@@ -132,70 +132,78 @@ export function PhotoSlideshow({ mode }: PhotoSlideshowProps) {
     [goNext, goPrev]
   );
 
-  return (
-    <div className={mode === "mobile" ? "flex flex-col items-center gap-3" : "absolute inset-0"}>
+  const images = SLIDESHOW_IMAGES.map((src, index) => (
+    <div
+      key={src}
+      className="absolute inset-0 transition-opacity"
+      style={{
+        transitionDuration: `${FADE_DURATION}ms`,
+        opacity: index === activeIndex ? 1 : 0,
+      }}
+    >
+      <Image
+        src={src}
+        alt={`Courtyard Pickle facility photo ${index + 1}`}
+        fill
+        className="object-cover object-center"
+        sizes={
+          mode === "desktop"
+            ? "(min-width: 1024px) 50vw, 0vw"
+            : "(max-width: 768px) 100vw, 0vw"
+        }
+        priority={index === 0}
+      />
+    </div>
+  ));
+
+  if (mode === "desktop") {
+    return (
       <div
         ref={containerRef}
-        className={`relative overflow-hidden ${
-          mode === "mobile"
-            ? "mx-4 rounded-[14px] h-[220px] w-[calc(100%-32px)]"
-            : "absolute inset-0 rounded-2xl"
-        }`}
+        className="w-full h-full relative overflow-hidden"
         style={{ backgroundColor: "#132015" }}
-        onTouchStart={mode === "mobile" ? handleTouchStart : undefined}
-        onTouchMove={mode === "mobile" ? handleTouchMove : undefined}
-        onTouchEnd={mode === "mobile" ? handleTouchEnd : undefined}
       >
-        {SLIDESHOW_IMAGES.map((src, index) => (
-          <div
-            key={src}
-            className="absolute inset-0 transition-opacity"
-            style={{
-              transitionDuration: `${FADE_DURATION}ms`,
-              opacity: index === activeIndex ? 1 : 0,
-            }}
-          >
-            <Image
-              src={src}
-              alt={`Courtyard Pickle facility photo ${index + 1}`}
-              fill
-              className="object-cover object-center"
-              sizes={
-                mode === "desktop"
-                  ? "(min-width: 1024px) 50vw, 0vw"
-                  : "(max-width: 768px) 100vw, 0vw"
-              }
-              priority={index === 0}
-            />
-          </div>
-        ))}
+        {images}
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col items-center gap-3">
+      <div
+        ref={containerRef}
+        className="relative overflow-hidden mx-4 rounded-[14px] h-[220px] w-[calc(100%-32px)]"
+        style={{ backgroundColor: "#132015" }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        {images}
       </div>
 
-      {mode === "mobile" && (
-        <div className="flex items-center justify-center gap-2">
-          {SLIDESHOW_IMAGES.map((_, index) => (
-            <button
-              key={index}
-              type="button"
-              aria-label={`Go to photo ${index + 1}`}
-              className="flex items-center justify-center py-[19px] bg-transparent border-none cursor-pointer"
-              onClick={() => goToSlide(index)}
-            >
-              <span
-                className="block transition-all duration-300 rounded-[3px]"
-                style={{
-                  width: index === activeIndex ? 14 : 6,
-                  height: 6,
-                  backgroundColor:
-                    index === activeIndex
-                      ? "#ccff00"
-                      : "rgba(255,255,255,0.2)",
-                }}
-              />
-            </button>
-          ))}
-        </div>
-      )}
+      <div className="flex items-center justify-center gap-2">
+        {SLIDESHOW_IMAGES.map((_, index) => (
+          <button
+            key={index}
+            type="button"
+            aria-label={`Go to photo ${index + 1}`}
+            className="flex items-center justify-center py-[19px] bg-transparent border-none cursor-pointer"
+            onClick={() => goToSlide(index)}
+          >
+            <span
+              className="block transition-all duration-300 rounded-[3px]"
+              style={{
+                width: index === activeIndex ? 14 : 6,
+                height: 6,
+                backgroundColor:
+                  index === activeIndex
+                    ? "#ccff00"
+                    : "rgba(255,255,255,0.2)",
+              }}
+            />
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
