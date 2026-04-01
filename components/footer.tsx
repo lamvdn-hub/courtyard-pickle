@@ -94,8 +94,7 @@ export function Footer() {
                 </div>
               </div>
               <div className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-white/[0.05] border border-white/[0.08]">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-sm text-white/80 font-medium">8/12 Courts Active Now</span>
+                <span className="text-sm text-white/80 font-medium">Book online, instant confirmation</span>
               </div>
               <p className="text-slate-400 text-xs">
                 Open Daily: 6:00 AM - 11:00 PM

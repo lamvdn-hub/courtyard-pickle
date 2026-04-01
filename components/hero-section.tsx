@@ -13,8 +13,7 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm">
-              <span className="w-2 h-2 rounded-full bg-lime animate-pulse" />
-              <span className="text-sm text-slate-400">8 of 12 courts active now</span>
+              <span className="text-sm text-slate-400">Book online, instant confirmation</span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.1]">
