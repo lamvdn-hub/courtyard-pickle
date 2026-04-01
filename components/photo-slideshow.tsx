@@ -11,7 +11,7 @@ const SLIDESHOW_IMAGES = [
   "/slideshow-images/5.jpg",
 ];
 
-const AUTOPLAY_INTERVAL = 4000;
+const AUTOPLAY_INTERVAL = 6000;
 const FADE_DURATION = 600;
 const SWIPE_THRESHOLD = 10;
 
