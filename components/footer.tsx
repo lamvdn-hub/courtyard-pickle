@@ -94,15 +94,15 @@ export function Footer() {
               <div className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-lime shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-white text-sm">1200 Paddle Drive</p>
-                  <p className="text-slate-400 text-sm">Austin, TX 78701</p>
+                  <p className="text-white text-sm">27 Dương Thị Xuân Quý</p>
+                  <p className="text-slate-400 text-sm">Q. Ngũ Hành Sơn, Đà Nẵng, Việt Nam</p>
                 </div>
               </div>
               <div className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-white/[0.05] border border-white/[0.08]">
                 <span className="text-sm text-white/80 font-medium">Book online, instant confirmation</span>
-              </div>
+              </div> 
               <p className="text-slate-400 text-xs">
-                Open Daily: 6:00 AM - 11:00 PM
+                Open Daily: 05:00 - 22:00
               </p>
             </div>
           </div>
