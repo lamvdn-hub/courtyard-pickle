@@ -170,7 +170,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             color: 'rgba(255,255,255,0.2)',
           }}
         >
-          Open daily 6AM &ndash; 11PM&nbsp;&nbsp;&middot;&nbsp;&nbsp;2 courts available
+          Open daily 05:00 &ndash; 22:00&nbsp;&nbsp;&middot;&nbsp;&nbsp;2 courts available
         </p>
       </div>
     </div>
