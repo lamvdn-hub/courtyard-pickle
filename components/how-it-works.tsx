@@ -6,21 +6,21 @@ const steps = [
     icon: CalendarDays,
     title: 'Pick Your Date & Court',
     description:
-      'Tap the button below to browse real-time availability. Choose your preferred date and court on our booking page.',
+      'View real time availability, choose your preferred date and court on our booking page.',
   },
   {
     number: '02',
     icon: ShieldCheck,
     title: 'Confirm & Pay',
     description:
-      'Complete your reservation securely in under a minute. Instant confirmation sent to your email.',
+      'Complete your payment securely through our trusted partner. Instant confirmation sent to your email.',
   },
   {
     number: '03',
     icon: Trophy,
     title: 'Show Up & Play',
     description:
-      'Gear included. Courts prepped. Just arrive, check in, and own the kitchen. Post-game lounge awaits.',
+      "Court's ready, refreshment prepared, even gears are included. Simply arrive and enjoy your time.",
   },
 ];
 
