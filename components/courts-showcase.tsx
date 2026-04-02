@@ -13,7 +13,9 @@ export function CourtsShowcase() {
 
         <div className="mx-auto max-w-[820px] px-6">
           <div className="facility-map-desktop">
-          <svg viewBox="0 0 780 460" xmlns="http://www.w3.org/2000/svg" fontFamily="system-ui,sans-serif" className="w-full h-auto">
+          <svg viewBox="0 0 780 460" xmlns="http://www.w3.org/2000/svg" fontFamily="system-ui,sans-serif" className="w-full h-auto" role="img" aria-labelledby="facility-map-desktop-title facility-map-desktop-desc">
+            <title id="facility-map-desktop-title">Courtyard facility floor plan</title>
+            <desc id="facility-map-desktop-desc">Bird's-eye layout showing two padel courts, indoor and outdoor café areas, locker rooms, and the street-side entrance walkway.</desc>
 
             {/* STREET */}
             <rect x="0" y="0" width="30" height="460" fill="rgba(204,255,0,0.03)"/>
@@ -113,7 +115,9 @@ export function CourtsShowcase() {
           </div>
 
           <div className="facility-map-mobile">
-          <svg viewBox="0 0 260 520" xmlns="http://www.w3.org/2000/svg" fontFamily="system-ui,sans-serif" className="w-full h-auto">
+          <svg viewBox="0 0 260 520" xmlns="http://www.w3.org/2000/svg" fontFamily="system-ui,sans-serif" className="w-full h-auto" role="img" aria-labelledby="facility-map-mobile-title facility-map-mobile-desc">
+            <title id="facility-map-mobile-title">Courtyard facility floor plan</title>
+            <desc id="facility-map-mobile-desc">Bird's-eye layout showing two padel courts, indoor and outdoor café areas, locker rooms, and the street-side entrance walkway.</desc>
 
             {/* FACILITY BOUNDARY */}
             <rect width="260" height="520" rx="8" fill="rgba(255,255,255,0.01)" stroke="rgba(255,255,255,0.05)" strokeWidth="1"/>
@@ -214,6 +218,9 @@ export function CourtsShowcase() {
 
           </svg>
           </div>
+          <p className="sr-only">
+            The Courtyard facility includes two regulation padel courts (Court 1 Interior and Court 2 Streetside), an indoor café with front desk and reception, an outdoor café with open seating, a separate outdoor seating area, and men's and women's locker rooms with showers. The entrance opens from the street into a central walkway connecting all areas. Additional spaces are coming soon.
+          </p>
         </div>
       </div>
     </section>
