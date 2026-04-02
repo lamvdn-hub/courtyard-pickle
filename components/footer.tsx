@@ -102,7 +102,7 @@ export function Footer() {
                 <span className="text-sm text-white/80 font-medium">Book online, instant confirmation</span>
               </div> */}
               <p className="text-slate-400 text-xs">
-                Open Daily: 5 AM - 10 PM
+                Open Daily: 5 am - 10 pm
               </p>
             </div>
           </div>
