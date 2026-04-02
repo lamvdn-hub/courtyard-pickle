@@ -11,37 +11,37 @@ const faqs = [
   {
     question: 'How do I complete my booking?',
     answer:
-      'Clicking any "Book" or "Reserve" button on this page takes you to our booking partner\'s secure site where you can select your date, court, and payment details. Confirmation is sent to your email instantly.',
+      'Clicking any "Book" or "Reserve" button on this page takes you to our booking partner\'s secure site, where you can select your preferred date, time, and court. After finalizing the payment you will receive the confirmation instantly in your email.',
   },
   {
     question: 'Do I need my own paddle?',
     answer:
-      'Not at all. Every booking includes complimentary access to pro-grade Selkirk paddles and premium pickleballs. Just show up and play.',
+      'Not at all. We offer free paddles and even balls. Just show up and play.',
   },
   {
     question: "What if I'm a beginner?",
     answer:
-      'We love beginners. Our daily "Kitchen Sink" hours are reserved exclusively for new players, with optional on-court coaching available. No judgment, just good rallies.',
+      'No problem at all. We have dedicated social slots for beginners, and even lesson options as well. Please reach out and we\'ll assist you with anything.',
   },
   {
     question: 'What is your cancellation policy?',
     answer:
-      'Life happens. You can reschedule any booking up to 12 hours in advance through our booking partner. No fees, no hassle, no questions.',
+      'We understand life happens. You can reschedule any booking up to 12 hours in advance through our booking partner with no extra fees.',
   },
   {
     question: 'What should I wear?',
     answer:
-      'Clean, non-marking court shoes are required. Beyond that, comfortable athletic wear is all you need. We have lockers and a full changing area onsite.',
+      'Comfortable athletic wear is all you need. We have locker rooms and a full changing area available.',
   },
   {
     question: 'Is there parking available?',
     answer:
-      'Yes. We offer free dedicated parking with over 100 spots, plus a covered drop-off zone. Bike racks and EV charging stations are also available.',
+      'Yes. We have a spacious area dedicated for motorcycles, and the curbside infront of our facility for those with cars.',
   },
   {
     question: 'Can I book for a group or event?',
     answer:
-      'Absolutely. We offer group packages for 4+ courts, complete with a private lounge area, catering options, and a dedicated event coordinator. Perfect for corporate outings and parties.',
+      'Absolutely. Please reach out through our contact details for full support and confirmation.',
   },
 ];
 
