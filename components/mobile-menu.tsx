@@ -27,9 +27,6 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
-      setTimeout(() => {
-        firstLinkRef.current?.focus();
-      }, 50);
     } else {
       document.body.style.overflow = '';
     }
@@ -113,6 +110,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
                 color: '#fff',
                 letterSpacing: '-0.01em',
                 borderBottom: index < navLinks.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
+                outline: 'none',
               }}
             >
               {link.label}
