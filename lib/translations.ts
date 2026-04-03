@@ -213,7 +213,7 @@ const vi: Translations = {
     entrance: 'LỐI VÀO',
     walkway: 'LỐI ĐI BỘ',
     court1: 'SÂN 1 · TRONG NHÀ',
-    court2: 'SÂN 2 · MẶT PHỐ',
+    court2: 'SÂN 2 · MẶT ĐƯỜNG',
     comingSoon: 'Sắp ra mắt',
     openSeating: 'Chỗ ngồi tự do',
     counterTablesReception: 'Bàn ghế · Lễ tân',
