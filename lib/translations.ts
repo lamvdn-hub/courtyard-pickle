@@ -155,7 +155,7 @@ const en: Translations = {
 
 const vi: Translations = {
   nav: {
-    howItWorks: 'Cách thức hoạt động',
+    howItWorks: 'Quy trình đặt sân',
     facility: 'Cơ sở vật chất',
     faq: 'Câu hỏi thường gặp',
     secureYourCourt: 'Đặt sân ngay',
