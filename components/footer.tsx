@@ -23,9 +23,10 @@ function ZaloButtonIcon() {
 }
 
 const socialButtonStyle: React.CSSProperties = {
-  display: 'inline-flex',
+  display: 'flex',
   alignItems: 'center',
   gap: '10px',
+  width: '100%',
   background: 'rgba(255,255,255,0.05)',
   border: '1px solid rgba(255,255,255,0.1)',
   borderRadius: '10px',
@@ -43,8 +44,11 @@ export function Footer() {
     <footer className="relative border-t border-white/[0.06]">
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-12 py-16 sm:py-20">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-[3fr_2fr] sm:gap-16">
+      <div
+        className="relative mx-auto px-6 md:px-12"
+        style={{ maxWidth: '1100px', paddingTop: '40px', paddingBottom: '40px' }}
+      >
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
           <div className="space-y-5">
             <div className="flex items-center gap-2">
               <Image
@@ -60,11 +64,26 @@ export function Footer() {
             </div>
             <p
               className="text-[13px] max-w-[380px]"
-              style={{ color: 'rgba(255,255,255,0.45)', lineHeight: 1.65, marginBottom: '20px' }}
+              style={{ color: 'rgba(255,255,255,0.45)', lineHeight: 1.65 }}
             >
               {t.footer.description}
             </p>
-            <div className="flex flex-wrap items-center gap-3">
+          </div>
+
+          <div>
+            <h4
+              style={{
+                fontSize: '11px',
+                fontWeight: 500,
+                color: 'rgba(255,255,255,0.35)',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                marginBottom: '16px',
+              }}
+            >
+              {t.footer.contactTitle}
+            </h4>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <a
                 href="https://www.facebook.com/courtyardpickleball"
                 target="_blank"
@@ -104,8 +123,14 @@ export function Footer() {
 
           <div>
             <h4
-              className="font-semibold text-[11px] uppercase mb-5"
-              style={{ color: 'rgba(255,255,255,0.35)', letterSpacing: '0.08em' }}
+              style={{
+                fontSize: '11px',
+                fontWeight: 500,
+                color: 'rgba(255,255,255,0.35)',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                marginBottom: '16px',
+              }}
             >
               {t.footer.locationTitle}
             </h4>

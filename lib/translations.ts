@@ -76,6 +76,7 @@ export interface Translations {
   };
   footer: {
     description: string;
+    contactTitle: string;
     messageFacebook: string;
     chatZalo: string;
     locationTitle: string;
@@ -165,8 +166,9 @@ const en: Translations = {
   },
   footer: {
     description: 'Courtyard Pickleball is Da Nang\'s premier pickleball facility, offering court rentals, coaching, and social play at 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam.',
-    messageFacebook: 'Message us on Facebook',
-    chatZalo: 'Chat on Zalo',
+    contactTitle: 'CONTACT US',
+    messageFacebook: 'Facebook',
+    chatZalo: 'Zalo',
     locationTitle: 'LOCATION',
     addressLine1: '27 Thị Xuân Quý',
     addressLine2: 'Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam',
@@ -254,8 +256,9 @@ const vi: Translations = {
   },
   footer: {
     description: 'Courtyard Pickleball là tổ hợp sân pickleball hàng đầu tại Đà Nẵng, chuyên cung cấp dịch vụ thuê sân, đào tạo và giao lưu cộng đồng tại số 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam.',
-    messageFacebook: 'Nhắn tin qua Facebook',
-    chatZalo: 'Chat ngay qua Zalo',
+    contactTitle: 'LIÊN HỆ',
+    messageFacebook: 'Facebook',
+    chatZalo: 'Zalo',
     locationTitle: 'ĐỊA ĐIỂM',
     addressLine1: '27 Thị Xuân Quý',
     addressLine2: 'Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam',
