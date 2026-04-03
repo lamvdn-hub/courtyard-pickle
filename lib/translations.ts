@@ -164,7 +164,7 @@ const vi: Translations = {
     headlinePart1: 'Courtyard',
     headlinePart2: 'Chờ Đón Bạn.',
     description:
-      'Hệ thống sân mái che. Dịch vụ chăm sóc dụng cụ miễn phí. Café thư giãn sau trận đấu. Tại Courtyard, hãy để chúng tôi lo mọi thứ, việc của bạn là tận hưởng cuộc chơi.',
+      'Hệ thống sân có mái che. Dịch vụ chăm sóc dụng cụ miễn phí. Café thư giãn sau trận đấu. Tại Courtyard, hãy để chúng tôi lo mọi thứ, việc của bạn là tận hưởng cuộc chơi.',
     ctaPrimary: 'Đặt sân ngay',
     ctaSecondary: 'Tìm hiểu thêm',
     ctaSecondaryMobile: 'Tìm hiểu thêm',
