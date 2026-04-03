@@ -7,10 +7,12 @@ import { FAQSchema } from '@/components/faq/faq-schema';
 import { FAQSection } from '@/components/faq/faq-section';
 import { Footer } from '@/components/footer';
 import { MobileBottomCTA } from '@/components/mobile-bottom-cta';
+import { ScrollReset } from '@/components/scroll-reset';
 
 export default function Home() {
   return (
     <main className="relative">
+      <ScrollReset />
       <StickyNav />
       <HeroSection />
       <HowItWorks />
