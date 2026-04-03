@@ -209,8 +209,8 @@ const vi: Translations = {
   },
   howItWorks: {
     kicker: 'ĐƠN GIẢN TRONG 3 BƯỚC',
-    header: 'Quy trình đặt sân',
-    subheader: 'Hoàn tất quá trình chỉ trong 60 giây.',
+    header: 'Quy Trình Đặt Sân',
+    subheader: 'Xác nhận chỉ trong 60 giây.',
     step1Title: 'Chọn ngày & đặt sân',
     step1Desc: 'Xem lịch trống thời gian thực, chọn ngày và sân bạn muốn ngay trên trang đặt chỗ.',
     step1MobileTitle: 'Chọn ngày & đặt sân',
