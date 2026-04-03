@@ -3,8 +3,10 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { BOOKING_URL } from '@/lib/constants';
+import { useLanguage } from '@/lib/language-context';
 
 export function MobileBottomCTA() {
+  const { t } = useLanguage();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -31,7 +33,7 @@ export function MobileBottomCTA() {
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 w-full bg-lime text-forest font-bold hover:bg-lime-dim rounded-xl h-12 text-sm transition-all duration-200 group"
         >
-          Reserve Your Court
+          {t.cta.reserve}
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </a>
       </div>
