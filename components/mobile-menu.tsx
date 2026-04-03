@@ -3,7 +3,8 @@
 import { useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { X, ArrowRight } from 'lucide-react';
-import { BOOKING_URL } from '@/lib/constants';
+import { BOOKING_URL, DEFAULT_LANGUAGE } from '@/lib/constants';
+import { LanguageSwitcher } from '@/components/navigation/language-switcher';
 
 const navLinks = [
   { label: 'How it works', href: '#how-it-works' },
@@ -15,9 +16,10 @@ interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
   triggerRef: React.RefObject<HTMLButtonElement>;
+  currentLang?: string;
 }
 
-export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
+export function MobileMenu({ isOpen, onClose, triggerRef, currentLang = DEFAULT_LANGUAGE }: MobileMenuProps) {
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -123,6 +125,29 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             height: '1px',
             background: 'rgba(255,255,255,0.06)',
             marginTop: '32px',
+            marginBottom: '28px',
+          }}
+        />
+
+        <div style={{ marginBottom: '24px' }}>
+          <p
+            style={{
+              fontSize: '11px',
+              color: 'rgba(255,255,255,0.3)',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              marginBottom: '12px',
+            }}
+          >
+            Language
+          </p>
+          <LanguageSwitcher currentLang={currentLang} variant="mobile" />
+        </div>
+
+        <div
+          style={{
+            height: '1px',
+            background: 'rgba(255,255,255,0.06)',
             marginBottom: '28px',
           }}
         />
