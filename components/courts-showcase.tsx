@@ -36,7 +36,7 @@ export function CourtsShowcase() {
             <circle cx="98" cy="76" r="8" fill="rgba(255,160,50,0.08)" stroke="rgba(255,160,50,0.25)" strokeWidth="1"/>
             <circle cx="122" cy="72" r="8" fill="rgba(255,160,50,0.08)" stroke="rgba(255,160,50,0.25)" strokeWidth="1"/>
             <circle cx="146" cy="76" r="8" fill="rgba(255,160,50,0.08)" stroke="rgba(255,160,50,0.25)" strokeWidth="1"/>
-            <text x="125" y="108" fontSize="8" fill="rgba(255,255,255,0.2)" textAnchor="middle">Open seating</text>
+            <text x="125" y="108" fontSize="8" fill="rgba(255,255,255,0.2)" textAnchor="middle">{t.facility.openSeating}</text>
 
             <rect x="210" y="20" width="158" height="100" rx="6" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.5)" strokeWidth="1.4"/>
             <text x="289" y="48" fontSize="10" fill="rgba(255,160,50,0.92)" textAnchor="middle" fontWeight="500" letterSpacing="0.3">{t.facility.indoorCafe}</text>
@@ -44,14 +44,14 @@ export function CourtsShowcase() {
             <rect x="226" y="72" width="28" height="18" rx="2" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.22)" strokeWidth="1"/>
             <rect x="260" y="72" width="28" height="18" rx="2" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.22)" strokeWidth="1"/>
             <rect x="294" y="72" width="28" height="18" rx="2" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.22)" strokeWidth="1"/>
-            <text x="289" y="108" fontSize="8" fill="rgba(255,255,255,0.2)" textAnchor="middle">{"Counter \u00B7 Tables \u00B7 Reception"}</text>
+            <text x="289" y="108" fontSize="8" fill="rgba(255,255,255,0.2)" textAnchor="middle">{t.facility.counterTablesReception}</text>
 
             <rect x="374" y="20" width="148" height="100" rx="6" fill="rgba(255,160,50,0.04)" stroke="rgba(255,160,50,0.2)" strokeWidth="1.2" strokeDasharray="5,3"/>
             <text x="448" y="52" fontSize="10" fill="rgba(255,160,50,0.6)" textAnchor="middle" fontWeight="500" letterSpacing="0.3">{t.facility.outdoorArea}</text>
             <circle cx="420" cy="76" r="8" fill="rgba(255,160,50,0.05)" stroke="rgba(255,160,50,0.18)" strokeWidth="1"/>
             <circle cx="445" cy="72" r="8" fill="rgba(255,160,50,0.05)" stroke="rgba(255,160,50,0.18)" strokeWidth="1"/>
             <circle cx="470" cy="76" r="8" fill="rgba(255,160,50,0.05)" stroke="rgba(255,160,50,0.18)" strokeWidth="1"/>
-            <text x="448" y="108" fontSize="8" fill="rgba(255,255,255,0.16)" textAnchor="middle">Open seating</text>
+            <text x="448" y="108" fontSize="8" fill="rgba(255,255,255,0.16)" textAnchor="middle">{t.facility.openSeating}</text>
 
             <rect x="534" y="20" width="228" height="100" rx="6" fill="rgba(120,160,255,0.06)" stroke="rgba(120,160,255,0.35)" strokeWidth="1.3"/>
             <text x="648" y="42" fontSize="10" fill="rgba(120,160,255,0.82)" textAnchor="middle" fontWeight="500" letterSpacing="0.3">{t.facility.lockerRooms}</text>
@@ -95,13 +95,9 @@ export function CourtsShowcase() {
 
             <rect x="382" y="168" width="140" height="272" rx="7" fill="rgba(255,255,255,0.018)" stroke="rgba(255,255,255,0.1)" strokeWidth="1" strokeDasharray="5,4"/>
             <text x="452" y="298" fontSize="11" fill="rgba(255,255,255,0.2)" textAnchor="middle" fontWeight="500">N.A.</text>
-            <rect x="406" y="316" width="92" height="22" rx="11" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" strokeWidth="1"/>
-            <text x="452" y="331" fontSize="8" fill="rgba(255,255,255,0.18)" textAnchor="middle">{t.facility.comingSoon}</text>
 
             <rect x="534" y="168" width="228" height="272" rx="7" fill="rgba(255,255,255,0.014)" stroke="rgba(255,255,255,0.08)" strokeWidth="1" strokeDasharray="5,4"/>
             <text x="648" y="298" fontSize="11" fill="rgba(255,255,255,0.18)" textAnchor="middle" fontWeight="500">N.A.</text>
-            <rect x="580" y="316" width="136" height="22" rx="11" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" strokeWidth="1"/>
-            <text x="648" y="331" fontSize="8" fill="rgba(255,255,255,0.16)" textAnchor="middle">{t.facility.comingSoon}</text>
 
             <text x="762" y="452" fontSize="8" fill="rgba(255,255,255,0.14)" textAnchor="end">Not to scale</text>
 
@@ -136,7 +132,7 @@ export function CourtsShowcase() {
             <circle cx="30" cy="168" r="7" fill="rgba(255,160,50,0.05)" stroke="rgba(255,160,50,0.16)" strokeWidth="1"/>
             <circle cx="45" cy="164" r="7" fill="rgba(255,160,50,0.05)" stroke="rgba(255,160,50,0.16)" strokeWidth="1"/>
             <circle cx="60" cy="168" r="7" fill="rgba(255,160,50,0.05)" stroke="rgba(255,160,50,0.16)" strokeWidth="1"/>
-            <text x="45" y="204" fontSize="7" fill="rgba(255,255,255,0.14)" textAnchor="middle">Open seating</text>
+            <text x="45" y="204" fontSize="7" fill="rgba(255,255,255,0.14)" textAnchor="middle">{t.facility.openSeating}</text>
 
             <rect x="2" y="224" width="86" height="140" rx="5" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.5)" strokeWidth="1.2"/>
             <text x="45" y="246" fontSize="7" fill="rgba(255,160,50,0.92)" textAnchor="middle" fontWeight="500">{t.facility.indoorCafe}</text>
@@ -144,16 +140,14 @@ export function CourtsShowcase() {
             <rect x="16" y="268" width="18" height="12" rx="2" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.22)" strokeWidth="1"/>
             <rect x="38" y="268" width="18" height="12" rx="2" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.22)" strokeWidth="1"/>
             <rect x="60" y="268" width="18" height="12" rx="2" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.22)" strokeWidth="1"/>
-            <text x="45" y="296" fontSize="7" fill="rgba(255,255,255,0.2)" textAnchor="middle">Counter</text>
-            <text x="45" y="307" fontSize="7" fill="rgba(255,255,255,0.2)" textAnchor="middle">Tables</text>
-            <text x="45" y="318" fontSize="7" fill="rgba(255,255,255,0.2)" textAnchor="middle">Reception</text>
+            <text x="45" y="302" fontSize="7" fill="rgba(255,255,255,0.2)" textAnchor="middle">{t.facility.counterTablesReception}</text>
 
             <rect x="2" y="372" width="86" height="124" rx="5" fill="rgba(255,160,50,0.06)" stroke="rgba(255,160,50,0.3)" strokeWidth="1" strokeDasharray="4,3"/>
             <text x="45" y="400" fontSize="7" fill="rgba(255,160,50,0.85)" textAnchor="middle" fontWeight="500">{t.facility.outdoorCafe}</text>
             <circle cx="30" cy="424" r="7" fill="rgba(255,160,50,0.08)" stroke="rgba(255,160,50,0.25)" strokeWidth="1"/>
             <circle cx="45" cy="420" r="7" fill="rgba(255,160,50,0.08)" stroke="rgba(255,160,50,0.25)" strokeWidth="1"/>
             <circle cx="60" cy="424" r="7" fill="rgba(255,160,50,0.08)" stroke="rgba(255,160,50,0.25)" strokeWidth="1"/>
-            <text x="45" y="448" fontSize="7" fill="rgba(255,255,255,0.18)" textAnchor="middle">Open seating</text>
+            <text x="45" y="448" fontSize="7" fill="rgba(255,255,255,0.18)" textAnchor="middle">{t.facility.openSeating}</text>
 
             <rect x="92" y="8" width="20" height="488" fill="rgba(255,255,255,0.012)"/>
             <line x1="92" y1="8" x2="92" y2="496" stroke="rgba(255,255,255,0.06)" strokeWidth="1"/>
@@ -162,15 +156,11 @@ export function CourtsShowcase() {
 
             <rect x="116" y="8" width="140" height="108" rx="5" fill="rgba(255,255,255,0.014)" stroke="rgba(255,255,255,0.08)" strokeWidth="1" strokeDasharray="5,4"/>
             <text x="186" y="60" fontSize="10" fill="rgba(255,255,255,0.18)" textAnchor="middle" fontWeight="500">N.A.</text>
-            <rect x="148" y="72" width="76" height="18" rx="9" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" strokeWidth="1"/>
-            <text x="186" y="85" fontSize="7" fill="rgba(255,255,255,0.16)" textAnchor="middle">{t.facility.comingSoon}</text>
 
             <line x1="116" y1="124" x2="256" y2="124" stroke="rgba(255,255,255,0.07)" strokeWidth="1" strokeDasharray="4,3"/>
 
             <rect x="116" y="130" width="140" height="108" rx="5" fill="rgba(255,255,255,0.014)" stroke="rgba(255,255,255,0.08)" strokeWidth="1" strokeDasharray="5,4"/>
             <text x="186" y="182" fontSize="10" fill="rgba(255,255,255,0.18)" textAnchor="middle" fontWeight="500">N.A.</text>
-            <rect x="148" y="194" width="76" height="18" rx="9" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" strokeWidth="1"/>
-            <text x="186" y="207" fontSize="7" fill="rgba(255,255,255,0.16)" textAnchor="middle">{t.facility.comingSoon}</text>
 
             <line x1="116" y1="246" x2="256" y2="246" stroke="rgba(255,255,255,0.06)" strokeWidth="1" strokeDasharray="4,3"/>
 

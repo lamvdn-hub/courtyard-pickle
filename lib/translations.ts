@@ -61,6 +61,8 @@ export interface Translations {
     court1: string;
     court2: string;
     comingSoon: string;
+    openSeating: string;
+    counterTablesReception: string;
   };
   cta: {
     readyTitle: string;
@@ -131,6 +133,8 @@ const en: Translations = {
     court1: 'COURT 1 \u00B7 INTERIOR',
     court2: 'COURT 2 \u00B7 STREETSIDE',
     comingSoon: 'Coming soon',
+    openSeating: 'Open seating',
+    counterTablesReception: 'Counter \u00B7 Tables \u00B7 Reception',
   },
   cta: {
     readyTitle: 'Ready to play?',
@@ -201,6 +205,8 @@ const vi: Translations = {
     court1: 'S\u00C2N 1 \u00B7 TRONG NH\u00C0',
     court2: 'S\u00C2N 2 \u00B7 M\u1EACT PH\u1ED0',
     comingSoon: 'S\u1EAFp ra m\u1EAFt',
+    openSeating: 'Ch\u1ED7 ng\u1ED3i t\u1EF1 do',
+    counterTablesReception: 'B\u00E0n gh\u1EBF \u00B7 L\u1EC5 t\u00E2n',
   },
   cta: {
     readyTitle: 'S\u1EB5n s\u00E0ng nh\u1EADp cu\u1ED9c?',
