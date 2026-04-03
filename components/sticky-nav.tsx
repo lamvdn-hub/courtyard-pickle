@@ -4,29 +4,22 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { BOOKING_URL, DEFAULT_LANGUAGE } from '@/lib/constants';
+import { BOOKING_URL } from '@/lib/constants';
 import { MobileMenu } from '@/components/mobile-menu';
 import { LanguageSwitcher } from '@/components/navigation/language-switcher';
-
-const navLinks = [
-  { label: 'How it Works', href: '#how-it-works' },
-  { label: 'Facility', href: '#courts' },
-  { label: 'FAQ', href: '#faq' },
-];
+import { useLanguage } from '@/lib/language-context';
 
 export function StickyNav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState(DEFAULT_LANGUAGE);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
+  const { lang, t } = useLanguage();
 
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const lang = params.get('lang');
-    if (lang === 'vi' || lang === 'en') {
-      setCurrentLang(lang);
-    }
-  }, []);
+  const navLinks = [
+    { label: t.nav.howItWorks, href: '#how-it-works' },
+    { label: t.nav.facility, href: '#courts' },
+    { label: t.nav.faq, href: '#faq' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -73,11 +66,11 @@ export function StickyNav() {
 
             <div className="flex items-center gap-3">
               <div className="hidden md:flex">
-                <LanguageSwitcher currentLang={currentLang} />
+                <LanguageSwitcher currentLang={lang} />
               </div>
               <Button asChild className="hidden md:inline-flex bg-lime text-forest font-semibold hover:bg-lime-dim rounded-xl px-6 transition-all duration-200 hover:shadow-lg hover:shadow-lime/20">
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
-                  Secure Your Court
+                  {t.nav.secureYourCourt}
                 </a>
               </Button>
               <button
@@ -98,7 +91,6 @@ export function StickyNav() {
         isOpen={mobileOpen}
         onClose={() => setMobileOpen(false)}
         triggerRef={hamburgerRef}
-        currentLang={currentLang}
       />
     </>
   );

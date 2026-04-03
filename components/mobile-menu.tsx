@@ -3,25 +3,26 @@
 import { useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { X, ArrowRight } from 'lucide-react';
-import { BOOKING_URL, DEFAULT_LANGUAGE } from '@/lib/constants';
+import { BOOKING_URL } from '@/lib/constants';
 import { LanguageSwitcher } from '@/components/navigation/language-switcher';
-
-const navLinks = [
-  { label: 'How it works', href: '#how-it-works' },
-  { label: 'Our facility', href: '#courts' },
-  { label: 'FAQ', href: '#faq' },
-];
+import { useLanguage } from '@/lib/language-context';
 
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
   triggerRef: React.RefObject<HTMLButtonElement>;
-  currentLang?: string;
 }
 
-export function MobileMenu({ isOpen, onClose, triggerRef, currentLang = DEFAULT_LANGUAGE }: MobileMenuProps) {
+export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const { lang, t } = useLanguage();
+
+  const navLinks = [
+    { label: t.mobile.howItWorks, href: '#how-it-works' },
+    { label: t.mobile.ourFacility, href: '#courts' },
+    { label: t.mobile.faq, href: '#faq' },
+  ];
 
   useEffect(() => {
     if (isOpen) {
@@ -139,9 +140,9 @@ export function MobileMenu({ isOpen, onClose, triggerRef, currentLang = DEFAULT_
               marginBottom: '12px',
             }}
           >
-            Language
+            {t.mobile.language}
           </p>
-          <LanguageSwitcher currentLang={currentLang} variant="mobile" />
+          <LanguageSwitcher currentLang={lang} variant="mobile" />
         </div>
 
         <div
@@ -162,7 +163,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef, currentLang = DEFAULT_
               marginBottom: '4px',
             }}
           >
-            Ready to play?
+            {t.mobile.readyToPlay}
           </p>
           <a
             href={BOOKING_URL}
@@ -179,7 +180,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef, currentLang = DEFAULT_
               borderRadius: '12px',
             }}
           >
-            Secure your court&nbsp;&rarr;
+            {t.mobile.secureYourCourt}&nbsp;&rarr;
           </a>
         </div>
       </div>
@@ -195,7 +196,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef, currentLang = DEFAULT_
             color: 'rgba(255,255,255,0.2)',
           }}
         >
-          Open daily 05:00 &ndash; 22:00&nbsp;&nbsp;&middot;&nbsp;&nbsp;2 courts available
+          {t.mobile.openHours}
         </p>
       </div>
     </div>

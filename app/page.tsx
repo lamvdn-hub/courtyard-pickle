@@ -8,20 +8,23 @@ import { FAQSection } from '@/components/faq/faq-section';
 import { Footer } from '@/components/footer';
 import { MobileBottomCTA } from '@/components/mobile-bottom-cta';
 import { ScrollReset } from '@/components/scroll-reset';
+import { LanguageProvider } from '@/lib/language-context';
 
 export default function Home() {
   return (
-    <main className="relative">
-      <ScrollReset />
-      <StickyNav />
-      <HeroSection />
-      <HowItWorks />
-      <CourtsShowcase />
-      <PrimaryCTA />
-      <FAQSchema />
-      <FAQSection />
-      <Footer />
-      <MobileBottomCTA />
-    </main>
+    <LanguageProvider>
+      <main className="relative">
+        <ScrollReset />
+        <StickyNav />
+        <HeroSection />
+        <HowItWorks />
+        <CourtsShowcase />
+        <PrimaryCTA />
+        <FAQSchema />
+        <FAQSection />
+        <Footer />
+        <MobileBottomCTA />
+      </main>
+    </LanguageProvider>
   );
 }
