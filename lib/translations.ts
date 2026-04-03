@@ -224,9 +224,9 @@ const vi: Translations = {
     disclaimer: 'B\u1EA1n s\u1EBD \u0111\u01B0\u1EE3c chuy\u1EC3n \u0111\u1EBFn trang thanh to\u00E1n b\u1EA3o m\u1EADt c\u1EE7a \u0111\u1ED1i t\u00E1c \u0111\u1EC3 ho\u00E0n t\u1EA5t \u0111\u1EB7t ch\u1ED7.',
   },
   faq: {
-    kicker: 'C\u00E2u h\u1ECFi th\u01B0\u1EDDng g\u1EB7p',
-    header: 'Gi\u1EA3i \u0111\u00E1p th\u1EAFc m\u1EAFc',
-    subheader: 'Tr\u1EA3 l\u1EDDi th\u1EB3ng th\u1EAFn. Kh\u00F4ng v\u00F2ng vo.',
+    kicker: 'B\u1EA0N C\u00D2N TH\u1EAEC M\u1EAEc?',
+    header: 'T\u1EA5t T\u1EA7n T\u1EADt Th\u00F4ng Tin B\u1EA1n C\u1EA7n',
+    subheader: 'Tr\u1EA3 l\u1EDDi tr\u1EF1c di\u1EC7n. Kh\u00F4ng l\u00F2ng v\u00F2ng.',
   },
 };
 
