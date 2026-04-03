@@ -219,8 +219,8 @@ const vi: Translations = {
     counterTablesReception: 'B\u00E0n gh\u1EBF \u00B7 L\u1EC5 t\u00E2n',
   },
   cta: {
-    readyTitle: 'S\u1EB5n s\u00E0ng nh\u1EADp cu\u1ED9c?',
-    reserve: '\u0110\u1EB7t s\u00E2n ngay',
+    readyTitle: 'S\u1EB5n S\u00E0ng Nh\u1EADp Cu\u1ED9c?',
+    reserve: 'Đặt Sân Ngay',
     disclaimer: 'B\u1EA1n s\u1EBD \u0111\u01B0\u1EE3c chuy\u1EC3n \u0111\u1EBFn trang thanh to\u00E1n b\u1EA3o m\u1EADt c\u1EE7a \u0111\u1ED1i t\u00E1c \u0111\u1EC3 ho\u00E0n t\u1EA5t \u0111\u1EB7t ch\u1ED7.',
   },
   faq: {
