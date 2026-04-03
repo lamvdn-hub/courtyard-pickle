@@ -7,8 +7,8 @@ import { useLanguage } from '@/lib/language-context';
 function FacebookButtonIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="10" cy="10" r="8.5" stroke="rgba(255,255,255,0.45)" strokeWidth="1.2"/>
-      <path d="M12 6.5H10.5C10.2 6.5 10 6.7 10 7V8.5H12L11.7 10.5H10V16H8V10.5H6.5V8.5H8V7C8 5.9 8.9 5 10 5H12V6.5Z" fill="rgba(255,255,255,0.45)"/>
+      <circle cx="10" cy="10" r="8.5" fill="#1877F2"/>
+      <path d="M12 6.5H10.5C10.2 6.5 10 6.7 10 7V8.5H12L11.7 10.5H10V16H8V10.5H6.5V8.5H8V7C8 5.9 8.9 5 10 5H12V6.5Z" fill="#fff"/>
     </svg>
   );
 }
@@ -16,8 +16,8 @@ function FacebookButtonIcon() {
 function ZaloButtonIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3 16C3 16 4.8 14.8 5.8 14.2C7.2 13.4 8.2 13.2 10 13.2C14 13.2 17 11 17 8.2C17 5.4 14 3.2 10 3.2C6 3.2 3 5.4 3 8.2C3 9.8 4 11.2 5.5 12.2L5 16H3Z" stroke="rgba(255,255,255,0.45)" strokeWidth="1.2" strokeLinejoin="round" fill="none"/>
-      <text x="10" y="9.5" fontSize="5" fill="rgba(255,255,255,0.45)" textAnchor="middle" fontWeight="700" fontFamily="system-ui">Zalo</text>
+      <path d="M3 16C3 16 4.8 14.8 5.8 14.2C7.2 13.4 8.2 13.2 10 13.2C14 13.2 17 11 17 8.2C17 5.4 14 3.2 10 3.2C6 3.2 3 5.4 3 8.2C3 9.8 4 11.2 5.5 12.2L5 16H3Z" fill="#0068FF" stroke="#0068FF" strokeWidth="0.5" strokeLinejoin="round"/>
+      <text x="10" y="9.5" fontSize="5" fill="#fff" textAnchor="middle" fontWeight="700" fontFamily="system-ui">Zalo</text>
     </svg>
   );
 }
