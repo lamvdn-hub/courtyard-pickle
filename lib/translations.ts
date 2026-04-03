@@ -222,7 +222,7 @@ const vi: Translations = {
     step3Title: 'Đến sân & trải nghiệm',
     step3Desc: 'Sân đã sẵn sàng, nước uống phục vụ tận nơi, hỗ trợ cả dụng cụ chơi. Bạn chỉ cần đến và tận hưởng.',
     step3MobileTitle: 'Đến sân & trải nghiệm',
-    step3MobileDesc: 'Sân sẵn sàng. Chỉ cần đến',
+    step3MobileDesc: 'Mọi thứ sẵn sàng. Chỉ cần bạn đến trải nghiệm',
   },
   facility: {
     header: 'Cơ sở vật chất',
