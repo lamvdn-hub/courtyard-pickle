@@ -249,7 +249,7 @@ const vi: Translations = {
     counterTablesReception: 'Bàn ghế · Ổ điện',
   },
   cta: {
-    readyTitle: 'Sẵn Sàng Nhập Cuộc?',
+    readyTitle: 'Bạn Đã Sẵn Sàng?',
     reserve: 'Đặt Sân Ngay',
     disclaimer: 'Bạn sẽ được chuyển đến trang đặt sân chính thức của Alobo để hoàn tất quá trình.',
   },
