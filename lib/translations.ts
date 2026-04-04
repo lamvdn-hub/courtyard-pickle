@@ -246,7 +246,7 @@ const vi: Translations = {
     comingSoon: 'Sắp ra mắt',
     frontDesk: '+ Quầy lễ tân',
     openSeating: 'Chỗ ngồi tự do',
-    counterTablesReception: 'Bàn ghế ngồi · Ổ điện',
+    counterTablesReception: 'Bàn ghế · Ổ điện',
   },
   cta: {
     readyTitle: 'Sẵn Sàng Nhập Cuộc?',
