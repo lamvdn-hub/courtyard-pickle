@@ -60,7 +60,7 @@ export function Footer() {
                 className="h-9 w-auto"
               />
               <span className="text-white font-bold text-base tracking-tight">
-                COURTYARD PICKLEBALL
+                COURTYARD PICKLE
               </span>
             </div>
             <p
