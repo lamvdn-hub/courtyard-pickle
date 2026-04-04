@@ -19,12 +19,12 @@ const en: FAQ[] = [
   {
     question: 'What are your opening hours?',
     answer:
-      'Courtyard Pickleball in Da Nang is open daily from 05:00 to 22:00. Hours may vary on public holidays \u2014 check our booking calendar for live availability.',
+      'Courtyard Pickle Da Nang is open daily from 05:00 to 22:00. Hours may vary on public holidays, please check our booking calendar for live availability.',
   },
   {
     question: 'Where is Courtyard Pickleball located?',
     answer:
-      'You can find us at 27 D\u01B0\u01A1ng Th\u1ECB Xu\u00E2n Qu\u00FD, Ng\u0169 H\u00E0nh S\u01A1n District, \u0110\u00E0 N\u1EB5ng, Vi\u1EC7t Nam.',
+      'You can find us at 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng.',
   },
   {
     question: 'Do I need to bring my own pickleball paddle?',
