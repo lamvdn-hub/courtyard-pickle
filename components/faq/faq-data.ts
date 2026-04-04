@@ -57,7 +57,7 @@ const en: FAQ[] = [
       'Yes. Dedicated motorcycle parking is available on-site. Car parking is available curbside directly in front of the facility on Dương Thị Xuân Quý.',
   },
   {
-    question: 'Can I book pickleball courts for a group or private event in Da Nang?',
+    question: 'Can I book pickleball courts for a group or private event?',
     answer:
       'Yes. We accommodate group sessions, corporate events, and private tournaments at Courtyard Pickleball, serving Da Nang and surrounding areas. Contact us at +84 932150006 or message us on Facebook to discuss availability, pricing, and setup.',
   },
