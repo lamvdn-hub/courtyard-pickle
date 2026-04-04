@@ -40,7 +40,7 @@ export function CourtsShowcase() {
 
             <rect x="210" y="20" width="158" height="100" rx="6" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.5)" strokeWidth="1.4"/>
             <text x="289" y="48" fontSize="10" fill="rgba(255,160,50,0.92)" textAnchor="middle" fontWeight="500" letterSpacing="0.3">{t.facility.indoorCafe}</text>
-            <text x="289" y="62" fontSize="8" fill="rgba(255,255,255,0.38)" textAnchor="middle">+ Front Desk</text>
+            <text x="289" y="62" fontSize="8" fill="rgba(255,255,255,0.38)" textAnchor="middle">{t.facility.frontDesk}</text>
             <rect x="226" y="72" width="28" height="18" rx="2" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.22)" strokeWidth="1"/>
             <rect x="260" y="72" width="28" height="18" rx="2" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.22)" strokeWidth="1"/>
             <rect x="294" y="72" width="28" height="18" rx="2" fill="rgba(255,160,50,0.1)" stroke="rgba(255,160,50,0.22)" strokeWidth="1"/>
