@@ -24,16 +24,18 @@ export function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
-            <h1 className="text-[3.25rem] sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.08] sm:leading-[1.1]">
-              {t.hero.headlinePart1}{" "}
-              <span className="text-lime">{t.hero.headlinePart2}</span>
-            </h1>
+            <div>
+              <h1 className="text-[3.25rem] sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.08] sm:leading-[1.1]">
+                {t.hero.headlinePart1}{" "}
+                <span className="text-lime">{t.hero.headlinePart2}</span>
+              </h1>
 
-            {t.hero.slogan && (
-              <h2 className="text-lg sm:text-xl font-normal text-white/60 mt-2 leading-snug">
-                {t.hero.slogan}
-              </h2>
-            )}
+              {t.hero.slogan && (
+                <h2 className="border-l-2 border-lime pl-[14px] mt-[14px] text-[18px] font-normal italic text-white/75 leading-snug">
+                  {t.hero.slogan}
+                </h2>
+              )}
+            </div>
 
             <p className="text-[15px] text-white/[0.65] max-w-lg leading-relaxed sm:text-xl sm:text-slate-400">
               {t.hero.description}
