@@ -49,7 +49,7 @@ const en: FAQ[] = [
   {
     question: 'What should I wear to play pickleball?',
     answer:
-      'Comfortable athletic wear is all you need. We have locker rooms and a full changing area available at the facility.',
+      'Comfortable athletic wear and shoes with good protection is all you need. We have locker rooms and a full changing area available at the facility.',
   },
   {
     question: 'Is there parking at Courtyard Pickleball in Da Nang?',
