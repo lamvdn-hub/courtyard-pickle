@@ -100,7 +100,7 @@ const vi: FAQ[] = [
       'Chắc chắn rồi! Chúng tôi chào mừng người chơi ở mọi cấp độ tại Courtyard Pickle, và chúng tôi đặc biệt tự hào về cộng đồng tuyệt vời của mình luôn giúp đỡ những người mới bắt đầu.',
   },
   {
-    question: 'Sân có lớp dạy chơi pickleball tại Đà Nẵng không?',
+    question: 'Sân có lớp dạy chơi pickleball không?',
     answer:
       'Có, chúng tôi cung cấp cả lớp học riêng và lớp học nhóm phù hợp với mọi cấp độ và lứa tuổi tại Courtyard Pickle. Bạn có thể tham khảo và đặt lịch bằng cách liên hệ trực tiếp với chúng tôi.',
   },
