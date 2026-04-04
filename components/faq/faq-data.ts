@@ -29,7 +29,7 @@ const en: FAQ[] = [
   {
     question: 'Do I need to bring my own pickleball paddle?',
     answer:
-      'Not at all. Courtyard Pickleball provides free paddles and balls for all players. Just show up and play.',
+      ' Courtyard Pickle provides free paddles and balls for all our players. Just simply show up and play.',
   },
   {
     question: 'Can beginners play at Courtyard Pickleball?',
