@@ -267,7 +267,7 @@ const vi: Translations = {
     addressLine1: '27 Thị Xuân Quý',
     addressLine2: 'Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam',
     hours: 'Mở cửa hàng ngày: 05:00 – 22:00',
-    copyright: 'Courtyard Pickleball. Bảo lưu mọi quyền.',
+    copyright: 'Courtyard Pickle. Bảo lưu mọi quyền.',
     privacyPolicy: 'Chính sách bảo mật',
     termsOfService: 'Điều khoản dịch vụ',
   },
