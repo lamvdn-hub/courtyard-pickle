@@ -54,7 +54,7 @@ const en: FAQ[] = [
   {
     question: 'Is there parking at Courtyard Pickleball in Da Nang?',
     answer:
-      'Yes. Dedicated motorcycle parking is available on-site. Car parking is available curbside directly in front of the facility on D\u01B0\u01A1ng Th\u1ECB Xu\u00E2n Qu\u00FD.',
+      'Yes. Dedicated motorcycle parking is available on-site. Car parking is available curbside directly in front of the facility on Dương Thị Xuân Quý.',
   },
   {
     question: 'Can I book pickleball courts for a group or private event in Da Nang?',
