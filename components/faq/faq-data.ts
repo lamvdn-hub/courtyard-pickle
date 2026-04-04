@@ -59,12 +59,12 @@ const en: FAQ[] = [
   {
     question: 'Can I book pickleball courts for a group or private event?',
     answer:
-      'Yes. We accommodate group sessions, corporate events, and private tournaments at Courtyard Pickleball, serving Da Nang and surrounding areas. Contact us at +84 932150006 or message us on Facebook to discuss availability, pricing, and setup.',
+      'Yes. We accommodate group sessions, corporate events, and private tournaments at Courtyard Pickle, serving Da Nang and surrounding areas. Please contact us at +84 932150006 or message us on Facebook to discuss availability, pricing, and setup.',
   },
   {
     question: 'Can I walk in without a reservation?',
     answer:
-      'Walk-ins are welcome when courts are available, but we recommend booking in advance to guarantee your slot, especially on weekends.',
+      'Walk-ins are welcome when courts are available, but we highly recommend booking in advance to guarantee your slot, especially on weekends.',
   },
 ];
 
