@@ -75,19 +75,19 @@ const vi: FAQ[] = [
       'Chỉ cần nhấp vào bất kỳ nút "Đặt sân" nào trên trang này, bạn sẽ được chuyển đến trang đặt chỗ chính thức của Alobo. Tại đây, bạn có thể chọn ngày, giờ và sân mong muốn tại Courtyard Pickle Đà Nẵng. Sau khi hoàn tất thanh toán, bạn sẽ nhận được email xác nhận ngay lập tức.',
   },
   {
-    question: 'Chi phí thuê sân pickleball tại Đà Nẵng là bao nhiêu?',
+    question: 'Chi phí thuê sân tại Courtyard Pickle là bao nhiêu?',
     answer:
-      'Giá thuê sân sẽ thay đổi tùy theo khung giờ và số lượng người chơi. Mức giá chi tiết sẽ được hiển thị tại trang thanh toán của đối tác đặt sân. Hãy nhấp vào nút "Đặt sân" để xem bảng giá cập nhật mới nhất.',
+      'Giá thuê sân sẽ thay đổi tùy theo khung giờ, trong khoảng 120k-160k / giờ và 50k/lượt cho vé social. Courtyard Pickle có hỗ trợ đặt lịch định kỳ theo tháng từ 100k-140k / giờ.',
   },
   {
     question: 'Giờ mở cửa của sân là khi nào?',
     answer:
-      'Courtyard Pickleball Đà Nẵng mở cửa hàng ngày từ 05:00 đến 22:00. Giờ hoạt động có thể thay đổi vào các ngày lễ — vui lòng kiểm tra lịch đặt sân để cập nhật tình trạng sân trống thực tế.',
+      'Courtyard Pickle Đà Nẵng mở cửa hàng ngày từ 05:00 đến 22:00. Giờ hoạt động có thể thay đổi vào các ngày lễ, xin vui lòng kiểm tra lịch đặt sân để cập nhật tình trạng sân trống thực tế.',
   },
   {
-    question: 'Courtyard Pickleball nằm ở đâu?',
+    question: 'Courtyard Pickle nằm ở đâu?',
     answer:
-      'Bạn có thể tìm thấy chúng tôi tại số 27 Dương Thị Xuân Quý, Quận Ngũ Hành Sơn, Đà Nẵng, Việt Nam.',
+      'Bạn có thể tìm thấy chúng tôi tại số 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng.',
   },
   {
     question: 'Tôi có cần tự mang theo vợt không?',
