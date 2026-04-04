@@ -253,8 +253,8 @@ const vi: Translations = {
   },
   faq: {
     kicker: 'BẠN CÒN THẮC MẮC?',
-    header: 'Tất Tần Tật Thông Tin Bạn Cần',
-    subheader: 'Trả lời trực diện. Không lòng vòng.',
+    header: 'Giải Đáp Mọi Thắc Mắc',
+    subheader: 'Thông tin rõ ràng. Hỗ trợ trực tiếp.',
   },
   footer: {
     description: 'Courtyard Pickleball là tổ hợp sân pickleball hàng đầu tại Đà Nẵng, chuyên cung cấp dịch vụ thuê sân, đào tạo và giao lưu cộng đồng tại số 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam.',
