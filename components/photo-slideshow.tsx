@@ -160,10 +160,35 @@ export function PhotoSlideshow({ mode }: PhotoSlideshowProps) {
     return (
       <div
         ref={containerRef}
-        className="w-full h-full relative overflow-hidden"
+        className="w-full h-full relative overflow-hidden flex flex-col"
         style={{ backgroundColor: "#132015" }}
       >
-        {images}
+        <div className="flex-1 relative">
+          {images}
+        </div>
+        <div className="flex items-center justify-center gap-2 py-4">
+          {SLIDESHOW_IMAGES.map((_, index) => (
+            <button
+              key={index}
+              type="button"
+              aria-label={`Go to photo ${index + 1}`}
+              className="flex items-center justify-center py-[19px] bg-transparent border-none cursor-pointer"
+              onClick={() => goToSlide(index)}
+            >
+              <span
+                className="block transition-all duration-300 rounded-[3px]"
+                style={{
+                  width: index === activeIndex ? 14 : 6,
+                  height: 6,
+                  backgroundColor:
+                    index === activeIndex
+                      ? "#ccff00"
+                      : "rgba(255,255,255,0.2)",
+                }}
+              />
+            </button>
+          ))}
+        </div>
       </div>
     );
   }
