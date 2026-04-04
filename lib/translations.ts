@@ -183,7 +183,7 @@ const en: Translations = {
 
 const vi: Translations = {
   nav: {
-    howItWorks: 'Quy trình đặt sân',
+    howItWorks: 'Cách thức đặt sân',
     facility: 'Cơ Sở Vật Chất',
     faq: 'Câu hỏi thường gặp',
     secureYourCourt: 'Đặt sân ngay',
