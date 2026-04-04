@@ -95,14 +95,14 @@ const vi: FAQ[] = [
       'Courtyard Pickle cho mượn vợt và bóng miễn phí cho tất cả người chơi. Bạn chỉ cần đến sân và sẵn sàng nhập cuộc.',
   },
   {
-    question: 'Người mới bắt đầu có thể chơi tại Courtyard Pickleball không?',
+    question: 'Người mới bắt đầu có thể chơi tại Courtyard Pickle không?',
     answer:
-      'Chắc chắn rồi! Chúng tôi có các buổi giao lưu dành riêng cho người mới, nơi các người chơi kinh nghiệm sẽ hỗ trợ bạn học những kỹ thuật cơ bản. Các lớp học cá nhân và nhóm cũng luôn sẵn sàng — bạn có thể đặt trực tiếp qua đối tác hoặc liên hệ với chúng tôi để được tư vấn.',
+      'Chắc chắn rồi! Chúng tôi chào mừng người chơi ở mọi cấp độ tại Courtyard Pickle, và chúng tôi đặc biệt tự hào về cộng đồng tuyệt vời của mình luôn giúp đỡ những người mới bắt đầu.',
   },
   {
     question: 'Sân có lớp dạy chơi pickleball tại Đà Nẵng không?',
     answer:
-      'Có. Chúng tôi cung cấp cả lớp học cá nhân và lớp nhóm phù hợp với mọi trình độ tại Courtyard Pickleball Đà Nẵng. Bạn có thể đặt lớp thông qua đối tác đặt sân hoặc liên hệ trực tiếp với chúng tôi.',
+      'Có, chúng tôi cung cấp cả lớp học riêng và lớp học nhóm phù hợp với mọi cấp độ và lứa tuổi tại Courtyard Pickle. Bạn có thể tham khảo và đặt lịch bằng cách liên hệ trực tiếp với chúng tôi.',
   },
   {
     question: 'Chính sách hủy sân và hoàn tiền như thế nào?',
