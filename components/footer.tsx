@@ -85,7 +85,7 @@ export function Footer() {
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <a
-                href="https://www.facebook.com/profile.php?id=61571952061949"
+                href="https://www.facebook.com/courtyardpickleball"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={socialButtonStyle}
@@ -102,7 +102,7 @@ export function Footer() {
                 {t.footer.messageFacebook}
               </a>
               <a
-                href="https://zalo.me/g/xegehi407"
+                href="https://zalo.me/[number]"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={socialButtonStyle}
