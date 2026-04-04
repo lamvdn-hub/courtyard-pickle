@@ -10,6 +10,7 @@ export interface Translations {
   hero: {
     headlinePart1: string;
     headlinePart2: string;
+    slogan?: string;
     description: string;
     ctaPrimary: string;
     ctaSecondary: string;
@@ -189,6 +190,7 @@ const vi: Translations = {
   hero: {
     headlinePart1: 'Courtyard',
     headlinePart2: 'Chờ Đón Bạn.',
+    slogan: 'Nơi Cảm Xúc Được "Chạm" Tới',
     description:
       'Hệ thống sân có mái che. Dịch vụ vệ sinh dụng cụ miễn phí. Café thư giãn sau trận đấu. Tại Courtyard, hãy để chúng tôi lo mọi thứ để bạn có thể tận hưởng cuộc chơi.',
     ctaPrimary: 'Đặt sân ngay',
