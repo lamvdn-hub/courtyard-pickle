@@ -77,7 +77,7 @@ const vi: FAQ[] = [
   {
     question: 'Giờ mở cửa của sân là khi nào?',
     answer:
-      'Courtyard Pickle Đà Nẵng mở cửa hàng ngày từ 05:00 đến 22:00. Giờ hoạt động có thể thay đổi vào các ngày lễ, xin vui lòng kiểm tra lịch đặt sân để cập nhật tình trạng sân trống thực tế.',
+      'Courtyard Pickle Đà Nẵng mở cửa hàng ngày từ 05:00 đến 22:00. Giờ hoạt động có thể thay đổi vào các ngày lễ, xin vui lòng kiểm tra out để cập nhật tình trạng sân trống thực tế.',
   },
   {
     question: 'Courtyard Pickle nằm ở đâu?',
