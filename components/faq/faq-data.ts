@@ -110,17 +110,12 @@ const vi: FAQ[] = [
       'Bạn có thể đổi lịch đặt sân miễn phí trước giờ chơi ít nhất 12 tiếng. Các yêu cầu hủy sân trước 12 tiếng sẽ được hoàn tiền đầy đủ. Các trường hợp hủy trong vòng 12 tiếng trước giờ chơi sẽ không được hoàn tiền.',
   },
   {
-    question: 'Tôi nên mặc gì khi chơi pickleball?',
+    question: 'Courtyard Pickle có chỗ đậu xe không?',
     answer:
-      'Bạn chỉ cần mặc trang phục thể thao thoải mái. Chúng tôi có sẵn phòng thay đồ và khu vực vệ sinh hiện đại ngay tại cơ sở để phục vụ bạn.',
+      'Chúng tôi có khu vực đậu xe máy rộng rãi tại sân. Đối với ô tô, bạn có thể đậu dọc lề đường ngay phía trước sân trên đường Dương Thị Xuân Quý.',
   },
   {
-    question: 'Courtyard Pickleball Đà Nẵng có chỗ đậu xe không?',
-    answer:
-      'Có. Chúng tôi có khu vực đậu xe máy riêng tại chỗ. Đối với ô tô, bạn có thể đậu dọc lề đường ngay phía trước sân trên đường Dương Thị Xuân Quý.',
-  },
-  {
-    question: 'Tôi có thể đặt sân cho nhóm hoặc sự kiện riêng tại Đà Nẵng không?',
+    question: 'Tôi có thể đặt sân cho nhóm hoặc sự kiện riêng không?',
     answer:
       'Có. Chúng tôi nhận tổ chức các buổi giao lưu nhóm, sự kiện công ty và giải đấu nội bộ tại Courtyard Pickleball. Vui lòng liên hệ qua số điện thoại +84 932150006 hoặc nhắn tin qua Facebook để thảo luận về lịch trống, mức giá và khâu tổ chức.',
   },
