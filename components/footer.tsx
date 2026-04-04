@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
+import { FACEBOOK_URL, ZALO_URL } from '@/lib/constants';
 
 function FacebookButtonIcon() {
   return (
@@ -85,7 +86,7 @@ export function Footer() {
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               <a
-                href="https://www.facebook.com/profile.php?id=61571952061949"
+                href={FACEBOOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={socialButtonStyle}
@@ -102,7 +103,7 @@ export function Footer() {
                 {t.footer.messageFacebook}
               </a>
               <a
-                href="https://zalo.me/g/xegehi407"
+                href={ZALO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={socialButtonStyle}
