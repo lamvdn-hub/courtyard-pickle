@@ -158,12 +158,12 @@ export function PhotoSlideshow({ mode }: PhotoSlideshowProps) {
 
   if (mode === "desktop") {
     return (
-      <div
-        ref={containerRef}
-        className="w-full h-full relative overflow-hidden flex flex-col"
-        style={{ backgroundColor: "#132015" }}
-      >
-        <div className="flex-1 relative">
+      <div className="flex flex-col">
+        <div
+          ref={containerRef}
+          className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10"
+          style={{ backgroundColor: "#132015" }}
+        >
           {images}
         </div>
         <div className="flex items-center justify-center gap-2 py-4">

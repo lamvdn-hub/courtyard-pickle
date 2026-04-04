@@ -81,9 +81,7 @@ export function HeroSection() {
           </div>
 
           <div className="hidden lg:block">
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10">
-              <PhotoSlideshow mode="desktop" />
-            </div>
+            <PhotoSlideshow mode="desktop" />
           </div>
         </div>
 
