@@ -14,7 +14,7 @@ const en: FAQ[] = [
   {
     question: 'How much does it cost to rent a pickleball court in Da Nang?',
     answer:
-      'Court rental pricing varies by time slot, ranging from 120k-160k per hour with social play ticket at 50k per section. Courtyard Pickle also offer monthly regular schedule from 100k-140k per hour.
+      'Court rental pricing varies by time slot, ranging from 120k-160k per hour with social play ticket at 50k per section. Courtyard Pickle also offer monthly regular schedule from 100k-140k per hour.'
   },
   {
     question: 'What are your opening hours?',
