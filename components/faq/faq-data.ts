@@ -90,9 +90,9 @@ const vi: FAQ[] = [
       'Bạn có thể tìm thấy chúng tôi tại số 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng.',
   },
   {
-    question: 'Tôi có cần tự mang theo vợt không?',
+    question: 'Sân có cho thuê vợt ko??',
     answer:
-      'Không cần thiết. Courtyard Pickleball cung cấp vợt và bóng miễn phí cho tất cả người chơi. Bạn chỉ cần đến sân và sẵn sàng nhập cuộc.',
+      'Courtyard Pickle cho mượn vợt và bóng miễn phí cho tất cả người chơi. Bạn chỉ cần đến sân và sẵn sàng nhập cuộc.',
   },
   {
     question: 'Người mới bắt đầu có thể chơi tại Courtyard Pickleball không?',
