@@ -152,6 +152,7 @@ const en: Translations = {
     court1: 'COURT 1 · INTERIOR',
     court2: 'COURT 2 · STREETSIDE',
     comingSoon: 'Coming soon',
+    frontDesk: '+ Front Desk',
     openSeating: 'Open seating',
     counterTablesReception: 'Counter · Tables · Reception',
   },
@@ -243,8 +244,9 @@ const vi: Translations = {
     court1: 'SÂN 1 · TRONG NHÀ',
     court2: 'SÂN 2 · MẶT ĐƯỜNG',
     comingSoon: 'Sắp ra mắt',
+    frontDesk: '+ Quầy lễ tân',
     openSeating: 'Chỗ ngồi tự do',
-    counterTablesReception: 'Bàn ghế · Lễ tân',
+    counterTablesReception: 'Bàn ghế ngồi · Ổ điện',
   },
   cta: {
     readyTitle: 'Sẵn Sàng Nhập Cuộc?',
