@@ -49,7 +49,7 @@ const en: FAQ[] = [
   {
     question: 'Is there parking at Courtyard Pickle?',
     answer:
-      'Yes. Dedicated motorcycle parking is available on-site. Car parking is available curbside directly in front of the facility on Dương Thị Xuân Quý.',
+      'Yes, dedicated motorcycle parking is available on-site. Car parking is available curbside directly in front of the facility on Dương Thị Xuân Quý.',
   },
   {
     question: 'Can I book pickleball courts for a group or private event?',
