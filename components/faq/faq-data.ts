@@ -37,7 +37,7 @@ const en: FAQ[] = [
       'Absolutely. We welcome all level of players to Courtyard Pickle, and we are especially proud of our amazing community that always extend a helping hand to beginners.',
   },
   {
-    question: 'Do you offer pickleball lessons in Da Nang?',
+    question: 'Do you offer pickleball lessons at Courtyard?',
     answer:
       'Yes, we offer both private and group lessons suitable for all levels and ages at Courtyard Pickle. Lessons can be booked by contacting us directly.',
   },
