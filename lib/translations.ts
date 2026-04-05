@@ -17,8 +17,8 @@ export interface Translations {
     ctaSecondaryMobile: string;
   };
   features: {
+    refreshments: string;
     equipment: string;
-    sheltered: string;
     skillLevels: string;
   };
   mobile: {
@@ -108,8 +108,8 @@ const en: Translations = {
     ctaSecondaryMobile: 'See how it works',
   },
   features: {
+    refreshments: 'Refreshing Fruits While Playing',
     equipment: 'Free Equipment and Cleaning',
-    sheltered: 'Covered & Sheltered',
     skillLevels: 'All Skill Levels',
   },
   mobile: {
@@ -200,8 +200,8 @@ const vi: Translations = {
     ctaSecondaryMobile: 'Tìm hiểu thêm',
   },
   features: {
+    refreshments: 'Trái cây giải nhiệt khi chơi',
     equipment: 'Miễn phí dụng cụ & vệ sinh',
-    sheltered: 'Sân có mái che hiện đại',
     skillLevels: 'Phù hợp mọi cấp độ',
   },
   mobile: {

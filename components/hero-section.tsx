@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Umbrella, Shield, Users } from "lucide-react";
+import { ArrowRight, Apple, Shield, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import { PhotoSlideshow } from "@/components/photo-slideshow";
@@ -10,8 +10,8 @@ export function HeroSection() {
   const { t } = useLanguage();
 
   const features = [
+    { icon: Apple, label: t.features.refreshments },
     { icon: Shield, label: t.features.equipment },
-    { icon: Umbrella, label: t.features.sheltered },
     { icon: Users, label: t.features.skillLevels },
   ];
 
