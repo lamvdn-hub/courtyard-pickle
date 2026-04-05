@@ -128,7 +128,7 @@ const en: Translations = {
     step1Title: 'Pick Your Date & Court',
     step1Desc: 'View real time availability, choose your preferred date and court on our booking page.',
     step1MobileTitle: 'Pick your date & court',
-    step1MobileDesc: 'Browse availability on our booking page',
+    step1MobileDesc: 'Browse date and live availability on our booking page',
     step2Title: 'Confirm & Pay',
     step2Desc: 'Booking information will be sent to you directly after payment confirmation.',
     step2MobileTitle: 'Confirm & pay',
