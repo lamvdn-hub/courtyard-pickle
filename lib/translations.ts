@@ -136,7 +136,7 @@ const en: Translations = {
     step3Title: 'Show Up & Play',
     step3Desc: "Court's ready, refreshment prepared, even gears are included. Simply arrive and enjoy your time.",
     step3MobileTitle: 'Show up & play',
-    step3MobileDesc: 'Gear ready. Courts prepped. Just arrive',
+    step3MobileDesc: 'Gear ready, refreshments are prepped. Simply arrive and enjoy.',
   },
   facility: {
     header: 'Our Facility',
