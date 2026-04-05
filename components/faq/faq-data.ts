@@ -34,7 +34,7 @@ const en: FAQ[] = [
   {
     question: 'Can beginners play at Courtyard Pickle?',
     answer:
-      'Absolutely. We welcome all level of players to Courtyard Pickle, and we are especially proud of our amazing community that always extend a helping hand to beginners.',
+      'Absolutely! We welcome all level of players to Courtyard Pickle, and we are especially proud of our amazing community that always extend a helping hand to beginners.',
   },
   {
     question: 'Do you offer pickleball lessons at Courtyard?',
