@@ -85,21 +85,6 @@ export function LanguageSwitcher({ currentLang, variant = 'desktop' }: LanguageS
           </span>
         ))}
       </div>
-      {t.hero.slogan && (
-        <div
-          className="border-l-2 pl-3"
-          style={{
-            borderColor: '#ccff00',
-            fontSize: '12px',
-            fontStyle: 'italic',
-            color: 'rgba(255,255,255,0.45)',
-            lineHeight: '1.3',
-            maxWidth: '200px',
-          }}
-        >
-          {t.hero.slogan}
-        </div>
-      )}
     </div>
   );
 }
