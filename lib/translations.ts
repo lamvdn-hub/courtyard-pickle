@@ -84,6 +84,7 @@ export interface Translations {
     primaryPhone: string;
     secondaryPhone: string;
     copyNumber: string;
+    copiedNumber: string;
     locationTitle: string;
     addressLine1: string;
     addressLine2: string;
@@ -176,9 +177,10 @@ const en: Translations = {
     contactTitle: 'CONTACT US',
     messageFacebook: 'Facebook',
     callUs: 'Call Us',
-    primaryPhone: 'Primary',
-    secondaryPhone: 'Secondary',
+    primaryPhone: 'PRIMARY',
+    secondaryPhone: 'SECONDARY',
     copyNumber: 'Copy',
+    copiedNumber: 'Copied \u2713',
     locationTitle: 'LOCATION',
     addressLine1: '27 Thị Xuân Quý',
     addressLine2: 'Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam',
@@ -271,9 +273,10 @@ const vi: Translations = {
     contactTitle: 'LIÊN HỆ',
     messageFacebook: 'Facebook',
     callUs: 'Gọi điện',
-    primaryPhone: 'Chính',
-    secondaryPhone: 'Phụ',
+    primaryPhone: 'CHÍNH',
+    secondaryPhone: 'PHỤ',
     copyNumber: 'Sao chép',
+    copiedNumber: 'Đã sao chép \u2713',
     locationTitle: 'ĐỊA ĐIỂM',
     addressLine1: '27 Thị Xuân Quý',
     addressLine2: 'Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam',
