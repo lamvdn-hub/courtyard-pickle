@@ -201,7 +201,7 @@ const vi: Translations = {
   },
   features: {
     refreshments: 'Trái cây giải nhiệt khi chơi',
-    facilities: 'Phòng tắm & Tiện nghi đầy đủ',
+    facilities: 'Phòng tắm & tiện nghi đầy đủ',
     skillLevels: 'Phù hợp mọi cấp độ',
   },
   mobile: {
