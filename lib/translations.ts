@@ -102,7 +102,7 @@ const en: Translations = {
     headlinePart1: 'Courtyard',
     headlinePart2: 'Pickle.',
     description:
-      'Sheltered courts. Free equipment care. A café to unwind after your games. At Courtyard, leave the details to us and just enjoy.',
+      'Sheltered courts. Free equipments and cleaning service. A café to unwind after your games. At Courtyard, leave the details to us and just enjoy.',
     ctaPrimary: 'Book a Court',
     ctaSecondary: 'How It Works',
     ctaSecondaryMobile: 'See how it works',
