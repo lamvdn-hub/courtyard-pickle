@@ -110,7 +110,7 @@ const en: Translations = {
   features: {
     refreshments: 'Refreshing Fruits During Your Game',
     equipment: 'Free Equipment and Cleaning',
-    skillLevels: 'All Skill Levels',
+    skillLevels: 'All Skill Levels Welcomed',
   },
   mobile: {
     language: 'Language',
