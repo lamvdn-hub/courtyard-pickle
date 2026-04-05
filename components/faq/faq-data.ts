@@ -47,7 +47,7 @@ const en: FAQ[] = [
       'You can reschedule any booking up to 12 hours in advance at no charge. Cancellations made more than 12 hours before your session are eligible for a full refund. Cancellations within 12 hours are non-refundable.',
   },
   {
-    question: 'Is there parking at Courtyard Pickleball in Da Nang?',
+    question: 'Is there parking at Courtyard Pickle?',
     answer:
       'Yes. Dedicated motorcycle parking is available on-site. Car parking is available curbside directly in front of the facility on Dương Thị Xuân Quý.',
   },
