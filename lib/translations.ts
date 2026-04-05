@@ -100,7 +100,7 @@ const en: Translations = {
   },
   hero: {
     headlinePart1: 'Courtyard',
-    headlinePart2: 'Awaits You.',
+    headlinePart2: 'Pickle.',
     description:
       'Covered courts. Free equipment care. A café to unwind after your games. At Courtyard, leave the details to us and just enjoy.',
     ctaPrimary: 'Book a Court',
