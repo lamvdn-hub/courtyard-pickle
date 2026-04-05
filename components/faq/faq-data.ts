@@ -22,7 +22,7 @@ const en: FAQ[] = [
       'Courtyard Pickle Da Nang is open daily from 05:00 to 22:00. Hours may vary on public holidays, please check our booking calendar for live availability.',
   },
   {
-    question: 'Where is Courtyard Pickleball located?',
+    question: 'Where is Courtyard Pickle located?',
     answer:
       'You can find us at 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng.',
   },
