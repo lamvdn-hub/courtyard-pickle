@@ -130,7 +130,7 @@ const en: Translations = {
     step1MobileTitle: 'Pick your date & court',
     step1MobileDesc: 'Browse availability on our booking page',
     step2Title: 'Confirm & Pay',
-    step2Desc: 'Complete your payment securely through our trusted partner. Instant confirmation sent to your email.',
+    step2Desc: 'After payment is confirmed, booking information will be sent to you directly.',
     step2MobileTitle: 'Confirm & pay',
     step2MobileDesc: 'Secure checkout. Instant email confirmation',
     step3Title: 'Show Up & Play',
