@@ -18,8 +18,6 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const [contactExpanded, setContactExpanded] = useState(false);
-  const contactPanelRef = useRef<HTMLDivElement>(null);
-  const [contactPanelHeight, setContactPanelHeight] = useState(0);
   const { lang, t } = useLanguage();
 
   const navLinks = [
@@ -39,12 +37,6 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
       document.body.style.overflow = '';
     };
   }, [isOpen]);
-
-  useEffect(() => {
-    if (contactPanelRef.current) {
-      setContactPanelHeight(contactPanelRef.current.scrollHeight);
-    }
-  }, [contactExpanded]);
 
   const handleClose = useCallback(() => {
     onClose();
@@ -159,15 +151,15 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
 
             <div
               style={{
-                maxHeight: contactExpanded ? `${contactPanelHeight}px` : '0px',
+                maxHeight: contactExpanded ? '1000px' : '0px',
                 opacity: contactExpanded ? 1 : 0,
                 overflow: 'hidden',
                 transition: contactExpanded
-                  ? 'max-height 0.2s ease-out, opacity 0.2s ease-out'
+                  ? 'max-height 0.35s ease-out, opacity 0.2s ease-out'
                   : 'max-height 0.15s ease-in, opacity 0.15s ease-in',
               }}
             >
-              <div ref={contactPanelRef} style={{ paddingBottom: '16px' }}>
+              <div style={{ paddingBottom: '16px' }}>
                 <ContactPanel />
               </div>
             </div>
