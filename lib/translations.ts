@@ -108,7 +108,7 @@ const en: Translations = {
     ctaSecondaryMobile: 'See how it works',
   },
   features: {
-    refreshments: 'Refreshing Fruits While Playing',
+    refreshments: 'Refreshing Fruits During Your Game',
     equipment: 'Free Equipment and Cleaning',
     skillLevels: 'All Skill Levels',
   },
