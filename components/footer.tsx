@@ -1,9 +1,10 @@
 'use client';
 
+import { useState } from 'react';
 import Image from 'next/image';
-import { MapPin } from 'lucide-react';
+import { MapPin, PhoneCall, Check } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
-import { FACEBOOK_URL, ZALO_URL } from '@/lib/constants';
+import { FACEBOOK_URL, PHONE_NUMBER_PRIMARY, PHONE_NUMBER_SECONDARY } from '@/lib/constants';
 
 function FacebookButtonIcon() {
   return (
@@ -14,12 +15,19 @@ function FacebookButtonIcon() {
   );
 }
 
-function ZaloButtonIcon() {
+function PhoneButtonIcon() {
   return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M3 16C3 16 4.8 14.8 5.8 14.2C7.2 13.4 8.2 13.2 10 13.2C14 13.2 17 11 17 8.2C17 5.4 14 3.2 10 3.2C6 3.2 3 5.4 3 8.2C3 9.8 4 11.2 5.5 12.2L5 16H3Z" fill="#0068FF" stroke="#0068FF" strokeWidth="0.5" strokeLinejoin="round"/>
-      <text x="10" y="9.5" fontSize="5" fill="#fff" textAnchor="middle" fontWeight="700" fontFamily="system-ui">Zalo</text>
-    </svg>
+    <div style={{
+      width: '20px',
+      height: '20px',
+      borderRadius: '50%',
+      background: '#10b981',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }}>
+      <PhoneCall size={11} color="#fff" />
+    </div>
   );
 }
 
@@ -40,6 +48,14 @@ const socialButtonStyle: React.CSSProperties = {
 
 export function Footer() {
   const { t } = useLanguage();
+  const [phoneExpanded, setPhoneExpanded] = useState(false);
+  const [copiedNumber, setCopiedNumber] = useState<string | null>(null);
+
+  const copyToClipboard = (number: string) => {
+    navigator.clipboard.writeText(number);
+    setCopiedNumber(number);
+    setTimeout(() => setCopiedNumber(null), 2000);
+  };
 
   return (
     <footer className="relative border-t border-white/[0.06]">
@@ -102,23 +118,144 @@ export function Footer() {
                 <FacebookButtonIcon />
                 {t.footer.messageFacebook}
               </a>
-              <a
-                href={ZALO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={socialButtonStyle}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,255,255,0.09)';
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.18)';
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,255,255,0.05)';
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.1)';
-                }}
-              >
-                <ZaloButtonIcon />
-                {t.footer.chatZalo}
-              </a>
+
+              <div>
+                <button
+                  onClick={() => setPhoneExpanded(!phoneExpanded)}
+                  style={{
+                    ...socialButtonStyle,
+                    textAlign: 'left'
+                  }}
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.09)';
+                    (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.18)';
+                  }}
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.05)';
+                    (e.currentTarget as HTMLButtonElement).style.borderColor = 'rgba(255,255,255,0.1)';
+                  }}
+                >
+                  <PhoneButtonIcon />
+                  {t.footer.callUs}
+                </button>
+
+                {phoneExpanded && (
+                  <div style={{
+                    marginTop: '10px',
+                    padding: '12px',
+                    background: 'rgba(255,255,255,0.03)',
+                    border: '1px solid rgba(255,255,255,0.08)',
+                    borderRadius: '10px',
+                  }}>
+                    <div style={{ marginBottom: '12px' }}>
+                      <div style={{
+                        fontSize: '10px',
+                        color: 'rgba(255,255,255,0.4)',
+                        marginBottom: '4px',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em'
+                      }}>
+                        {t.footer.primaryPhone}
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <a
+                          href={`tel:${PHONE_NUMBER_PRIMARY}`}
+                          style={{
+                            fontSize: '15px',
+                            color: 'rgba(255,255,255,0.85)',
+                            fontWeight: 500,
+                            textDecoration: 'none',
+                            flex: 1
+                          }}
+                        >
+                          {PHONE_NUMBER_PRIMARY}
+                        </a>
+                        <button
+                          onClick={() => copyToClipboard(PHONE_NUMBER_PRIMARY)}
+                          style={{
+                            padding: '6px 10px',
+                            background: 'rgba(255,255,255,0.08)',
+                            border: '1px solid rgba(255,255,255,0.12)',
+                            borderRadius: '6px',
+                            fontSize: '11px',
+                            color: 'rgba(255,255,255,0.6)',
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '4px',
+                            transition: 'all 0.2s'
+                          }}
+                          onMouseEnter={e => {
+                            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.12)';
+                          }}
+                          onMouseLeave={e => {
+                            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.08)';
+                          }}
+                        >
+                          {copiedNumber === PHONE_NUMBER_PRIMARY ? (
+                            <Check size={12} />
+                          ) : (
+                            t.footer.copyNumber
+                          )}
+                        </button>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div style={{
+                        fontSize: '10px',
+                        color: 'rgba(255,255,255,0.4)',
+                        marginBottom: '4px',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em'
+                      }}>
+                        {t.footer.secondaryPhone}
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <a
+                          href={`tel:${PHONE_NUMBER_SECONDARY}`}
+                          style={{
+                            fontSize: '13px',
+                            color: 'rgba(255,255,255,0.6)',
+                            textDecoration: 'none',
+                            flex: 1
+                          }}
+                        >
+                          {PHONE_NUMBER_SECONDARY}
+                        </a>
+                        <button
+                          onClick={() => copyToClipboard(PHONE_NUMBER_SECONDARY)}
+                          style={{
+                            padding: '6px 10px',
+                            background: 'rgba(255,255,255,0.08)',
+                            border: '1px solid rgba(255,255,255,0.12)',
+                            borderRadius: '6px',
+                            fontSize: '11px',
+                            color: 'rgba(255,255,255,0.6)',
+                            cursor: 'pointer',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '4px',
+                            transition: 'all 0.2s'
+                          }}
+                          onMouseEnter={e => {
+                            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.12)';
+                          }}
+                          onMouseLeave={e => {
+                            (e.currentTarget as HTMLButtonElement).style.background = 'rgba(255,255,255,0.08)';
+                          }}
+                        >
+                          {copiedNumber === PHONE_NUMBER_SECONDARY ? (
+                            <Check size={12} />
+                          ) : (
+                            t.footer.copyNumber
+                          )}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 

@@ -80,7 +80,10 @@ export interface Translations {
     description: string;
     contactTitle: string;
     messageFacebook: string;
-    chatZalo: string;
+    callUs: string;
+    primaryPhone: string;
+    secondaryPhone: string;
+    copyNumber: string;
     locationTitle: string;
     addressLine1: string;
     addressLine2: string;
@@ -172,7 +175,10 @@ const en: Translations = {
     description: 'Courtyard Pickle is Da Nang\'s premier pickleball facility, offering court rentals, coaching, and social play at 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam.',
     contactTitle: 'CONTACT US',
     messageFacebook: 'Facebook',
-    chatZalo: 'Zalo',
+    callUs: 'Call Us',
+    primaryPhone: 'Primary',
+    secondaryPhone: 'Secondary',
+    copyNumber: 'Copy',
     locationTitle: 'LOCATION',
     addressLine1: '27 Thị Xuân Quý',
     addressLine2: 'Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam',
@@ -264,7 +270,10 @@ const vi: Translations = {
     description: 'Courtyard Pickle là tổ hợp sân pickleball uy tín tại Đà Nẵng, chuyên cung cấp dịch vụ thuê sân, lớp học và giao lưu cộng đồng tại số 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam.',
     contactTitle: 'LIÊN HỆ',
     messageFacebook: 'Facebook',
-    chatZalo: 'Zalo',
+    callUs: 'Gọi điện',
+    primaryPhone: 'Chính',
+    secondaryPhone: 'Phụ',
+    copyNumber: 'Sao chép',
     locationTitle: 'ĐỊA ĐIỂM',
     addressLine1: '27 Thị Xuân Quý',
     addressLine2: 'Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam',
