@@ -29,6 +29,12 @@ export function HeroSection() {
                 {t.hero.headlinePart1}{" "}
                 <span className="text-lime">{t.hero.headlinePart2}</span>
               </h1>
+
+              {t.hero.slogan && (
+                <h2 className="border-l-2 border-lime pl-[14px] mt-[14px] text-[18px] font-normal italic text-white/75 leading-snug">
+                  {t.hero.slogan}
+                </h2>
+              )}
             </div>
 
             <p className="text-[15px] text-white/[0.65] max-w-lg leading-relaxed sm:text-xl sm:text-slate-400">
