@@ -161,7 +161,7 @@ const en: Translations = {
   cta: {
     readyTitle: 'Ready to play?',
     reserve: 'Reserve Your Court',
-    disclaimer: "You'll be taken to our secure booking partner to complete your reservation.",
+    disclaimer: "You'll be taken to Alobo's official booking site to complete your reservation.",
   },
   faq: {
     kicker: 'Got Questions?',
