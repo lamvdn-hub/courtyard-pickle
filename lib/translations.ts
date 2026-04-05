@@ -165,7 +165,7 @@ const en: Translations = {
   faq: {
     kicker: 'Got Questions?',
     header: 'Everything You Need to Know',
-    subheader: 'Straight answers. No runaround.',
+    subheader: 'Clear information. Direct support.',
   },
   footer: {
     description: 'Courtyard Pickle is Da Nang\'s premier pickleball facility, offering court rentals, coaching, and social play at 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam.',
