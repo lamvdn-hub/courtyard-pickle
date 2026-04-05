@@ -18,7 +18,7 @@ export interface Translations {
   };
   features: {
     refreshments: string;
-    equipment: string;
+    facilities: string;
     skillLevels: string;
   };
   mobile: {
@@ -109,7 +109,7 @@ const en: Translations = {
   },
   features: {
     refreshments: 'Refreshing Fruits During Your Game',
-    equipment: 'Free Equipment and Cleaning',
+    facilities: 'Showers & Full Amenities',
     skillLevels: 'All Skill Levels Welcomed',
   },
   mobile: {
@@ -201,7 +201,7 @@ const vi: Translations = {
   },
   features: {
     refreshments: 'Trái cây giải nhiệt khi chơi',
-    equipment: 'Miễn phí dụng cụ & vệ sinh',
+    facilities: 'Phòng tắm & Tiện nghi đầy đủ',
     skillLevels: 'Phù hợp mọi cấp độ',
   },
   mobile: {
