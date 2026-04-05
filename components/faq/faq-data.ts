@@ -27,7 +27,7 @@ const en: FAQ[] = [
       'You can find us at 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng.',
   },
   {
-    question: 'Do I need to bring my own pickleball paddle?',
+    question: 'Do I need to bring my own paddle?',
     answer:
       ' Courtyard Pickle provides free paddles and balls for all our players. Just simply show up and play.',
   },
