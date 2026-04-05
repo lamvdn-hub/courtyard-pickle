@@ -101,7 +101,7 @@ const en: Translations = {
   hero: {
     headlinePart1: 'Courtyard',
     headlinePart2: 'Pickle.',
-    slogan: 'Where Emotions Are Touched',
+    slogan: 'Nơi Cảm Xúc Được Chạm Tới',
     description:
       'Sheltered courts. Free equipments and cleaning service. A café to unwind after your games. At Courtyard, leave the details to us and just enjoy.',
     ctaPrimary: 'Book a Court',

@@ -20,52 +20,36 @@ export function LanguageSwitcher({ currentLang, variant = 'desktop' }: LanguageS
 
   if (variant === 'mobile') {
     return (
-      <div className="flex flex-col gap-3">
-        <div className="flex items-center gap-3">
-          <Globe className="w-4 h-4" style={{ color: 'rgba(255,255,255,0.35)' }} />
-          <div className="flex items-center gap-2">
-            {LANGUAGES.map((lang, index) => (
-              <span key={lang.code} className="flex items-center gap-2">
-                <button
-                  onClick={() => handleSwitch(lang.code)}
-                  lang={lang.code}
-                  disabled={currentLang === lang.code}
-                  className="transition-colors duration-200"
-                  style={{
-                    fontSize: '14px',
-                    fontWeight: currentLang === lang.code ? 700 : 500,
-                    color: currentLang === lang.code ? '#fff' : 'rgba(255,255,255,0.35)',
-                    background: 'none',
-                    border: 'none',
-                    cursor: currentLang === lang.code ? 'default' : 'pointer',
-                    padding: 0,
-                  }}
-                  aria-label={`Switch to ${lang.label}`}
-                  aria-current={currentLang === lang.code ? 'true' : undefined}
-                >
-                  {lang.label}
-                </button>
-                {index < LANGUAGES.length - 1 && (
-                  <span style={{ color: 'rgba(255,255,255,0.12)', userSelect: 'none' }}>|</span>
-                )}
-              </span>
-            ))}
-          </div>
+      <div className="flex items-center gap-3">
+        <Globe className="w-4 h-4" style={{ color: 'rgba(255,255,255,0.35)' }} />
+        <div className="flex items-center gap-2">
+          {LANGUAGES.map((lang, index) => (
+            <span key={lang.code} className="flex items-center gap-2">
+              <button
+                onClick={() => handleSwitch(lang.code)}
+                lang={lang.code}
+                disabled={currentLang === lang.code}
+                className="transition-colors duration-200"
+                style={{
+                  fontSize: '14px',
+                  fontWeight: currentLang === lang.code ? 700 : 500,
+                  color: currentLang === lang.code ? '#fff' : 'rgba(255,255,255,0.35)',
+                  background: 'none',
+                  border: 'none',
+                  cursor: currentLang === lang.code ? 'default' : 'pointer',
+                  padding: 0,
+                }}
+                aria-label={`Switch to ${lang.label}`}
+                aria-current={currentLang === lang.code ? 'true' : undefined}
+              >
+                {lang.label}
+              </button>
+              {index < LANGUAGES.length - 1 && (
+                <span style={{ color: 'rgba(255,255,255,0.12)', userSelect: 'none' }}>|</span>
+              )}
+            </span>
+          ))}
         </div>
-        {t.hero.slogan && (
-          <div
-            className="border-l-2 pl-3"
-            style={{
-              borderColor: '#ccff00',
-              fontSize: '13px',
-              fontStyle: 'italic',
-              color: 'rgba(255,255,255,0.5)',
-              lineHeight: '1.4',
-            }}
-          >
-            {t.hero.slogan}
-          </div>
-        )}
       </div>
     );
   }
