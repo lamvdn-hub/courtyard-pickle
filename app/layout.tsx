@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Courtyard Pickle | Premium Indoor Pickleball',
   description:
-    '12 climate-controlled courts. Pro-grade cushioning. Post-game lounge. Book your court at Courtyard Pickle.',
+    'Sheltered courts. Free refreshments. Relaxing café. Book your court at Courtyard Pickle.',
 };
 
 export default function RootLayout({
