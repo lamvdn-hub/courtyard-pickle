@@ -1,11 +1,12 @@
 'use client';
 
-import { useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
-import { X, ArrowRight } from 'lucide-react';
+import { X, ArrowRight, ChevronDown } from 'lucide-react';
 import { BOOKING_URL } from '@/lib/constants';
 import { LanguageSwitcher } from '@/components/navigation/language-switcher';
 import { useLanguage } from '@/lib/language-context';
+import { ContactPanel } from '@/components/contact-panel';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -16,6 +17,9 @@ interface MobileMenuProps {
 export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const [contactExpanded, setContactExpanded] = useState(false);
+  const contactPanelRef = useRef<HTMLDivElement>(null);
+  const [contactPanelHeight, setContactPanelHeight] = useState(0);
   const { lang, t } = useLanguage();
 
   const navLinks = [
@@ -29,11 +33,18 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
+      setContactExpanded(false);
     }
     return () => {
       document.body.style.overflow = '';
     };
   }, [isOpen]);
+
+  useEffect(() => {
+    if (contactPanelRef.current) {
+      setContactPanelHeight(contactPanelRef.current.scrollHeight);
+    }
+  }, [contactExpanded]);
 
   const handleClose = useCallback(() => {
     onClose();
@@ -90,7 +101,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
         </button>
       </div>
 
-      <div className="flex-1 flex flex-col px-6 pt-8">
+      <div className="flex-1 flex flex-col px-6 pt-8 overflow-y-auto">
         <nav>
           {navLinks.map((link, index) => (
             <a
@@ -109,7 +120,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
                 fontWeight: 500,
                 color: '#fff',
                 letterSpacing: '-0.01em',
-                borderBottom: index < navLinks.length - 1 ? '1px solid rgba(255,255,255,0.06)' : 'none',
+                borderBottom: '1px solid rgba(255,255,255,0.06)',
                 outline: 'none',
               }}
             >
@@ -117,6 +128,50 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               <ArrowRight className="w-4 h-4" style={{ opacity: 0.3 }} />
             </a>
           ))}
+
+          <div style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+            <button
+              onClick={() => setContactExpanded(!contactExpanded)}
+              className="flex items-center justify-between w-full transition-colors"
+              style={{
+                padding: '18px 0',
+                fontSize: '18px',
+                fontWeight: 500,
+                color: '#fff',
+                letterSpacing: '-0.01em',
+                outline: 'none',
+                background: 'none',
+                border: 'none',
+                cursor: 'pointer',
+                textAlign: 'left',
+              }}
+            >
+              {t.mobile.contact}
+              <ChevronDown
+                className="w-[14px] h-[14px]"
+                style={{
+                  opacity: 0.3,
+                  transition: 'transform 0.2s ease',
+                  transform: contactExpanded ? 'rotate(180deg)' : 'rotate(0deg)',
+                }}
+              />
+            </button>
+
+            <div
+              style={{
+                maxHeight: contactExpanded ? `${contactPanelHeight}px` : '0px',
+                opacity: contactExpanded ? 1 : 0,
+                overflow: 'hidden',
+                transition: contactExpanded
+                  ? 'max-height 0.2s ease-out, opacity 0.2s ease-out'
+                  : 'max-height 0.15s ease-in, opacity 0.15s ease-in',
+              }}
+            >
+              <div ref={contactPanelRef} style={{ paddingBottom: '16px' }}>
+                <ContactPanel />
+              </div>
+            </div>
+          </div>
         </nav>
 
         <div

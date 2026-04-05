@@ -5,6 +5,7 @@ export interface Translations {
     howItWorks: string;
     facility: string;
     faq: string;
+    contact: string;
     secureYourCourt: string;
   };
   hero: {
@@ -28,6 +29,7 @@ export interface Translations {
     howItWorks: string;
     ourFacility: string;
     faq: string;
+    contact: string;
     openHours: string;
   };
   howItWorks: {
@@ -100,6 +102,7 @@ const en: Translations = {
     howItWorks: 'How it Works',
     facility: 'Facility',
     faq: 'FAQ',
+    contact: 'CONTACT',
     secureYourCourt: 'Secure Your Court',
   },
   hero: {
@@ -124,6 +127,7 @@ const en: Translations = {
     howItWorks: 'How it works',
     ourFacility: 'Our facility',
     faq: 'FAQ',
+    contact: 'Contact',
     openHours: 'Open daily 05:00 – 22:00  ·  2 courts available',
   },
   howItWorks: {
@@ -196,6 +200,7 @@ const vi: Translations = {
     howItWorks: 'Cách thức đặt sân',
     facility: 'Cơ sở vật chất',
     faq: 'Câu hỏi thường gặp',
+    contact: 'LIÊN HỆ',
     secureYourCourt: 'Đặt sân ngay',
   },
   hero: {
@@ -220,6 +225,7 @@ const vi: Translations = {
     howItWorks: 'Cách thức đặt sân',
     ourFacility: 'Cơ sở vật chất',
     faq: 'Câu hỏi thường gặp',
+    contact: 'Liên hệ',
     openHours: 'Mở cửa hàng ngày 05:00 – 22:00  ·  2 sân',
   },
   howItWorks: {

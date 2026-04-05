@@ -3,32 +3,7 @@
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
-import { FACEBOOK_URL } from '@/lib/constants';
-import { PhoneContact } from '@/components/phone-contact';
-
-function FacebookButtonIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="10" cy="10" r="8.5" fill="#1877F2"/>
-      <path d="M12 6.5H10.5C10.2 6.5 10 6.7 10 7V8.5H12L11.7 10.5H10V16H8V10.5H6.5V8.5H8V7C8 5.9 8.9 5 10 5H12V6.5Z" fill="#fff"/>
-    </svg>
-  );
-}
-
-const socialButtonStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  gap: '10px',
-  width: '100%',
-  background: 'rgba(255,255,255,0.05)',
-  border: '1px solid rgba(255,255,255,0.1)',
-  borderRadius: '10px',
-  padding: '10px 16px',
-  fontSize: '13px',
-  color: 'rgba(255,255,255,0.6)',
-  cursor: 'pointer',
-  transition: 'background 0.2s, border-color 0.2s',
-};
+import { ContactPanel } from '@/components/contact-panel';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -76,27 +51,7 @@ export function Footer() {
             >
               {t.footer.contactTitle}
             </h4>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              <a
-                href={FACEBOOK_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={socialButtonStyle}
-                onMouseEnter={e => {
-                  (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,255,255,0.09)';
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.18)';
-                }}
-                onMouseLeave={e => {
-                  (e.currentTarget as HTMLAnchorElement).style.background = 'rgba(255,255,255,0.05)';
-                  (e.currentTarget as HTMLAnchorElement).style.borderColor = 'rgba(255,255,255,0.1)';
-                }}
-              >
-                <FacebookButtonIcon />
-                {t.footer.messageFacebook}
-              </a>
-
-              <PhoneContact />
-            </div>
+            <ContactPanel />
           </div>
 
           <div>

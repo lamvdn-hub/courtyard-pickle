@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -8,11 +8,15 @@ import { BOOKING_URL } from '@/lib/constants';
 import { MobileMenu } from '@/components/mobile-menu';
 import { LanguageSwitcher } from '@/components/navigation/language-switcher';
 import { useLanguage } from '@/lib/language-context';
+import { ContactPanel } from '@/components/contact-panel';
 
 export function StickyNav() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [contactOpen, setContactOpen] = useState(false);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
+  const contactLinkRef = useRef<HTMLButtonElement>(null);
+  const popoverRef = useRef<HTMLDivElement>(null);
   const { lang, t } = useLanguage();
 
   const navLinks = [
@@ -26,6 +30,34 @@ export function StickyNav() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const handleClickOutside = useCallback((e: MouseEvent) => {
+    if (
+      popoverRef.current &&
+      !popoverRef.current.contains(e.target as Node) &&
+      contactLinkRef.current &&
+      !contactLinkRef.current.contains(e.target as Node)
+    ) {
+      setContactOpen(false);
+    }
+  }, []);
+
+  const handleEscape = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      setContactOpen(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (contactOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener('keydown', handleEscape);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [contactOpen, handleClickOutside, handleEscape]);
 
   return (
     <>
@@ -62,6 +94,50 @@ export function StickyNav() {
                   {link.label}
                 </a>
               ))}
+              <div className="relative">
+                <button
+                  ref={contactLinkRef}
+                  onClick={() => setContactOpen(!contactOpen)}
+                  className="text-sm hover:text-white transition-colors duration-200 tracking-wide uppercase"
+                  style={{
+                    color: contactOpen ? '#fff' : undefined,
+                    background: 'none',
+                    border: 'none',
+                    cursor: 'pointer',
+                    padding: 0,
+                    font: 'inherit',
+                  }}
+                >
+                  <span className={contactOpen ? '' : 'text-slate-400'}>
+                    {t.nav.contact}
+                  </span>
+                </button>
+
+                <div
+                  ref={popoverRef}
+                  style={{
+                    position: 'absolute',
+                    top: 'calc(100% + 8px)',
+                    left: '50%',
+                    transform: contactOpen
+                      ? 'translateX(-50%) translateY(0px)'
+                      : 'translateX(-50%) translateY(-4px)',
+                    width: '280px',
+                    background: '#0f2213',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    borderRadius: '12px',
+                    padding: '16px',
+                    zIndex: 100,
+                    opacity: contactOpen ? 1 : 0,
+                    pointerEvents: contactOpen ? 'auto' : 'none',
+                    transition: contactOpen
+                      ? 'opacity 0.18s ease-out, transform 0.18s ease-out'
+                      : 'opacity 0.14s ease-in, transform 0.14s ease-in',
+                  }}
+                >
+                  <ContactPanel showHeading />
+                </div>
+              </div>
             </div>
 
             <div className="flex items-center gap-3">
