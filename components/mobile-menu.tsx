@@ -228,21 +228,21 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             {t.mobile.secureYourCourt}&nbsp;&rarr;
           </a>
         </div>
-      </div>
 
-      <div
-        className="px-6 py-6"
-        style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
-      >
-        <p
-          className="text-center"
-          style={{
-            fontSize: '11px',
-            color: 'rgba(255,255,255,0.2)',
-          }}
+        <div
+          className="py-6 mt-6"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
         >
-          {t.mobile.openHours}
-        </p>
+          <p
+            className="text-center"
+            style={{
+              fontSize: '11px',
+              color: 'rgba(255,255,255,0.2)',
+            }}
+          >
+            {t.mobile.openHours}
+          </p>
+        </div>
       </div>
     </div>
   );

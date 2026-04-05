@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect, useCallback } from 'react';
+import { useState, useRef, useCallback } from 'react';
 import { PhoneCall, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
 import { FACEBOOK_URL, PHONE_NUMBER_PRIMARY, PHONE_NUMBER_SECONDARY } from '@/lib/constants';
@@ -110,13 +110,6 @@ export function ContactPanel({ showHeading = false }: ContactPanelProps) {
   const [phoneExpanded, setPhoneExpanded] = useState(false);
   const [copiedNumber, setCopiedNumber] = useState<string | null>(null);
   const panelRef = useRef<HTMLDivElement>(null);
-  const [panelHeight, setPanelHeight] = useState(0);
-
-  useEffect(() => {
-    if (panelRef.current) {
-      setPanelHeight(panelRef.current.scrollHeight);
-    }
-  }, [phoneExpanded]);
 
   const copyToClipboard = useCallback((number: string) => {
     try {
@@ -220,7 +213,7 @@ export function ContactPanel({ showHeading = false }: ContactPanelProps) {
 
           <div
             style={{
-              maxHeight: phoneExpanded ? `${panelHeight}px` : '0px',
+              maxHeight: phoneExpanded ? '500px' : '0px',
               opacity: phoneExpanded ? 1 : 0,
               overflow: 'hidden',
               transition: phoneExpanded
