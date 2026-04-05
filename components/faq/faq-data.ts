@@ -32,7 +32,7 @@ const en: FAQ[] = [
       ' Courtyard Pickle provides free paddles and balls for all our players. Just simply show up and play.',
   },
   {
-    question: 'Can beginners play at Courtyard Pickleball?',
+    question: 'Can beginners play at Courtyard Pickle?',
     answer:
       'Absolutely. We welcome all level of players to Courtyard Pickle, and we are especially proud of our amazing community that always extend a helping hand to beginners.',
   },
