@@ -1,11 +1,11 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Dancing_Script } from 'next/font/google';
+import { Inter, Pacifico } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
-const dancingScript = Dancing_Script({
+const pacifico = Pacifico({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: '400',
   variable: '--font-playfair',
 });
 
@@ -34,7 +34,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} ${dancingScript.variable}`}>{children}</body>
+      <body className={`${inter.className} ${pacifico.variable}`}>{children}</body>
     </html>
   );
 }
