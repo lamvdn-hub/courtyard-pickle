@@ -42,14 +42,14 @@ const en: FAQ[] = [
       'Yes, we offer both private and group lessons suitable for all levels and ages at Courtyard Pickle. Lessons can be booked by contacting us directly.',
   },
   {
-    question: 'What is your cancellation and refund policy?',
-    answer:
-      'You can reschedule any booking up to 12 hours in advance at no charge. Cancellations made more than 12 hours before your session are eligible for a full refund. Cancellations within 12 hours are non-refundable.',
-  },
-  {
     question: 'Is there parking at Courtyard Pickle?',
     answer:
       'Yes, dedicated motorcycle parking is available on-site. Car parking is available curbside directly in front of the facility on Dương Thị Xuân Quý.',
+  },
+  {
+    question: 'What is your cancellation and refund policy?',
+    answer:
+      'You can reschedule any booking up to 12 hours in advance at no charge. Cancellations made more than 12 hours before your session are eligible for a full refund. Cancellations within 12 hours are non-refundable.',
   },
   {
     question: 'Can I book pickleball courts for a group or private event?',
@@ -100,14 +100,14 @@ const vi: FAQ[] = [
       'Chúng tôi cung cấp cả lớp học riêng và lớp học nhóm phù hợp với mọi cấp độ và lứa tuổi tại Courtyard Pickle. Bạn có thể tham khảo và đặt lịch bằng cách liên hệ trực tiếp với chúng tôi.',
   },
   {
-    question: 'Chính sách hủy sân và hoàn tiền như thế nào?',
-    answer:
-      'Bạn có thể đổi lịch đặt sân miễn phí trước giờ chơi ít nhất 12 tiếng. Các yêu cầu hủy sân trước 12 tiếng sẽ được hoàn tiền đầy đủ. Các trường hợp hủy trong vòng 12 tiếng trước giờ chơi sẽ không được hoàn tiền.',
-  },
-  {
     question: 'Courtyard Pickle có chỗ đậu xe không?',
     answer:
       'Chúng tôi có khu vực đậu xe máy rộng rãi tại sân. Đối với ô tô, bạn có thể đậu dọc lề đường ngay phía trước sân trên đường Dương Thị Xuân Quý.',
+  },
+  {
+    question: 'Chính sách hủy sân và hoàn tiền như thế nào?',
+    answer:
+      'Bạn có thể đổi lịch đặt sân miễn phí trước giờ chơi ít nhất 12 tiếng. Các yêu cầu hủy sân trước 12 tiếng sẽ được hoàn tiền đầy đủ. Các trường hợp hủy trong vòng 12 tiếng trước giờ chơi sẽ không được hoàn tiền.',
   },
   {
     question: 'Tôi có thể đặt sân cho nhóm hoặc sự kiện riêng không?',
