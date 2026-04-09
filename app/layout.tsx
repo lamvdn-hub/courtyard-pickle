@@ -1,8 +1,13 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Playfair_Display } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
+const playfair = Playfair_Display({
+  subsets: ['latin', 'vietnamese'],
+  style: ['italic'],
+  variable: '--font-playfair',
+});
 
 export const metadata: Metadata = {
   title: 'Courtyard Pickle | Premium Indoor Pickleball',
@@ -29,7 +34,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} ${playfair.variable}`}>{children}</body>
     </html>
   );
 }
