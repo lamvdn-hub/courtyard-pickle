@@ -1,9 +1,9 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Inter, Lora } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
-const playfair = Playfair_Display({
+const lora = Lora({
   subsets: ['latin', 'vietnamese'],
   style: ['italic'],
   variable: '--font-playfair',
@@ -34,7 +34,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} ${playfair.variable}`}>{children}</body>
+      <body className={`${inter.className} ${lora.variable}`}>{children}</body>
     </html>
   );
 }
