@@ -1,12 +1,11 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, DM_Serif_Display } from 'next/font/google';
+import { Inter, Dancing_Script } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
-const dmSerifDisplay = DM_Serif_Display({
+const dancingScript = Dancing_Script({
   subsets: ['latin'],
-  style: ['italic'],
-  weight: '400',
+  weight: ['400', '700'],
   variable: '--font-playfair',
 });
 
@@ -35,7 +34,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} ${dmSerifDisplay.variable}`}>{children}</body>
+      <body className={`${inter.className} ${dancingScript.variable}`}>{children}</body>
     </html>
   );
 }
