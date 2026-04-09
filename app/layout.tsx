@@ -1,11 +1,12 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Lora } from 'next/font/google';
+import { Inter, DM_Serif_Display } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
-const lora = Lora({
-  subsets: ['latin', 'vietnamese'],
+const dmSerifDisplay = DM_Serif_Display({
+  subsets: ['latin'],
   style: ['italic'],
+  weight: '400',
   variable: '--font-playfair',
 });
 
@@ -34,7 +35,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} ${lora.variable}`}>{children}</body>
+      <body className={`${inter.className} ${dmSerifDisplay.variable}`}>{children}</body>
     </html>
   );
 }
