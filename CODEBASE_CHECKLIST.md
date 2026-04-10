@@ -16,12 +16,12 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 ---
 
 ## 🏷️ Phase 2: Meta Tags — Page Head
-- [ ] **Title Tag**: Add `<title>Courtyard Pickle — Pickleball Court Rental in Da Nang</title>`
-- [ ] **Meta Description**: Add `<meta name="description" content="Book covered pickleball courts in Da Nang at Courtyard Pickle. Court rentals, coaching, and social play at 27 Thị Xuân Quý, Ngũ Hành Sơn." />`
-- [ ] **Robots Tag**: Add `<meta name="robots" content="index, follow" />`
-- [ ] **Canonical Tag**: Add `<link rel="canonical" href="https://yourdomain.com" />`
-- [ ] **HTML Lang Attribute**: Add `lang` attribute to `<html>` tag (e.g., `lang="en"` or `lang="vi"`).
-- [ ] **Open Graph Tags**:
+- [x] **Title Tag**: Add `<title>Courtyard Pickle — Pickleball Court Rental in Da Nang</title>`
+- [x] **Meta Description**: Add `<meta name="description" content="Book sheltered pickleball courts in Da Nang at Courtyard Pickle. Court rentals, coaching, and social play at 27 Thị Xuân Quý, Ngũ Hành Sơn." />`
+- [x] **Robots Tag**: Add `<meta name="robots" content="index, follow" />`
+- [x] **Canonical Tag**: Add `<link rel="canonical" href="https://yourdomain.com" />`
+- [x] **HTML Lang Attribute**: Add `lang` attribute to `<html>` tag (e.g., `lang="en"` or `lang="vi"`).
+- [x] **Open Graph Tags**:
     - `og:title`
     - `og:description`
     - `og:url`
