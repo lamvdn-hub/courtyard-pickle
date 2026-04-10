@@ -73,7 +73,7 @@ export function StickyNav() {
             <a href="#" className="flex items-center gap-2 group">
               <Image
                 src="/courtyard_logo.webp"
-                alt="Courtyard Pickleball Logo"
+                alt="Courtyard Pickle Logo"
                 width={72}
                 height={72}
                 className="h-[72px] w-auto transition-transform group-hover:scale-105"

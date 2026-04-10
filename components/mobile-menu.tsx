@@ -72,7 +72,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
         <div className="flex items-center gap-2">
           <Image
             src="/courtyard_logo.webp"
-            alt="Courtyard Pickleball Logo"
+            alt="Courtyard Pickle Logo"
             width={72}
             height={72}
             className="h-[72px] w-auto"

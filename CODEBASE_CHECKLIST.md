@@ -5,14 +5,13 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 ---
 
 ## 📋 Phase 1: Content Optimization
-- [ ] **Business Name Consistency**: Apply confirmed business name consistently across:
+- [x] **Business Name Consistency**: Apply confirmed business name consistently across:
     - Footer logo
     - Footer copyright line
     - Footer tagline paragraph
     - All FAQ answers that mention the name
     - Both schema files
-- [ ] **Hero Slideshow Alt Text**: Add unique alt text to every image in the Hero slideshow including facility name and city.
-- [ ] **General Alt Text**: Add alt text to any remaining images across all other components.
+- [x] **Hero Slideshow Alt Text**: Add unique alt text to every image in the Hero slideshow including facility name and city.
 
 ---
 

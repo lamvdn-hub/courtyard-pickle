@@ -4,12 +4,12 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 
 const SLIDESHOW_IMAGES = [
-  "/slideshow-images/5.jpg",
-  "/slideshow-images/2.jpg",
-  "/slideshow-images/11.jpg",
-  "/slideshow-images/7.jpg",
-  "/slideshow-images/3.jpg",
-  "/slideshow-images/12.jpg",
+  { src: "/slideshow-images/5.jpg", alt: "Pickleball tournament participants celebrating at Courtyard Pickle, Da Nang" },
+  { src: "/slideshow-images/2.jpg", alt: "Women's pickleball tournament winners and players at Courtyard Pickle, Da Nang" },
+  { src: "/slideshow-images/11.jpg", alt: "Two players in a team competing in a pickleball doubles match at Courtyard Pickle, Da Nang" },
+  { src: "/slideshow-images/7.jpg", alt: "Pickleball player executing a backhand shot at Courtyard Pickle courts, Da Nang" },
+  { src: "/slideshow-images/3.jpg", alt: "Female pickleball player preparing to hit at Courtyard Pickle, Da Nang" },
+  { src: "/slideshow-images/12.jpg", alt: "Female pickleball player mid forehand swing at Courtyard Pickle courts, Da Nang" },
 ];
 
 const AUTOPLAY_INTERVAL = 6000;
@@ -133,9 +133,9 @@ export function PhotoSlideshow({ mode }: PhotoSlideshowProps) {
     [goNext, goPrev]
   );
 
-  const images = SLIDESHOW_IMAGES.map((src, index) => (
+  const images = SLIDESHOW_IMAGES.map((img, index) => (
     <div
-      key={src}
+      key={img.src}
       className="absolute inset-0 transition-opacity"
       style={{
         transitionDuration: `${FADE_DURATION}ms`,
@@ -143,8 +143,8 @@ export function PhotoSlideshow({ mode }: PhotoSlideshowProps) {
       }}
     >
       <Image
-        src={src}
-        alt={`Courtyard Pickle facility photo ${index + 1}`}
+        src={img.src}
+        alt={img.alt}
         fill
         className="object-cover object-center"
         sizes={

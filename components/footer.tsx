@@ -21,7 +21,7 @@ export function Footer() {
             <div className="flex items-center gap-2">
               <Image
                 src="/courtyard_logo.webp"
-                alt="Courtyard Pickleball Logo"
+                alt="Courtyard Pickle Logo"
                 width={36}
                 height={36}
                 className="h-9 w-auto"
