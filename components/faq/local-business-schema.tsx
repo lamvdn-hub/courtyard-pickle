@@ -3,7 +3,7 @@ const localBusinessSchema = {
   '@type': 'SportsActivityLocation',
   name: 'Courtyard Pickle',
   url: 'PLACEHOLDER_URL',
-  telephone: '+84932xxxxxx',
+  telephone: '+84 93 215 00 06',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '27 Thị Xuân Quý, Bắc Mỹ An',
