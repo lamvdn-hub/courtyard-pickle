@@ -38,19 +38,19 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 ---
 
 ## 🗺️ Phase 4: SVG Facility Diagram
-- [ ] **SVG Metadata**: Confirm `<title>` and `<desc>` are the first children inside both desktop and mobile SVGs.
-- [ ] **SVG Descriptions**: Confirm both SVG `<desc>` tags say "pickleball courts" (not "padel courts").
-- [ ] **Accessibility Text**: Confirm sr-only paragraph says "pickleball" (not "picklball").
-- [ ] **SVG ID Uniqueness**: Confirm desktop and mobile SVG IDs are unique (e.g., `facility-map-desktop-title` vs `facility-map-mobile-title`).
+- [x] **SVG Metadata**: Confirm `<title>` and `<desc>` are the first children inside both desktop and mobile SVGs.
+- [x] **SVG Descriptions**: Confirm both SVG `<desc>` tags say "pickleball courts" (not "padel courts").
+- [x] **Accessibility Text**: Confirm sr-only paragraph says "pickleball" (not "picklball").
+- [x] **SVG ID Uniqueness**: Confirm desktop and mobile SVG IDs are unique (e.g., `facility-map-desktop-title` vs `facility-map-mobile-title`).
 
 ---
 
 ## 📍 Phase 5: NAP Consistency (Name, Address, Phone)
 *Run after real domain is confirmed and all content fixes above are complete.*
-- [ ] **Business Name**: Identical across footer, tagline, schema, and Google Business Profile.
-- [ ] **Address**: Identical across footer, FAQ, tagline, and schema: `27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam`.
-- [ ] **Phone Number**: Identical across schema, FAQ, and footer.
-- [ ] **Opening Hours**: Identical across footer, FAQ, and schema.
+- [x] **Business Name**: Identical across footer, tagline, schema, and Google Business Profile.
+- [x] **Address**: Identical across footer, FAQ, tagline, and schema: `27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam`.
+- [x] **Phone Number**: Identical across schema, FAQ, and footer.
+- [x] **Opening Hours**: Identical across footer, FAQ, and schema.
 
 ---
 
