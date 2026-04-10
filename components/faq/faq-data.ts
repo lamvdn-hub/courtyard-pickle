@@ -49,7 +49,7 @@ const en: FAQ[] = [
   {
     question: 'What is your cancellation and refund policy?',
     answer:
-      'You can reschedule any booking up to 12 hours in advance at no charge. Cancellations made more than 12 hours before your session are eligible for a full refund. Cancellations within 12 hours are non-refundable.',
+      'You can reschedule any booking up to 5 hours in advance at no charge. Cancellations made more than 5 hours before your session are eligible for a full refund. Cancellations within 5 hours are non-refundable.',
   },
   {
     question: 'Can I book pickleball courts for a group or private event?',
