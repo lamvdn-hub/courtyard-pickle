@@ -32,8 +32,8 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 
 ## 🛠️ Phase 3: Schema Implementation
 - [x] **Local Business Schema**: Replace domain placeholders in `layout.tsx` with `https://courtyard-pickle.vercel.app`.
-- [ ] **FAQ Schema Scope**: Confirm `faqSchema` object in `faq-schema.tsx` sits outside the component function.
-- [ ] **FAQ Schema Directive**: Confirm `faq-schema.tsx` has no `'use client'` directive.
+- [x] **FAQ Schema Scope**: Confirm `faqSchema` object in `faq-schema.tsx` sits outside the component function.
+- [x] **FAQ Schema Directive**: Confirm `faq-schema.tsx` has no `'use client'` directive.
 
 ---
 
