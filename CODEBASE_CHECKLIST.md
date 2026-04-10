@@ -19,7 +19,7 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 - [x] **Title Tag**: Add `<title>Courtyard Pickle — Pickleball Court Rental in Da Nang</title>`
 - [x] **Meta Description**: Add `<meta name="description" content="Book sheltered pickleball courts in Da Nang at Courtyard Pickle. Court rentals, coaching, and social play at 27 Thị Xuân Quý, Ngũ Hành Sơn." />`
 - [x] **Robots Tag**: Add `<meta name="robots" content="index, follow" />`
-- [x] **Canonical Tag**: Add `<link rel="canonical" href="https://yourdomain.com" />`
+- [x] **Canonical Tag**: Add `<link rel="canonical" href="https://courtyard-pickle.vercel.app" />`
 - [x] **HTML Lang Attribute**: Add `lang` attribute to `<html>` tag (e.g., `lang="en"` or `lang="vi"`).
 - [x] **Open Graph Tags**:
     - `og:title`
@@ -31,7 +31,7 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 ---
 
 ## 🛠️ Phase 3: Schema Implementation
-- [ ] **Local Business Schema**: Replace `PLACEHOLDER_URL` in `layout.tsx` with the real domain.
+- [x] **Local Business Schema**: Replace domain placeholders in `layout.tsx` with `https://courtyard-pickle.vercel.app`.
 - [ ] **FAQ Schema Scope**: Confirm `faqSchema` object in `faq-schema.tsx` sits outside the component function.
 - [ ] **FAQ Schema Directive**: Confirm `faq-schema.tsx` has no `'use client'` directive.
 
@@ -57,7 +57,7 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 ## ⚙️ Phase 6: Technical SEO
 - [ ] **robots.txt**: Verify it exists and is not blocking crawlers (`Disallow: /` must not be present).
 - [ ] **sitemap.xml**: Verify it is generated and accessible.
-- [ ] **Domain Redirection**: Confirm `www.yourdomain.com` redirects to `yourdomain.com` (canonical version).
+- [ ] **Domain Redirection**: Confirm `www.courtyard-pickle.vercel.app` redirects to `courtyard-pickle.vercel.app` (canonical version).
 
 ---
 
@@ -65,5 +65,5 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 - [ ] **Head Tags**: View source and confirm `<title>` and `<meta name="description">` are present.
 - [ ] **JSON-LD Schema**: View source and confirm both blocks are present and outside `<main>`.
 - [ ] **SVG Schema**: Search for `facility-map-desktop-title` in server-rendered HTML.
-- [ ] **Sitemap Check**: Load `yourdomain.com/sitemap.xml` in browser.
-- [ ] **Robots Check**: Load `yourdomain.com/robots.txt` in browser.
+- [ ] **Sitemap Check**: Load `courtyard-pickle.vercel.app/sitemap.xml` in browser.
+- [ ] **Robots Check**: Load `courtyard-pickle.vercel.app/robots.txt` in browser.
