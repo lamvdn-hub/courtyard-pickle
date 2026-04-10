@@ -110,7 +110,7 @@ const en: Translations = {
     headlinePart2: 'Pickle.',
     slogan: 'Where Every Sense Is Touched',
     description:
-      'Sheltered courts. Free equipments and cleaning service. A café to unwind after your games. At Courtyard, leave the details to us and just enjoy.',
+      'Sheltered courts. Free equipments and cleaning service. A café to unwind after your games. At Courtyard, leave the details to us so you can just enjoy the game.',
     ctaPrimary: 'Book a Court',
     ctaSecondary: 'How It Works',
     ctaSecondaryMobile: 'See how it works',
