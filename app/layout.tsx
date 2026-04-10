@@ -19,7 +19,7 @@ const dmSerifDisplay = DM_Serif_Display({
 export const metadata: Metadata = {
   title: 'Courtyard Pickle | Premium Indoor Pickleball',
   description:
-    'Sheltered courts. Free refreshments. Relaxing café. Book your court at Courtyard Pickle.',
+    'Sheltered courts. Free refreshments. Relaxing café. Book your court at Courtyard Pickle Da Nang.',
 };
 
 const localBusinessSchema = {
