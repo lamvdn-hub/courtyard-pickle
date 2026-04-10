@@ -31,7 +31,7 @@ export function HeroSection() {
               </h1>
 
               {t.hero.slogan && (
-                <h2 className="border-l-2 border-lime pl-[14px] mt-[14px] text-[18px] font-normal italic text-white/75 leading-snug" style={{ fontFamily: 'var(--font-playfair)', fontStyle: 'italic' }}>
+                <h2 className="border-l-2 border-lime pl-[14px] mt-[14px] text-[18px] font-normal italic text-white/75 leading-snug" style={{ fontFamily: 'var(--font-dm-serif-display)', fontStyle: 'italic' }}>
                   {t.hero.slogan}
                 </h2>
               )}

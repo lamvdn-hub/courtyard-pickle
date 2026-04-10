@@ -1,12 +1,18 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Pacifico } from 'next/font/google';
+import { Inter, Pacifico, DM_Serif_Display } from 'next/font/google';
 
 const inter = Inter({ subsets: ['latin'] });
 const pacifico = Pacifico({
   subsets: ['latin'],
   weight: '400',
   variable: '--font-playfair',
+});
+const dmSerifDisplay = DM_Serif_Display({
+  subsets: ['latin'],
+  weight: '400',
+  style: 'italic',
+  variable: '--font-dm-serif-display',
 });
 
 export const metadata: Metadata = {
@@ -34,7 +40,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} ${pacifico.variable}`}>{children}</body>
+      <body className={`${inter.className} ${pacifico.variable} ${dmSerifDisplay.variable}`}>{children}</body>
     </html>
   );
 }
