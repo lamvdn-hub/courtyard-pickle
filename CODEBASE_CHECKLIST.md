@@ -55,9 +55,9 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 ---
 
 ## ⚙️ Phase 6: Technical SEO
-- [ ] **robots.txt**: Verify it exists and is not blocking crawlers (`Disallow: /` must not be present).
-- [ ] **sitemap.xml**: Verify it is generated and accessible.
-- [ ] **Domain Redirection**: Confirm `www.courtyard-pickle.vercel.app` redirects to `courtyard-pickle.vercel.app` (canonical version).
+- [x] **robots.txt**: Verify it exists and is not blocking crawlers (`Disallow: /` must not be present).
+- [x] **sitemap.xml**: Verify it is generated and accessible.
+- [x] **Domain Redirection**: Confirm `www.courtyard-pickle.vercel.app` redirects to `courtyard-pickle.vercel.app` (canonical version).
 
 ---
 
