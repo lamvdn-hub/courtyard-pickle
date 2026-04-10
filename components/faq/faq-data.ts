@@ -54,7 +54,7 @@ const en: FAQ[] = [
   {
     question: 'Can I book pickleball courts for a group or private event?',
     answer:
-      'Yes. We accommodate group sessions, corporate events, and private tournaments at Courtyard Pickle, serving Da Nang and surrounding areas. Please contact us at +84 932150006 or message us on Facebook to discuss availability, pricing, and setup.',
+      'Yes. We accommodate group sessions, events, and private tournaments at Courtyard Pickle, serving Da Nang and surrounding areas. Please contact us at +84 932150006 or message us on Facebook to discuss availability, pricing, and setup.',
   },
   {
     question: 'Can I walk in without a reservation?',
@@ -107,7 +107,7 @@ const vi: FAQ[] = [
   {
     question: 'Chính sách hủy sân và hoàn tiền như thế nào?',
     answer:
-      'Bạn có thể đổi lịch đặt sân miễn phí trước giờ chơi ít nhất 12 tiếng. Các yêu cầu hủy sân trước 12 tiếng sẽ được hoàn tiền đầy đủ. Các trường hợp hủy trong vòng 12 tiếng trước giờ chơi sẽ không được hoàn tiền.',
+      'Bạn có thể đổi lịch đặt sân miễn phí trước giờ chơi ít nhất 5 tiếng. Các yêu cầu hủy sân trước 5 tiếng sẽ được hoàn tiền đầy đủ. Các trường hợp hủy trong vòng 5 tiếng trước giờ chơi sẽ không được hoàn tiền.',
   },
   {
     question: 'Tôi có thể đặt sân cho nhóm hoặc sự kiện riêng không?',
