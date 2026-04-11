@@ -25,16 +25,16 @@ export const metadata: Metadata = {
     follow: true,
   },
   alternates: {
-    canonical: 'https://courtyard-pickle.vercel.app',
+    canonical: 'https://courtyardpickledanang.com',
   },
   openGraph: {
     title: 'Courtyard Pickle — Pickleball Da Nang',
     description: 'Book sheltered pickleball courts in Da Nang.',
-    url: 'https://courtyard-pickle.vercel.app',
+    url: 'https://courtyardpickledanang.com',
     type: 'website',
     images: [
       {
-        url: 'https://courtyard-pickle.vercel.app/og-image.jpg',
+        url: 'https://courtyardpickledanang.com/og-image.jpg',
       },
     ],
   },
@@ -44,7 +44,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'SportsActivityLocation',
   name: 'Courtyard Pickle',
-  url: 'https://courtyard-pickle.vercel.app',
+  url: 'https://courtyardpickledanang.com',
   telephone: '+84 93 215 00 06',
   address: {
     '@type': 'PostalAddress',

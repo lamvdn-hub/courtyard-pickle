@@ -19,7 +19,7 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 - [x] **Title Tag**: Add `<title>Courtyard Pickle — Pickleball Court Rental in Da Nang</title>`
 - [x] **Meta Description**: Add `<meta name="description" content="Book sheltered pickleball courts in Da Nang at Courtyard Pickle. Court rentals, coaching, and social play at 27 Thị Xuân Quý, Ngũ Hành Sơn." />`
 - [x] **Robots Tag**: Add `<meta name="robots" content="index, follow" />`
-- [x] **Canonical Tag**: Add `<link rel="canonical" href="https://courtyard-pickle.vercel.app" />`
+- [x] **Canonical Tag**: Add `<link rel="canonical" href="https://courtyardpickledanang.com" />`
 - [x] **HTML Lang Attribute**: Add `lang` attribute to `<html>` tag (e.g., `lang="en"` or `lang="vi"`).
 - [x] **Open Graph Tags**:
     - `og:title`
@@ -31,7 +31,7 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 ---
 
 ## 🛠️ Phase 3: Schema Implementation
-- [x] **Local Business Schema**: Replace domain placeholders in `layout.tsx` with `https://courtyard-pickle.vercel.app`.
+- [x] **Local Business Schema**: Replace domain placeholders in `layout.tsx` with `https://courtyardpickledanang.com`.
 - [x] **FAQ Schema Scope**: Confirm `faqSchema` object in `faq-schema.tsx` sits outside the component function.
 - [x] **FAQ Schema Directive**: Confirm `faq-schema.tsx` has no `'use client'` directive.
 

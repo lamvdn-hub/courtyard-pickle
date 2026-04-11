@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://courtyard-pickle.vercel.app/sitemap.xml',
+    sitemap: 'https://courtyardpickledanang.com/sitemap.xml',
   };
 }

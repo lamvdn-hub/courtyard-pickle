@@ -2,7 +2,7 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'SportsActivityLocation',
   name: 'Courtyard Pickle',
-  url: 'https://courtyard-pickle.vercel.app',
+  url: 'https://courtyardpickledanang.com',
   telephone: '+84 93 215 00 06',
   address: {
     '@type': 'PostalAddress',
