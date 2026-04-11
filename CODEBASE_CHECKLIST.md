@@ -61,7 +61,16 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 
 ---
 
-## ✅ Phase 7: Verification After Deploy
+## ✅ Phase 7: Verification On Test Domain
+- [x] **Head Tags**: View source and confirm `<title>` and `<meta name="description">` are present.
+- [x] **JSON-LD Schema**: View source and confirm both blocks are present and outside `<main>`.
+- [x] **SVG Schema**: Search for `facility-map-desktop-title` in server-rendered HTML.
+- [x] **Sitemap Check**: Load `courtyard-pickle.vercel.app/sitemap.xml` in browser.
+- [x] **Robots Check**: Load `courtyard-pickle.vercel.app/robots.txt` in browser.
+
+---
+
+## ✅ Phase 7.1: Verification At Launch
 - [ ] **Head Tags**: View source and confirm `<title>` and `<meta name="description">` are present.
 - [ ] **JSON-LD Schema**: View source and confirm both blocks are present and outside `<main>`.
 - [ ] **SVG Schema**: Search for `facility-map-desktop-title` in server-rendered HTML.
