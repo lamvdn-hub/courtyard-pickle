@@ -107,13 +107,6 @@ export function Footer() {
             >
               {t.footer.privacyPolicy}
             </a>
-            <a
-              href="#"
-              className="text-xs hover:text-white/60 transition-colors"
-              style={{ color: 'rgba(255,255,255,0.25)' }}
-            >
-              {t.footer.termsOfService}
-            </a>
           </div>
         </div>
       </div>
