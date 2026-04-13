@@ -6,7 +6,7 @@ import { useLanguage } from '@/lib/language-context';
 import { ContactPanel } from '@/components/contact-panel';
 
 export function Footer() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <footer className="relative border-t border-white/[0.06]">
@@ -101,7 +101,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <a
-              href="#"
+              href={lang === 'vi' ? "/chinh-sach-bao-mat" : "/privacy-policy"}
               className="text-xs hover:text-white/60 transition-colors"
               style={{ color: 'rgba(255,255,255,0.25)' }}
             >
