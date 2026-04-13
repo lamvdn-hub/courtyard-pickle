@@ -8,14 +8,14 @@ import { ArrowLeft } from 'lucide-react';
 
 export default function PrivacyPolicy() {
   return (
-    <LanguageProvider>
+    <LanguageProvider defaultLang="en">
       <main className="relative flex flex-col min-h-screen pt-[104px]">
         <ScrollReset />
         <StickyNav />
         
         <div className="flex-grow w-full max-w-[720px] mx-auto px-6 py-12">
           <Link 
-            href="/" 
+            href="/?lang=en" 
             className="inline-flex items-center text-sm transition-colors mb-8 text-white/70 hover:text-white"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />

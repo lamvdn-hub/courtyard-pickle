@@ -14,6 +14,13 @@ export function LanguageSwitcher({ currentLang, variant = 'desktop' }: LanguageS
 
   const handleSwitch = (langCode: string) => {
     const url = new URL(window.location.href);
+    
+    if (url.pathname === '/privacy-policy' && langCode === 'vi') {
+      url.pathname = '/chinh-sach-bao-mat';
+    } else if (url.pathname === '/chinh-sach-bao-mat' && langCode === 'en') {
+      url.pathname = '/privacy-policy';
+    }
+    
     url.searchParams.set('lang', langCode);
     window.location.href = url.toString();
   };

@@ -8,7 +8,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export default function PrivacyPolicyVN() {
   return (
-    <LanguageProvider>
+    <LanguageProvider defaultLang="vi">
       <main className="relative flex flex-col min-h-screen pt-[104px]">
         <ScrollReset />
         <StickyNav />
