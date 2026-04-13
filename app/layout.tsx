@@ -17,9 +17,9 @@ const dmSerifDisplay = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Courtyard Pickle — Pickleball Court Rental in Da Nang',
+  title: 'Courtyard Pickle - Pickleball Court Rental in Da Nang',
   description:
-    'Book sheltered pickleball courts in Da Nang at Courtyard Pickle. Court rentals, coaching, and social play at 27 Thị Xuân Quý, Ngũ Hành Sơn.',
+    'Play pickleball in Da Nang at Courtyard Pickle. Free equipment, fresh fruit, café & all skill levels welcome. Easy online booking.',
   robots: {
     index: true,
     follow: true,
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     icon: '/icon.png',
   },
   openGraph: {
-    title: 'Courtyard Pickle — Pickleball Da Nang',
-    description: 'Book sheltered pickleball courts in Da Nang.',
+    title: 'Courtyard Pickle - Pickleball Da Nang',
+    description: 'Pickleball, fresh fruit, café & good vibes in Da Nang.',
     url: 'https://courtyardpickledanang.com',
     type: 'website',
     images: [
