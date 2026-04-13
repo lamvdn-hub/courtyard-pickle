@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://courtyardpickledanang.com',
   },
+  icons: {
+    icon: '/courtyard_logo.webp',
+  },
   openGraph: {
     title: 'Courtyard Pickle — Pickleball Da Nang',
     description: 'Book sheltered pickleball courts in Da Nang.',
