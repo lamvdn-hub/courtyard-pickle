@@ -4,12 +4,12 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 
 const SLIDESHOW_IMAGES = [
-  { src: "/slideshow-images/5.jpg", alt: "Pickleball tournament participants celebrating at Courtyard Pickle, Da Nang" },
-  { src: "/slideshow-images/2.jpg", alt: "Women's pickleball tournament winners and players at Courtyard Pickle, Da Nang" },
-  { src: "/slideshow-images/11.jpg", alt: "Two players in a team competing in a pickleball doubles match at Courtyard Pickle, Da Nang" },
-  { src: "/slideshow-images/7.jpg", alt: "Pickleball player executing a backhand shot at Courtyard Pickle courts, Da Nang" },
-  { src: "/slideshow-images/3.jpg", alt: "Female pickleball player preparing to hit at Courtyard Pickle, Da Nang" },
-  { src: "/slideshow-images/12.jpg", alt: "Female pickleball player mid forehand swing at Courtyard Pickle courts, Da Nang" },
+  { src: "/images_webp/5.webp", alt: "Pickleball tournament participants celebrating at Courtyard Pickle, Da Nang" },
+  { src: "/images_webp/2.webp", alt: "Women's pickleball tournament winners and players at Courtyard Pickle, Da Nang" },
+  { src: "/images_webp/11.webp", alt: "Two players in a team competing in a pickleball doubles match at Courtyard Pickle, Da Nang" },
+  { src: "/images_webp/7.webp", alt: "Pickleball player executing a backhand shot at Courtyard Pickle courts, Da Nang" },
+  { src: "/images_webp/3.webp", alt: "Female pickleball player preparing to hit at Courtyard Pickle, Da Nang" },
+  { src: "/images_webp/12.webp", alt: "Female pickleball player mid forehand swing at Courtyard Pickle courts, Da Nang" },
 ];
 
 const AUTOPLAY_INTERVAL = 6000;
