@@ -69,7 +69,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
       aria-label="Navigation menu"
     >
       <div className="flex items-center justify-between px-4 h-16" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-        <div className="flex items-center gap-2">
+        <a href={`/?lang=${lang}`} className="flex items-center gap-2">
           <Image
             src="/courtyard_logo.webp"
             alt="Courtyard Pickle Logo"
@@ -78,7 +78,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             className="h-[72px] w-auto"
             priority
           />
-        </div>
+        </a>
         <button
           ref={closeButtonRef}
           onClick={handleClose}
