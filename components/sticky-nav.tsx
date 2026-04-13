@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { Menu } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { BOOKING_URL } from '@/lib/constants';
 import { MobileMenu } from '@/components/mobile-menu';
@@ -18,6 +19,8 @@ export function StickyNav() {
   const contactLinkRef = useRef<HTMLButtonElement>(null);
   const popoverRef = useRef<HTMLDivElement>(null);
   const { lang, t } = useLanguage();
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   const navLinks = [
     { label: t.nav.howItWorks, href: '#how-it-works' },
@@ -88,7 +91,7 @@ export function StickyNav() {
               {navLinks.map((link) => (
                 <a
                   key={link.href}
-                  href={link.href}
+                  href={isHomePage ? link.href : `/?lang=${lang}${link.href}`}
                   className="text-sm text-slate-400 hover:text-white transition-colors duration-200 tracking-wide uppercase"
                 >
                   {link.label}

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Image from 'next/image';
 import { X, ArrowRight, ChevronDown } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import { BOOKING_URL } from '@/lib/constants';
 import { LanguageSwitcher } from '@/components/navigation/language-switcher';
 import { useLanguage } from '@/lib/language-context';
@@ -19,6 +20,8 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const [contactExpanded, setContactExpanded] = useState(false);
   const { lang, t } = useLanguage();
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   const navLinks = [
     { label: t.mobile.howItWorks, href: '#how-it-works' },
@@ -45,15 +48,20 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
     }, 220);
   }, [onClose, triggerRef]);
 
-  const handleNavClick = useCallback((href: string) => {
-    onClose();
-    setTimeout(() => {
-      const el = document.querySelector(href);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 220);
-  }, [onClose]);
+  const handleNavClick = useCallback((href: string, e: React.MouseEvent) => {
+    if (isHomePage) {
+      e.preventDefault();
+      onClose();
+      setTimeout(() => {
+        const el = document.querySelector(href);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 220);
+    } else {
+      onClose();
+    }
+  }, [onClose, isHomePage]);
 
   const handleCtaClick = useCallback(() => {
     onClose();
@@ -99,11 +107,10 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             <a
               key={link.href}
               ref={index === 0 ? firstLinkRef : undefined}
-              href={link.href}
+              href={isHomePage ? link.href : `/?lang=${lang}${link.href}`}
               role="menuitem"
               onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(link.href);
+                handleNavClick(link.href, e);
               }}
               className="flex items-center justify-between transition-colors"
               style={{
