@@ -4,17 +4,20 @@ import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
 import { ContactPanel } from '@/components/contact-panel';
+import { usePathname } from 'next/navigation';
 
 export function Footer() {
   const { t, lang } = useLanguage();
+  const pathname = usePathname();
+  const isPolicyPage = pathname === '/privacy-policy' || pathname === '/chinh-sach-bao-mat';
 
   return (
     <footer className="relative border-t border-white/[0.06]">
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
 
       <div
-        className="relative mx-auto px-6 md:px-12"
-        style={{ maxWidth: '1100px', paddingTop: '40px', paddingBottom: '40px' }}
+        className={`relative mx-auto px-6 md:px-12 ${!isPolicyPage ? 'pb-[100px] md:pb-10' : 'pb-10'}`}
+        style={{ maxWidth: '1100px', paddingTop: '40px' }}
       >
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
           <div className="space-y-5">

@@ -1,13 +1,17 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { ArrowRight } from 'lucide-react';
 import { BOOKING_URL } from '@/lib/constants';
 import { useLanguage } from '@/lib/language-context';
 
 export function MobileBottomCTA() {
   const { t } = useLanguage();
+  const pathname = usePathname();
   const [visible, setVisible] = useState(false);
+
+  const isPolicyPage = pathname === '/privacy-policy' || pathname === '/chinh-sach-bao-mat';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +20,10 @@ export function MobileBottomCTA() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  if (isPolicyPage) {
+    return null;
+  }
 
   return (
     <div
