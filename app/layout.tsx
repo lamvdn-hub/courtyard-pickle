@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     canonical: 'https://courtyardpickledanang.com',
   },
   icons: {
-    icon: '/courtyard_logo.webp',
+    icon: '/icon.png',
   },
   openGraph: {
     title: 'Courtyard Pickle — Pickleball Da Nang',
