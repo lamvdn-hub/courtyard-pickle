@@ -6,6 +6,7 @@ import { PrimaryCTA } from '@/components/primary-cta';
 import { FAQSection } from '@/components/faq/faq-section';
 import { PricingSection } from '@/components/pricing-section';
 import { Footer } from '@/components/footer';
+import { Testimonials } from '@/components/testimonials';
 import { MobileBottomCTA } from '@/components/mobile-bottom-cta';
 import { ScrollReset } from '@/components/scroll-reset';
 import { LanguageProvider } from '@/lib/language-context';
@@ -19,6 +20,7 @@ export default function Home() {
         <HeroSection />
         <HowItWorks />
         <CourtsShowcase />
+        <Testimonials />
         <PrimaryCTA />
         <PricingSection />
         <FAQSection />

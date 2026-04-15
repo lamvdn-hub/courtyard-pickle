@@ -44,8 +44,8 @@
 
 ## Phase 2 — Medium Impact, Medium Effort
 
-- [ ] **2.1 Testimonials Section**
-  **Status:** Ready to implement
+- [x] **2.1 Testimonials Section**
+  **Status:** Implemented
   **Impact:** High — strongest conversion driver for a local sports venue
   **Effort:** Low — content sourced from existing Google Business Profile reviews
 

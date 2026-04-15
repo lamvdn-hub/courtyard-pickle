@@ -121,6 +121,14 @@ export interface Translations {
     };
     bookNow: string;
   };
+  testimonials: {
+    header: string;
+    viewMore: string;
+    reviews: {
+      name: string;
+      text: string;
+    }[];
+  };
 }
 
 const en: Translations = {
@@ -245,6 +253,24 @@ const en: Translations = {
     },
     bookNow: 'Book Now',
   },
+  testimonials: {
+    header: 'What Players Say',
+    viewMore: 'See all reviews on Google',
+    reviews: [
+      {
+        name: 'Quan',
+        text: 'Very comfortable courts, high-quality surface. Free paddle cleaning and fruits are a big plus.',
+      },
+      {
+        name: 'Thao',
+        text: 'The café area is great for waiting or relaxing after a game. Sheltered courts mean no worries about sun or rain.',
+      },
+      {
+        name: 'Huy',
+        text: 'Easy to find location, clean courts and friendly staff helping new players. Definitely coming back!',
+      },
+    ],
+  },
 };
 
 const vi: Translations = {
@@ -368,6 +394,24 @@ const vi: Translations = {
       price: '50.000 VNĐ / lượt',
     },
     bookNow: 'Đặt Sân Ngay',
+  },
+  testimonials: {
+    header: 'Khách Hàng Nói Gì',
+    viewMore: 'Xem tất cả đánh giá trên Google',
+    reviews: [
+      {
+        name: 'Quân',
+        text: 'Sân chơi rất thoải mái, mặt sân chất lượng. Dịch vụ vệ sinh vợt và trái cây miễn phí là điểm cộng lớn.',
+      },
+      {
+        name: 'Thảo',
+        text: 'Không gian café ngồi chờ hay nghỉ ngơi sau khi chơi đều rất tuyệt. Sân có mái che nên không lo nắng mưa.',
+      },
+      {
+        name: 'Huy',
+        text: 'Vị trí dễ tìm, sân sạch sẽ và nhân viên nhiệt tình hỗ trợ người mới chơi. Chắc chắn sẽ quay lại!',
+      },
+    ],
   },
 };
 
