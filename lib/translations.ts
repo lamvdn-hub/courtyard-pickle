@@ -95,6 +95,32 @@ export interface Translations {
     privacyPolicy: string;
     termsOfService: string;
   };
+  reviews: {
+    badgeFormat: string;
+  };
+  pricing: {
+    kicker: string;
+    header: string;
+    subheader: string;
+    casual: {
+      title: string;
+      desc: string;
+      offPeak: string;
+      peak: string;
+    };
+    fixed: {
+      title: string;
+      desc: string;
+      offPeak: string;
+      peak: string;
+    };
+    social: {
+      title: string;
+      desc: string;
+      price: string;
+    };
+    bookNow: string;
+  };
 }
 
 const en: Translations = {
@@ -193,6 +219,32 @@ const en: Translations = {
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Terms of Service',
   },
+  reviews: {
+    badgeFormat: '4.7 / 5.0 (46 reviews on Google)',
+  },
+  pricing: {
+    kicker: 'Clear Pricing',
+    header: 'Play on Your Terms',
+    subheader: 'Simple rates tailored to how often you play.',
+    casual: {
+      title: 'Casual Play',
+      desc: 'Ideal for spontaneous games. Pay per hour.',
+      offPeak: '120k VND / hr',
+      peak: '160k VND / hr',
+    },
+    fixed: {
+      title: 'Fixed Booking',
+      desc: 'Secure the same time every week or month.',
+      offPeak: '100k VND / hr',
+      peak: '140k VND / hr',
+    },
+    social: {
+      title: 'Social Play',
+      desc: 'Join the community and play with others.',
+      price: '50k VND / ticket',
+    },
+    bookNow: 'Book Now',
+  },
 };
 
 const vi: Translations = {
@@ -290,6 +342,32 @@ const vi: Translations = {
     copyright: 'Courtyard Pickle. Bảo lưu mọi quyền.',
     privacyPolicy: 'Chính sách bảo mật',
     termsOfService: 'Điều khoản dịch vụ',
+  },
+  reviews: {
+    badgeFormat: '4.7 / 5.0 (46 đánh giá trên Google)',
+  },
+  pricing: {
+    kicker: 'Bảng Giá Rõ Ràng',
+    header: 'Lựa Chọn Phù Hợp Cho Bạn',
+    subheader: 'Mức giá linh hoạt tùy theo nhu cầu của bạn.',
+    casual: {
+      title: 'Sân Vãng Lai',
+      desc: 'Dành cho những trận đấu ngẫu hứng. Thanh toán theo giờ.',
+      offPeak: '120.000 VNĐ / giờ',
+      peak: '160.000 VNĐ / giờ',
+    },
+    fixed: {
+      title: 'Sân Cố Định',
+      desc: 'Đảm bảo thời gian cố định hàng tuần/tháng.',
+      offPeak: '100.000 VNĐ / giờ',
+      peak: '140.000 VNĐ / giờ',
+    },
+    social: {
+      title: 'Giao Lưu - Social Play',
+      desc: 'Tham gia vào cộng đồng và giao lưu.',
+      price: '50.000 VNĐ / lượt',
+    },
+    bookNow: 'Đặt Sân Ngay',
   },
 };
 

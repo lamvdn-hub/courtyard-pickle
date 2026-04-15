@@ -4,6 +4,7 @@ import { HowItWorks } from '@/components/how-it-works';
 import { CourtsShowcase } from '@/components/courts-showcase';
 import { PrimaryCTA } from '@/components/primary-cta';
 import { FAQSection } from '@/components/faq/faq-section';
+import { PricingSection } from '@/components/pricing-section';
 import { Footer } from '@/components/footer';
 import { MobileBottomCTA } from '@/components/mobile-bottom-cta';
 import { ScrollReset } from '@/components/scroll-reset';
@@ -19,6 +20,7 @@ export default function Home() {
         <HowItWorks />
         <CourtsShowcase />
         <PrimaryCTA />
+        <PricingSection />
         <FAQSection />
         <Footer />
         <MobileBottomCTA />

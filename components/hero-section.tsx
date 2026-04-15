@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { BOOKING_URL } from "@/lib/constants";
 import { PhotoSlideshow } from "@/components/photo-slideshow";
 import { useLanguage } from "@/lib/language-context";
+import { GoogleReviewsBadge } from "@/components/google-reviews-badge";
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -78,6 +79,8 @@ export function HeroSection() {
                 </div>
               ))}
             </div>
+            
+            <GoogleReviewsBadge />
           </div>
 
           <div className="hidden lg:block">
