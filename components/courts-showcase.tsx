@@ -1,6 +1,7 @@
 'use client';
 
 import { useLanguage } from '@/lib/language-context';
+import { Reveal } from '@/components/ui/reveal';
 
 export function CourtsShowcase() {
   const { t } = useLanguage();
@@ -8,17 +9,21 @@ export function CourtsShowcase() {
   return (
     <section id="courts" className="pt-12 pb-24 sm:pt-12 sm:pb-32 relative scroll-mt-16 md:scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4">
-            {t.facility.header}
-          </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            {t.facility.subheader}
-          </p>
-        </div>
+        <Reveal>
+          <div className="text-center mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4">
+              {t.facility.header}
+            </h2>
+            <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+              {t.facility.subheader}
+            </p>
+          </div>
+        </Reveal>
 
-        <div className="mx-auto max-w-[820px] px-6">
-          <div className="facility-map-desktop">
+        <Reveal delay={200}>
+          <div className="mx-auto max-w-[820px] px-6">
+            <div className="facility-map-desktop">
+              {/* SVG content... */}
           <svg viewBox="0 0 780 460" xmlns="http://www.w3.org/2000/svg" fontFamily="system-ui,sans-serif" className="w-full h-auto" role="img" aria-labelledby="facility-map-desktop-title facility-map-desktop-desc">
             <title id="facility-map-desktop-title">Courtyard facility floor plan</title>
             <desc id="facility-map-desktop-desc">Floor plan of Courtyard Pickle at 27 Th&#7883; Xu&#226;n Qu&#253;, Ng&#361; H&#224;nh S&#417;n, Da Nang.
@@ -192,6 +197,7 @@ export function CourtsShowcase() {
             The Courtyard facility includes two sheltered and covered pickleball courts (Court 1 Interior and Court 2 Streetside), an indoor caf&#233; with front desk and reception, an outdoor caf&#233; with open seating, a separate outdoor seating area, and men&apos;s and women&apos;s locker rooms with showers. The entrance opens from the street into a central walkway connecting all areas. Additional spaces are coming soon.
           </p>
         </div>
+        </Reveal>
       </div>
     </section>
   );

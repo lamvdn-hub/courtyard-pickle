@@ -108,8 +108,8 @@
 
 ---
 
-- [ ] **2.4 Scroll Animations + Reduced-Motion Support**
-  **Status:** Ready to implement — must be implemented together, never separately
+- [x] **2.4 Scroll Animations + Reduced-Motion Support**
+  **Status:** Implemented
   **Impact:** Medium — elevates perceived quality and makes the page feel more premium
   **Effort:** Medium
 
