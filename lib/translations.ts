@@ -129,6 +129,13 @@ export interface Translations {
       text: string;
     }[];
   };
+  tournaments: {
+    header: string;
+    date: string;
+    description: string;
+    detailsBtn: string;
+    comingSoonDate: string;
+  };
 }
 
 const en: Translations = {
@@ -271,6 +278,13 @@ const en: Translations = {
       },
     ],
   },
+  tournaments: {
+    header: 'Regular Tournaments',
+    date: '',
+    description: 'Join our upcoming community tournament.',
+    detailsBtn: 'See details on Facebook',
+    comingSoonDate: 'Next tournament coming soon',
+  },
 };
 
 const vi: Translations = {
@@ -412,6 +426,13 @@ const vi: Translations = {
         text: 'Vị trí dễ tìm, sân sạch sẽ và nhân viên nhiệt tình hỗ trợ người mới chơi. Chắc chắn sẽ quay lại!',
       },
     ],
+  },
+  tournaments: {
+    header: 'Giải Đấu Thường Xuyên',
+    date: '',
+    description: 'Tham gia giải đấu cộng đồng sắp tới của chúng tôi.',
+    detailsBtn: 'Xem chi tiết trên Facebook',
+    comingSoonDate: 'Giải đấu tiếp theo sắp được công bố',
   },
 };
 

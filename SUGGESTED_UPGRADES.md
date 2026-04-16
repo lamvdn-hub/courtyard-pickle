@@ -88,8 +88,8 @@
 
 ---
 
-- [ ] **2.3 Tournament Section**
-  **Status:** Ready to implement — client workflow confirmed
+- [x] **2.3 Tournament Section**
+  **Status:** Implemented
   **Impact:** Medium-High — differentiates Courtyard Pickle from competitors, signals active community
   **Effort:** Low (Option B — maintained date field)
 
