@@ -94,6 +94,20 @@ export function Footer() {
               >
                 {t.footer.hours}
               </p>
+              <div className="pt-2">
+                <div className="w-full h-[180px] rounded-xl overflow-hidden border border-white/5 relative bg-white/[0.03]">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.4537961171764!2d108.24151717474345!3d16.041924384633667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314217003116a67d%3A0xd946bfec5ce05bfe!2sCourtyard%20Pickle!5e0!3m2!1sen!2sde!4v1776362761355!5m2!1sen!2sde"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, filter: 'grayscale(0.6) invert(0.92) contrast(0.85) brightness(0.95)' }}
+                    allowFullScreen={false}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Courtyard Pickle Location"
+                  ></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>

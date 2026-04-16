@@ -73,8 +73,8 @@
 
 ---
 
-- [ ] **2.2 Map Embed**
-  **Status:** Ready to implement
+- [x] **2.2 Map Embed**
+  **Status:** Implemented
   **Impact:** Medium — removes location uncertainty for first-time visitors
   **Effort:** Low
 
