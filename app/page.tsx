@@ -9,6 +9,24 @@ import { MobileBottomCTA } from '@/components/mobile-bottom-cta';
 import { ScrollReset } from '@/components/scroll-reset';
 import { LanguageProvider } from '@/lib/language-context';
 
+export async function generateMetadata({ searchParams }: { searchParams: any }) {
+  const params = await searchParams;
+  const lang = params?.lang;
+  const canonical = lang 
+    ? `https://courtyardpickledanang.com/?lang=${lang}`
+    : 'https://courtyardpickledanang.com';
+
+  return {
+    alternates: {
+      canonical,
+      languages: {
+        'vi': 'https://courtyardpickledanang.com/?lang=vi',
+        'en': 'https://courtyardpickledanang.com/?lang=en',
+      },
+    },
+  };
+}
+
 export default function Home() {
   return (
     <LanguageProvider>

@@ -24,9 +24,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  alternates: {
-    canonical: 'https://courtyardpickledanang.com',
-  },
   icons: {
     icon: '/icon.png',
   },
