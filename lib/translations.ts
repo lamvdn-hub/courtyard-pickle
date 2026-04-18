@@ -113,11 +113,14 @@ export interface Translations {
       desc: string;
       offPeak: string;
       peak: string;
+      contactCta: string;
     };
     social: {
       title: string;
       desc: string;
       price: string;
+      calloutBody: string;
+      calloutLink: string;
     };
     bookNow: string;
   };
@@ -252,11 +255,14 @@ const en: Translations = {
       desc: 'Secure the same time every week or month.',
       offPeak: '100k VND / hr',
       peak: '140k VND / hr',
+      contactCta: 'Contact Us to Arrange',
     },
     social: {
       title: 'Social Play',
       desc: 'Join the community and play with others.',
       price: '50k VND / ticket',
+      calloutBody: 'Occasional open sessions, 50k VND per ticket. Hosted at lower frequency.',
+      calloutLink: 'Follow us on Facebook for upcoming dates.',
     },
     bookNow: 'Book Now',
   },
@@ -401,11 +407,14 @@ const vi: Translations = {
       desc: 'Đảm bảo thời gian cố định hàng tuần/tháng.',
       offPeak: '100.000 VNĐ / giờ',
       peak: '140.000 VNĐ / giờ',
+      contactCta: 'Liên hệ để đặt chỗ',
     },
     social: {
       title: 'Giao Lưu - Social Play',
       desc: 'Tham gia vào cộng đồng và giao lưu.',
       price: '50.000 VNĐ / lượt',
+      calloutBody: 'Các buổi chơi mở thỉnh thoảng diễn ra, 50.000 VNĐ một lượt. Tổ chức với tần suất thấp hơn.',
+      calloutLink: 'Theo dõi chúng tôi trên Facebook để cập nhật lịch chơi.',
     },
     bookNow: 'Đặt Sân Ngay',
   },

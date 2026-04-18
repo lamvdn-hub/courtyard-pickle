@@ -1,15 +1,48 @@
 'use client';
 
+import { useState, useRef, useEffect } from 'react';
+
 import { useLanguage } from '@/lib/language-context';
 import { ArrowRight, Clock, Sun } from 'lucide-react';
-import { BOOKING_URL } from '@/lib/constants';
+import { BOOKING_URL, FACEBOOK_URL } from '@/lib/constants';
 import { Reveal } from '@/components/ui/reveal';
+import { ContactPanel } from '@/components/contact-panel';
 
 export function PricingSection() {
   const { t } = useLanguage();
 
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const [opensUpward, setOpensUpward] = useState(true);
+
+  const POPOVER_HEIGHT_ESTIMATE = 400;
+
+  // Handle contact toggle with dynamic positioning
+  function handleContactToggle() {
+    if (!isContactOpen && buttonRef.current) {
+      const rect = buttonRef.current.getBoundingClientRect();
+      // If there's enough space above the button, open upward
+      setOpensUpward(rect.top > POPOVER_HEIGHT_ESTIMATE);
+    }
+    setIsContactOpen(prev => !prev);
+  }
+
+  // Handle click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsContactOpen(false);
+      }
+    };
+    if (isContactOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [isContactOpen]);
+
   return (
-    <section id="pricing" className="relative py-24 sm:py-32 bg-forest overflow-hidden" aria-labelledby="pricing-heading">
+    <section id="pricing" className="relative z-20 py-24 sm:py-32 bg-forest" aria-labelledby="pricing-heading">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-forest-light/10 to-transparent" />
 
       <div className="relative mx-auto px-6 lg:px-8 max-w-7xl">
@@ -27,13 +60,13 @@ export function PricingSection() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {/* Casual Play Card */}
           <Reveal delay={100} className="h-full">
             <div className="bg-forest-light border border-white/10 rounded-3xl p-8 hover:border-lime/30 transition-colors flex flex-col pt-10 h-full">
               <h3 className="text-2xl font-bold text-white mb-2">{t.pricing.casual.title}</h3>
               <p className="text-sm text-slate-400 mb-8">{t.pricing.casual.desc}</p>
-              
+
               <div className="space-y-4 mb-10 flex-grow">
                 <div className="flex items-start gap-4">
                   <Sun className="w-5 h-5 text-lime mt-0.5 shrink-0" />
@@ -66,73 +99,98 @@ export function PricingSection() {
           {/* Fixed Booking Card - Highlighted */}
           <Reveal delay={200} className="h-full lg:-mt-4 lg:mb-4">
             <div className="bg-forest-light border border-lime/30 rounded-3xl p-8 flex flex-col relative shadow-2xl shadow-lime/5 pt-10 h-full">
-               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
                 <span className="bg-lime text-forest text-xs font-bold uppercase tracking-wider py-1 px-3 rounded-full">
                   Best Value
                 </span>
               </div>
 
-              <h3 className="text-2xl font-bold text-white mb-2">{t.pricing.fixed.title}</h3>
-              <p className="text-sm text-slate-400 mb-8">{t.pricing.fixed.desc}</p>
-              
-              <div className="space-y-4 mb-10 flex-grow">
-                <div className="flex items-start gap-4">
-                  <Sun className="w-5 h-5 text-lime mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm text-slate-400 mb-1">05:30 - 16:30</p>
-                    <p className="text-lg font-semibold text-white">{t.pricing.fixed.offPeak}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <Clock className="w-5 h-5 text-lime mt-0.5 shrink-0" />
-                  <div>
-                    <p className="text-sm text-slate-400 mb-1">16:30 - 22:30</p>
-                    <p className="text-lg font-semibold text-white">{t.pricing.fixed.peak}</p>
-                  </div>
-                </div>
-              </div>
+              {/* Top content wrapper with clipping - excluding the popover area to allow overflow */}
+              <div className="flex flex-col flex-grow overflow-hidden rounded-3xl">
+                <h3 className="text-2xl font-bold text-white mb-2">{t.pricing.fixed.title}</h3>
+                <p className="text-sm text-slate-400 mb-8">{t.pricing.fixed.desc}</p>
 
-              <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full bg-lime hover:bg-lime-dim text-forest font-bold rounded-xl h-12 text-sm transition-all duration-200 group"
-              >
-                {t.pricing.bookNow}
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
-          </Reveal>
-
-          {/* Social Play Card */}
-          <Reveal delay={300} className="h-full">
-            <div className="bg-forest-light border border-white/10 rounded-3xl p-8 hover:border-lime/30 transition-colors flex flex-col pt-10 h-full">
-              <h3 className="text-2xl font-bold text-white mb-2">{t.pricing.social.title}</h3>
-              <p className="text-sm text-slate-400 mb-8">{t.pricing.social.desc}</p>
-              
-              <div className="space-y-4 mb-10 flex-grow">
-                <div className="flex items-start gap-4">
-                  <div className="w-5 h-5 rounded-full bg-lime/20 flex items-center justify-center mt-0.5 shrink-0">
-                    <div className="w-2 h-2 rounded-full bg-lime" />
+                <div className="space-y-4 mb-10 flex-grow">
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-start gap-4">
+                      <Sun className="w-5 h-5 text-lime mt-0.5 shrink-0" />
+                      <div>
+                        <p className="text-sm text-slate-400 mb-1">05:30 - 16:30</p>
+                        <p className="text-lg font-semibold text-white">{t.pricing.fixed.offPeak}</p>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-semibold text-lime/85 bg-lime/10 rounded px-1.5 py-0.5 shrink-0 mt-1">
+                      Save 17%
+                    </span>
                   </div>
-                  <div>
-                    <p className="text-sm text-slate-400 mb-1">Per Session / Lượt</p>
-                    <p className="text-lg font-semibold text-white">{t.pricing.social.price}</p>
+                  <div className="flex items-start justify-between gap-2">
+                    <div className="flex items-start gap-4">
+                      <Clock className="w-5 h-5 text-lime mt-0.5 shrink-0" />
+                      <div>
+                        <p className="text-sm text-slate-400 mb-1">16:30 - 22:30</p>
+                        <p className="text-lg font-semibold text-white">{t.pricing.fixed.peak}</p>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-semibold text-lime/85 bg-lime/10 rounded px-1.5 py-0.5 shrink-0 mt-1">
+                      Save 13%
+                    </span>
                   </div>
                 </div>
               </div>
 
-              <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full bg-white/5 hover:bg-white/10 text-white font-medium rounded-xl h-12 text-sm transition-all duration-200 border border-white/10 group mt-auto"
-              >
-                {t.pricing.bookNow}
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
+              <div ref={containerRef} className="relative mt-auto">
+                {/* Popover Panel */}
+                <div
+                  aria-hidden={!isContactOpen}
+                  className={`absolute left-0 right-0 z-50 p-4 rounded-2xl bg-[#0f2213] border border-white/10 shadow-2xl transition-[opacity,transform] duration-200 ease-out ${isContactOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none'
+                    } ${opensUpward ? 'bottom-[calc(100%+12px)]' : 'top-[calc(100%+12px)]'
+                    }`}
+                >
+                  <ContactPanel showHeading />
+
+                  {/* Decorative Arrow */}
+                  <div
+                    className={`absolute left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent ${opensUpward
+                        ? 'bottom-[-8px] border-t-[8px] border-t-[#0f2213]'
+                        : 'top-[-8px] border-b-[8px] border-b-[#0f2213]'
+                      }`}
+                  />
+                </div>
+
+                {/* CTA Button */}
+                <button
+                  ref={buttonRef}
+                  onClick={handleContactToggle}
+                  aria-haspopup="true"
+                  aria-expanded={isContactOpen}
+                  className="flex items-center justify-center gap-2 w-full bg-white/5 hover:bg-white/10 text-white/70 font-medium rounded-xl h-12 text-sm transition-all duration-200 border border-white/10 group"
+                >
+                  {t.pricing.fixed.contactCta || "Contact Us to Arrange"}
+                  <span className={`transition-transform duration-200 ${isContactOpen ? 'rotate-180' : ''}`}>
+                    {opensUpward ? '↑' : '↓'}
+                  </span>
+                </button>
+              </div>
             </div>
           </Reveal>
+
+        </div>
+
+        {/* Social Play callout */}
+        <div className="flex items-start gap-3 max-w-4xl mx-auto mt-5 bg-white/[0.025] border border-white/[0.06] rounded-2xl px-5 py-4">
+          <div className="w-2 h-2 rounded-full bg-white/20 shrink-0 mt-[6px]" />
+          <p className="text-sm text-white/32 leading-relaxed">
+            <span className="font-medium text-white/45">{t.pricing.social.title}</span>
+            {' '}— {t.pricing.social.calloutBody}{' '}
+            <a
+              href={FACEBOOK_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lime/60 hover:text-lime/80 transition-colors"
+            >
+              {t.pricing.social.calloutLink}
+            </a>
+          </p>
         </div>
       </div>
     </section>
