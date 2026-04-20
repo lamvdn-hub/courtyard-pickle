@@ -24,7 +24,7 @@ const en: FAQ[] = [
   {
     question: 'Where is Courtyard Pickle located?',
     answer:
-      'You can find us at 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng.',
+      'You can find us at 27 Dương Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng.',
   },
   {
     question: 'Do I need to bring my own paddle?',
@@ -82,7 +82,7 @@ const vi: FAQ[] = [
   {
     question: 'Courtyard Pickle nằm ở đâu?',
     answer:
-      'Bạn có thể tìm thấy chúng tôi tại số 27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng.',
+      'Bạn có thể tìm thấy chúng tôi tại số 27 Dương Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng.',
   },
   {
     question: 'Sân có cho thuê vợt ko?',

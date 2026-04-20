@@ -31,7 +31,7 @@ export default function PrivacyPolicy() {
             
             <h2 className="text-xl font-bold text-white mt-8 mb-4">1. Who We Are</h2>
             <p>Courtyard Pickle ("we", "us", "our") operates the website <a href="https://courtyardpickledanang.com" className="text-lime hover:underline">courtyardpickledanang.com</a> (the "Site").</p>
-            <p><strong>Registered address:</strong><br />27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam</p>
+            <p><strong>Registered address:</strong><br />27 Dương Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam</p>
             <p><strong>Privacy contact:</strong><br />courtyard.picklecafe@gmail.com</p>
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">2. Scope</h2>
@@ -87,7 +87,7 @@ export default function PrivacyPolicy() {
             <p>We may update this policy for tools, legal requirements, or functionality. The "Last updated" date changes accordingly. Material changes are notified prominently on the Site. Where changes affect consent-based processing, we provide opportunity to review and renew consent. Continued use after notification constitutes acceptance where legally permitted.</p>
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">13. Contact</h2>
-            <p><strong>Courtyard Pickle</strong><br />27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam<br />Email: courtyard.picklecafe@gmail.com<br />Website: courtyardpickledanang.com</p>
+            <p><strong>Courtyard Pickle</strong><br />27 Dương Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam<br />Email: courtyard.picklecafe@gmail.com<br />Website: courtyardpickledanang.com</p>
           </div>
         </div>
 

@@ -26,7 +26,7 @@ export function CourtsShowcase() {
               {/* SVG content... */}
           <svg viewBox="0 0 780 460" xmlns="http://www.w3.org/2000/svg" fontFamily="system-ui,sans-serif" className="w-full h-auto" role="img" aria-labelledby="facility-map-desktop-title facility-map-desktop-desc">
             <title id="facility-map-desktop-title">Courtyard facility floor plan</title>
-            <desc id="facility-map-desktop-desc">Floor plan of Courtyard Pickle at 27 Th&#7883; Xu&#226;n Qu&#253;, Ng&#361; H&#224;nh S&#417;n, Da Nang.
+            <desc id="facility-map-desktop-desc">Floor plan of Courtyard Pickle at 27 D&#432;&#417;ng Th&#7883; Xu&#226;n Qu&#253;, Ng&#361; H&#224;nh S&#417;n, Da Nang.
   The facility features two covered pickleball courts, an indoor caf&#233; with front desk and reception, an outdoor caf&#233; with open seating, an outdoor area, and locker rooms with separate showers.
             </desc>
 
@@ -112,7 +112,7 @@ export function CourtsShowcase() {
           <div className="facility-map-mobile">
           <svg viewBox="0 0 260 520" xmlns="http://www.w3.org/2000/svg" fontFamily="system-ui,sans-serif" className="w-full h-auto" role="img" aria-labelledby="facility-map-mobile-title facility-map-mobile-desc">
             <title id="facility-map-mobile-title">Courtyard facility floor plan</title>
-            <desc id="facility-map-mobile-desc">Floor plan of Courtyard Pickle at 27 Thị Xuân Quý, Ngũ Hành Sơn, Da Nang.
+            <desc id="facility-map-mobile-desc">Floor plan of Courtyard Pickle at 27 Dương Thị Xuân Quý, Ngũ Hành Sơn, Da Nang.
   The facility features two covered pickleball courts, an indoor caf&#233; with front desk and reception, an outdoor caf&#233; with open seating, an outdoor area, and locker rooms with separate showers.</desc>
 
             <rect width="260" height="520" rx="8" fill="rgba(255,255,255,0.01)" stroke="rgba(255,255,255,0.05)" strokeWidth="1"/>
