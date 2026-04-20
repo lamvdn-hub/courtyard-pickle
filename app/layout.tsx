@@ -48,7 +48,7 @@ const localBusinessSchema = {
   telephone: '+84 93 215 00 06',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '27 Thị Xuân Quý, Bắc Mỹ An',
+    streetAddress: '27 Dương Thị Xuân Quý, Bắc Mỹ An',
     addressLocality: 'Da Nang',
     addressRegion: 'Ngũ Hành Sơn',
     postalCode: '550000',

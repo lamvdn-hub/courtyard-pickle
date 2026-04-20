@@ -17,7 +17,7 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 
 ## 🏷️ Phase 2: Meta Tags — Page Head
 - [x] **Title Tag**: Add `<title>Courtyard Pickle — Pickleball Court Rental in Da Nang</title>`
-- [x] **Meta Description**: Add `<meta name="description" content="Book sheltered pickleball courts in Da Nang at Courtyard Pickle. Court rentals, coaching, and social play at 27 Thị Xuân Quý, Ngũ Hành Sơn." />`
+- [x] **Meta Description**: Add `<meta name="description" content="Book sheltered pickleball courts in Da Nang at Courtyard Pickle. Court rentals, coaching, and social play at 27 Dương Thị Xuân Quý, Ngũ Hành Sơn." />`
 - [x] **Robots Tag**: Add `<meta name="robots" content="index, follow" />`
 - [x] **Canonical Tag**: Add `<link rel="canonical" href="https://courtyardpickledanang.com" />`
 - [x] **HTML Lang Attribute**: Add `lang` attribute to `<html>` tag (e.g., `lang="en"` or `lang="vi"`).
@@ -48,7 +48,7 @@ This checklist tracks the SEO (Search Engine Optimization) and AEO (Answer Engin
 ## 📍 Phase 5: NAP Consistency (Name, Address, Phone)
 *Run after real domain is confirmed and all content fixes above are complete.*
 - [x] **Business Name**: Identical across footer, tagline, schema, and Google Business Profile.
-- [x] **Address**: Identical across footer, FAQ, tagline, and schema: `27 Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam`.
+- [x] **Address**: Identical across footer, FAQ, tagline, and schema: `27 Dương Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam`.
 - [x] **Phone Number**: Identical across schema, FAQ, and footer.
 - [x] **Opening Hours**: Identical across footer, FAQ, and schema.
 
