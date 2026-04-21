@@ -5,6 +5,18 @@ import { ScrollReset } from '@/components/scroll-reset';
 import { LanguageProvider } from '@/lib/language-context';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | Courtyard Pickle',
+  alternates: {
+    canonical: 'https://courtyardpickledanang.com/privacy-policy',
+    languages: {
+      'en': 'https://courtyardpickledanang.com/privacy-policy',
+      'vi': 'https://courtyardpickledanang.com/chinh-sach-bao-mat',
+    },
+  },
+};
 
 export default function PrivacyPolicy() {
   return (
