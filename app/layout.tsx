@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Pacifico, DM_Serif_Display } from 'next/font/google';
 import { FAQSchema } from '@/components/faq/faq-schema';
+import { headers } from 'next/headers';
 
 const inter = Inter({ subsets: ['latin'] });
 const pacifico = Pacifico({
@@ -23,9 +24,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  },
-  alternates: {
-    canonical: 'https://courtyardpickledanang.com',
   },
   icons: {
     icon: '/icon.png',
@@ -61,13 +59,16 @@ const localBusinessSchema = {
   sport: 'Pickleball',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const headerList = await headers();
+  const lang = headerList.get('x-lang') || 'vi';
+
   return (
-    <html lang="en">
+    <html lang={lang}>
       <head>
         {/* Google Tag Manager */}
         <script
