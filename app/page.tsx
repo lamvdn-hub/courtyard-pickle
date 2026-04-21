@@ -63,10 +63,10 @@ export default function Home() {
         <HeroSection />
         <HowItWorks />
         <CourtsShowcase />
-        <Testimonials />
-        <TournamentSection />
-        <PrimaryCTA />
         <PricingSection />
+        <Testimonials />
+        <PrimaryCTA />
+        <TournamentSection />
         <FAQSection />
         <Footer />
         <MobileBottomCTA />

@@ -69,7 +69,9 @@ export function HeroSection() {
               </a>
             </div>
 
-            <div className="flex items-center gap-6 sm:mt-0 pt-0 sm:pt-4">
+            <GoogleReviewsBadge />
+            
+            <div className="flex items-center gap-6">
               {features.map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-2">
                   <Icon className="w-4 h-4 text-lime" />
@@ -79,8 +81,6 @@ export function HeroSection() {
                 </div>
               ))}
             </div>
-            
-            <GoogleReviewsBadge />
           </div>
 
           <div className="hidden lg:block">

@@ -10,7 +10,7 @@ export function GoogleReviewsBadge() {
       href="https://www.google.com/search?q=courtyard+pickle+da+nang&sxsrf=ANbL-n6OrSRuq7N0Sm7EtV5rPuT6ZOpkFQ%3A1776261746390#irp="
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-3 p-3 mt-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-200 group w-fit"
+      className="inline-flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-200 group w-fit"
     >
       <div className="flex gap-1">
         {/* Google branding typically uses #FBBC04 for their stars */}
