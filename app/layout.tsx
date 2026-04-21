@@ -1,7 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Pacifico, DM_Serif_Display } from 'next/font/google';
-import { FAQSchema } from '@/components/faq/faq-schema';
+
 import { headers } from 'next/headers';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -41,24 +41,6 @@ export const metadata: Metadata = {
   },
 };
 
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'SportsActivityLocation',
-  name: 'Courtyard Pickle',
-  url: 'https://courtyardpickledanang.com',
-  telephone: '+84 93 215 00 06',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '27 Dương Thị Xuân Quý, Bắc Mỹ An',
-    addressLocality: 'Da Nang',
-    addressRegion: 'Ngũ Hành Sơn',
-    postalCode: '550000',
-    addressCountry: 'VN',
-  },
-  openingHours: 'Mo-Su 05:00-22:00',
-  sport: 'Pickleball',
-};
-
 export default async function RootLayout({
   children,
 }: {
@@ -91,11 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             `,
           }}
         />
-        <FAQSchema />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-        />
+
       </head>
       <body className={`${inter.className} ${pacifico.variable} ${dmSerifDisplay.variable}`}>
         {/* Google Tag Manager (noscript) */}

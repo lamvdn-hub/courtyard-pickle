@@ -8,6 +8,25 @@ import { Footer } from '@/components/footer';
 import { MobileBottomCTA } from '@/components/mobile-bottom-cta';
 import { ScrollReset } from '@/components/scroll-reset';
 import { LanguageProvider } from '@/lib/language-context';
+import { FAQSchema } from '@/components/faq/faq-schema';
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsActivityLocation',
+  name: 'Courtyard Pickle',
+  url: 'https://courtyardpickledanang.com',
+  telephone: '+84 93 215 00 06',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '27 Dương Thị Xuân Quý, Bắc Mỹ An',
+    addressLocality: 'Da Nang',
+    addressRegion: 'Ngũ Hành Sơn',
+    postalCode: '550000',
+    addressCountry: 'VN',
+  },
+  openingHours: 'Mo-Su 05:00-22:00',
+  sport: 'Pickleball',
+};
 
 export async function generateMetadata({ searchParams }: { searchParams: any }) {
   const params = await searchParams;
@@ -30,6 +49,11 @@ export async function generateMetadata({ searchParams }: { searchParams: any }) 
 export default function Home() {
   return (
     <LanguageProvider>
+      <FAQSchema />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <main className="relative">
         <ScrollReset />
         <StickyNav />
