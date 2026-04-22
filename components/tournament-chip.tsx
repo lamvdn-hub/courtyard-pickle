@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Trophy, Calendar, ArrowRight } from 'lucide-react';
 import { tournamentConfig, LocalizedString } from '@/config/tournament.config';
 import { useLanguage } from '@/lib/language-context';
@@ -19,26 +20,36 @@ const mountAnimation = {
 
 // OPTION 2: Border pulse (Currently Active)
 // Pulses the border to lime once, then clears the inline style so Tailwind hover effects continue to work.
-const mountAnimation = {
-  initial: {
-    borderColor: 'rgba(255, 255, 255, 0.1)',
-    boxShadow: '0px 0px 0px rgba(212, 255, 0, 0)'
-  },
-  animate: {
-    borderColor: ['rgba(255, 255, 255, 0.1)', 'rgba(212, 255, 0, 1)', 'rgba(255, 255, 255, 0.1)'],
-    boxShadow: [
-      '0px 0px clamp(0px, 0vw - 0px, 0px) rgba(212, 255, 0, 0)',
-      '0px 0px clamp(2px, 10vw - 38px, 100px) rgba(212, 255, 0, 1)',
-      '0px 0px clamp(0px, 0vw - 0px, 0px) rgba(212, 255, 0, 0)'
-    ],
-    transitionEnd: { borderColor: '', boxShadow: '' }
-  },
-  transition: { duration: 1.5, delay: 0.4, ease: 'easeInOut' as const, times: [0, 0.5, 1] }
-};
+function useMountAnimation() {
+  const [mobileOpacity, setMobileOpacity] = useState(1);
+
+  useEffect(() => {
+    // Lowers opacity on mobile, keeps max opacity on desktop
+    setMobileOpacity(window.innerWidth < 768 ? 0.3 : 1);
+  }, []);
+
+  return {
+    initial: {
+      borderColor: 'rgba(255, 255, 255, 0.1)',
+      boxShadow: '0px 0px 0px rgba(212, 255, 0, 0)'
+    },
+    animate: {
+      borderColor: ['rgba(255, 255, 255, 0.1)', 'rgba(212, 255, 0, 1)', 'rgba(255, 255, 255, 0.1)'],
+      boxShadow: [
+        '0px 0px clamp(0px, 0vw - 0px, 0px) rgba(212, 255, 0, 0)',
+        `0px 0px clamp(2px, 10vw - 38px, 100px) rgba(212, 255, 0, ${mobileOpacity})`,
+        '0px 0px clamp(0px, 0vw - 0px, 0px) rgba(212, 255, 0, 0)'
+      ],
+      transitionEnd: { borderColor: '', boxShadow: '' }
+    },
+    transition: { duration: 1.5, delay: 0.4, ease: 'easeInOut' as const, times: [0, 0.5, 1] }
+  };
+}
 
 export function TournamentChip() {
   const { lang, t } = useLanguage();
   const { state, name, date, link, linkLabel } = tournamentConfig;
+  const mountAnimation = useMountAnimation();
 
   if (state === 'hidden') return null;
 
