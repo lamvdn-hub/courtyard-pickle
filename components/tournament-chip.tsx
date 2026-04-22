@@ -28,7 +28,7 @@ const mountAnimation = {
     borderColor: ['rgba(255, 255, 255, 0.1)', 'rgba(212, 255, 0, 1)', 'rgba(255, 255, 255, 0.1)'],
     boxShadow: [
       '0px 0px clamp(0px, 0vw, 0px) rgba(212, 255, 0, 0)',
-      '0px 0px clamp(6px, 4vw, 50px) rgba(212, 255, 0, 1)',
+      '0px 0px clamp(2px, 8vw, 100px) rgba(212, 255, 0, 1)',
       '0px 0px clamp(0px, 0vw, 0px) rgba(212, 255, 0, 0)'
     ],
     transitionEnd: { borderColor: '', boxShadow: '' }
