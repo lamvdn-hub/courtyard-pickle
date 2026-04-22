@@ -138,6 +138,9 @@ export interface Translations {
     description: string;
     detailsBtn: string;
     comingSoonDate: string;
+    chipStatusAnnounced: string;
+    chipStatusToday: string;
+    chipStatusRecent: string;
   };
 }
 
@@ -290,6 +293,9 @@ const en: Translations = {
     description: 'Join our upcoming community tournament.',
     detailsBtn: 'See details on Facebook',
     comingSoonDate: 'Next tournament coming soon',
+    chipStatusAnnounced: 'Upcoming Tournament',
+    chipStatusToday: 'In Play Today',
+    chipStatusRecent: 'Recent Results',
   },
 };
 
@@ -442,6 +448,9 @@ const vi: Translations = {
     description: 'Tham gia giải đấu cộng đồng sắp tới của chúng tôi.',
     detailsBtn: 'Xem chi tiết trên Facebook',
     comingSoonDate: 'Giải đấu tiếp theo sắp được công bố',
+    chipStatusAnnounced: 'Giải đấu sắp tới',
+    chipStatusToday: 'Đang diễn ra',
+    chipStatusRecent: 'Kết quả gần đây',
   },
 };
 

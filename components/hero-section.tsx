@@ -6,6 +6,7 @@ import { BOOKING_URL } from "@/lib/constants";
 import { PhotoSlideshow } from "@/components/photo-slideshow";
 import { useLanguage } from "@/lib/language-context";
 import { GoogleReviewsBadge } from "@/components/google-reviews-badge";
+import { TournamentChip } from "@/components/tournament-chip";
 
 export function HeroSection() {
   const { t } = useLanguage();
@@ -25,6 +26,8 @@ export function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
+            <TournamentChip />
+            
             <div>
               <h1 className="text-[3.25rem] sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.08] sm:leading-[1.1]">
                 {t.hero.headlinePart1}{" "}
