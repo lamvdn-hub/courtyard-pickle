@@ -20,6 +20,7 @@ const mountAnimation = {
 
 // OPTION 2: Border pulse (Currently Active)
 // Pulses the border to lime once, then clears the inline style so Tailwind hover effects continue to work.
+
 function useMountAnimation() {
   const [mobileOpacity, setMobileOpacity] = useState(1);
 
@@ -92,7 +93,7 @@ export function TournamentChip() {
 
   return (
     <motion.div
-      {...mountAnimation}
+      /*{...mountAnimation}*/
       className="flex items-center gap-2 p-1 pl-3 pr-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300 group max-w-full w-fit"
     >
       <div className="flex items-center gap-2 min-w-0 flex-1">
