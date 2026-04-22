@@ -26,7 +26,11 @@ const mountAnimation = {
   },
   animate: {
     borderColor: ['rgba(255, 255, 255, 0.1)', 'rgba(212, 255, 0, 1)', 'rgba(255, 255, 255, 0.1)'],
-    boxShadow: ['0px 0px 0px rgba(212, 255, 0, 0)', '0px 0px 30px rgba(212, 255, 0, 1)', '0px 0px 0px rgba(212, 255, 0, 0)'],
+    boxShadow: [
+      '0px 0px clamp(0px, 0vw, 0px) rgba(212, 255, 0, 0)', 
+      '0px 0px clamp(12px, 2vw, 30px) rgba(212, 255, 0, 1)', 
+      '0px 0px clamp(0px, 0vw, 0px) rgba(212, 255, 0, 0)'
+    ],
     transitionEnd: { borderColor: '', boxShadow: '' }
   },
   transition: { duration: 1.5, delay: 0.4, ease: 'easeInOut' as const, times: [0, 0.5, 1] }
