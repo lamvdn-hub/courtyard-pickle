@@ -19,6 +19,8 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const [contactExpanded, setContactExpanded] = useState(false);
+  const [isRendered, setIsRendered] = useState(isOpen);
+  const [isVisible, setIsVisible] = useState(false);
   const { lang, t } = useLanguage();
   const pathname = usePathname();
   const isHomePage = pathname === '/';
@@ -26,19 +28,32 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   const navLinks = [
     { label: t.mobile.howItWorks, href: '#how-it-works' },
     { label: t.mobile.ourFacility, href: '#courts' },
+    { label: t.mobile.pricing, href: '#pricing' },
+    { label: t.mobile.testimonials, href: '#testimonials' },
+    { label: t.mobile.tournaments, href: '#tournaments' },
     { label: t.mobile.faq, href: '#faq' },
   ];
 
   useEffect(() => {
     if (isOpen) {
+      setIsRendered(true);
+      const timeout = setTimeout(() => setIsVisible(true), 10);
       document.body.style.overflow = 'hidden';
+      return () => clearTimeout(timeout);
     } else {
+      setIsVisible(false);
       document.body.style.overflow = '';
       setContactExpanded(false);
+      
+      if (window.innerWidth >= 768) {
+        const timer = setTimeout(() => {
+          setIsRendered(false);
+        }, 300);
+        return () => clearTimeout(timer);
+      } else {
+        setIsRendered(false);
+      }
     }
-    return () => {
-      document.body.style.overflow = '';
-    };
   }, [isOpen]);
 
   const handleClose = useCallback(() => {
@@ -67,11 +82,17 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
     onClose();
   }, [onClose]);
 
-  if (!isOpen) return null;
+  if (!isRendered) return null;
 
   return (
-    <div
-      className="fixed inset-0 z-[60] md:hidden flex flex-col animate-fade-in"
+    <>
+      <div 
+        className={`fixed inset-0 z-[50] hidden md:block bg-black/60 backdrop-blur-sm transition-opacity duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+        onClick={handleClose}
+        aria-hidden="true"
+      />
+      <div
+        className={`fixed inset-0 z-[60] flex flex-col md:left-auto md:right-0 md:w-[380px] lg:w-[420px] md:border-l md:border-white/10 md:shadow-2xl md:transition-transform md:duration-300 md:ease-out ${!isVisible ? 'md:translate-x-full' : 'md:translate-x-0'} animate-fade-in md:animate-none`}
       style={{ backgroundColor: '#0a1a0c' }}
       role="menu"
       aria-label="Navigation menu"
@@ -252,5 +273,6 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
         </div>
       </div>
     </div>
+    </>
   );
 }

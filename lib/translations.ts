@@ -28,6 +28,9 @@ export interface Translations {
     secureYourCourt: string;
     howItWorks: string;
     ourFacility: string;
+    pricing: string;
+    testimonials: string;
+    tournaments: string;
     faq: string;
     contact: string;
     openHours: string;
@@ -173,6 +176,9 @@ const en: Translations = {
     secureYourCourt: 'Secure your court',
     howItWorks: 'How it works',
     ourFacility: 'Our facility',
+    pricing: 'Pricing',
+    testimonials: 'Testimonials',
+    tournaments: 'Tournaments',
     faq: 'FAQ',
     contact: 'Contact',
     openHours: 'Open daily 05:00 – 22:00  ·  2 courts available',
@@ -328,6 +334,9 @@ const vi: Translations = {
     secureYourCourt: 'Đặt sân ngay',
     howItWorks: 'Cách thức đặt sân',
     ourFacility: 'Cơ sở vật chất',
+    pricing: 'Bảng giá',
+    testimonials: 'Đánh giá',
+    tournaments: 'Giải đấu',
     faq: 'Câu hỏi thường gặp',
     contact: 'Liên hệ',
     openHours: 'Mở cửa hàng ngày 05:00 – 22:00  ·  2 sân',
