@@ -3,6 +3,34 @@
 import { Trophy, Calendar, ArrowRight } from 'lucide-react';
 import { tournamentConfig, LocalizedString } from '@/config/tournament.config';
 import { useLanguage } from '@/lib/language-context';
+import { motion } from 'framer-motion';
+
+// === ENTRANCE ANIMATION OPTIONS ===
+// To swap animations, comment out the active one and uncomment the other.
+
+// OPTION 1: Fade and slide down (Currently Disabled)
+/*
+const mountAnimation = {
+  initial: { opacity: 0, y: -10 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.5, delay: 0.4, ease: 'easeOut' as const }
+};
+*/
+
+// OPTION 2: Border pulse (Currently Active)
+// Pulses the border to lime once, then clears the inline style so Tailwind hover effects continue to work.
+const mountAnimation = {
+  initial: {
+    borderColor: 'rgba(255, 255, 255, 0.1)',
+    boxShadow: '0px 0px 0px rgba(212, 255, 0, 0)'
+  },
+  animate: {
+    borderColor: ['rgba(255, 255, 255, 0.1)', 'rgba(212, 255, 0, 1)', 'rgba(255, 255, 255, 0.1)'],
+    boxShadow: ['0px 0px 0px rgba(212, 255, 0, 0)', '0px 0px 30px rgba(212, 255, 0, 1)', '0px 0px 0px rgba(212, 255, 0, 0)'],
+    transitionEnd: { borderColor: '', boxShadow: '' }
+  },
+  transition: { duration: 1.5, delay: 0.4, ease: 'easeInOut' as const, times: [0, 0.5, 1] }
+};
 
 export function TournamentChip() {
   const { lang, t } = useLanguage();
@@ -48,7 +76,10 @@ export function TournamentChip() {
   );
 
   return (
-    <div className="flex items-center gap-2 p-1 pl-3 pr-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300 group max-w-full w-fit">
+    <motion.div
+      {...mountAnimation}
+      className="flex items-center gap-2 p-1 pl-3 pr-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300 group max-w-full w-fit"
+    >
       <div className="flex items-center gap-2 min-w-0 flex-1">
         {getIcon()}
         <div className="flex items-center gap-2 min-w-0 flex-1">
@@ -77,6 +108,6 @@ export function TournamentChip() {
         <span className="whitespace-nowrap">{localizedLinkLabel}</span>
         <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5 shrink-0" />
       </a>
-    </div>
+    </motion.div>
   );
 }
