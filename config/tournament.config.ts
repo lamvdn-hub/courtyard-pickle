@@ -20,8 +20,8 @@ export const tournamentConfig: TournamentConfig = {
     vi: 'Bounty Hunter',
   },
   date: {
-    en: 'May 15th, 2026',
-    vi: 'Ngày 15 tháng 5, 2026',
+    en: 'Sat, 25 Apr 2026',
+    vi: 'Thứ 7, 25/04/26',
   },
   link: 'https://facebook.com/courtyardpickleball',
   linkLabel: {

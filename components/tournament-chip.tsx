@@ -18,11 +18,11 @@ export function TournamentChip() {
   const getStatusLabel = () => {
     switch (state) {
       case 'announced':
-        return lang === 'en' ? 'UPCOMING' : 'SẮP TỚI';
+        return t.tournaments.chipStatusAnnounced;
       case 'today':
-        return lang === 'en' ? 'LIVE' : 'TRỰC TIẾP';
+        return t.tournaments.chipStatusToday;
       case 'recent':
-        return lang === 'en' ? 'RESULTS' : 'KẾT QUẢ';
+        return t.tournaments.chipStatusRecent;
       default:
         return '';
     }
@@ -31,11 +31,11 @@ export function TournamentChip() {
   const getIcon = () => {
     switch (state) {
       case 'today':
-        return <Trophy className="w-4 h-4 text-lime animate-pulse" />;
+        return <Trophy className="w-4 h-4 text-lime animate-pulse shrink-0" />;
       case 'recent':
-        return <Trophy className="w-4 h-4 text-lime" />;
+        return <Trophy className="w-4 h-4 text-lime shrink-0" />;
       default:
-        return <Calendar className="w-4 h-4 text-lime" />;
+        return <Calendar className="w-4 h-4 text-lime shrink-0" />;
     }
   };
 
@@ -43,34 +43,39 @@ export function TournamentChip() {
   const localizedDate = getLocalized(date);
   const localizedLinkLabel = getLocalized(linkLabel);
 
-  const getMainContent = () => {
-    if (state === 'announced') return `${localizedName} • ${localizedDate}`;
-    return localizedName;
-  };
+  const Dot = () => (
+    <span className="w-1 h-1 rounded-full bg-white/40 shrink-0" />
+  );
 
   return (
-    <div className="inline-flex items-center gap-2 p-1 pl-3 pr-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300 group">
-      <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2 p-1 pl-3 pr-1 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300 group max-w-full w-fit">
+      <div className="flex items-center gap-2 min-w-0 flex-1">
         {getIcon()}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-lime leading-none">
+        <div className="flex items-center gap-2 min-w-0 flex-1">
+          <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-lime leading-none shrink-0">
             {getStatusLabel()}
           </span>
-          <span className="hidden sm:block w-1 h-1 rounded-full bg-white/20" />
-          <span className="text-sm font-medium text-white/90 group-hover:text-white transition-colors">
-            {getMainContent()}
+          <Dot />
+          <span className="text-sm font-medium text-white/90 group-hover:text-white transition-colors truncate">
+            {localizedName}
           </span>
+          {state === 'announced' && (
+            <div className="hidden md:flex items-center gap-2 shrink-0">
+              <Dot />
+              <span className="text-sm font-medium text-white/70">{localizedDate}</span>
+            </div>
+          )}
         </div>
       </div>
-      
+
       <a
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-lime text-black text-xs font-bold hover:bg-lime-dim transition-colors ml-2"
+        className="flex items-center gap-1.5 py-1.5 px-3 rounded-full bg-lime text-black text-[11px] sm:text-xs font-bold hover:bg-lime-dim transition-colors shrink-0"
       >
-        {localizedLinkLabel}
-        <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
+        <span className="whitespace-nowrap">{localizedLinkLabel}</span>
+        <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5 shrink-0" />
       </a>
     </div>
   );

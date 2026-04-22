@@ -241,7 +241,7 @@ const en: Translations = {
     termsOfService: 'Terms of Service',
   },
   reviews: {
-    badgeFormat: '4.7 / 5.0 (46 reviews on Google)',
+    badgeFormat: '4.7 / 5.0 (47 reviews on Google)',
   },
   pricing: {
     kicker: 'Clear Pricing',
@@ -396,7 +396,7 @@ const vi: Translations = {
     termsOfService: 'Điều khoản dịch vụ',
   },
   reviews: {
-    badgeFormat: '4.7 / 5.0 (46 đánh giá trên Google)',
+    badgeFormat: '4.7 / 5.0 (47 đánh giá trên Google)',
   },
   pricing: {
     kicker: 'Bảng Giá Rõ Ràng',

@@ -26,8 +26,10 @@ export function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
-            <TournamentChip />
-            
+            <div className="pt-4 sm:pt-6">
+              <TournamentChip />
+            </div>
+
             <div>
               <h1 className="text-[3.25rem] sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.08] sm:leading-[1.1]">
                 {t.hero.headlinePart1}{" "}
@@ -73,7 +75,7 @@ export function HeroSection() {
             </div>
 
             <GoogleReviewsBadge />
-            
+
             <div className="flex items-center gap-6">
               {features.map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-2">
