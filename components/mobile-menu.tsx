@@ -139,23 +139,29 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
         role="menu"
         aria-label="Navigation menu"
       >
-        {/* ── Header: logo + close ── */}
-        <div className="flex items-center justify-between px-4 h-16" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-          <a href={`/?lang=${lang}`} className="flex items-center gap-2">
+        {/* ── Header: logo + language + close ── */}
+        <div className="flex items-center justify-between px-4 h-16 shrink-0" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+          <a href={`/?lang=${lang}`} className="flex items-center">
             <Image
               src="/courtyard_logo.webp"
               alt="Courtyard Pickle Logo"
               width={72}
               height={72}
-              className="h-[72px] w-auto"
+              className="h-[64px] w-auto"
               priority
             />
           </a>
+
+          {/* Centered language switcher */}
+          <div className="flex-1 flex justify-center px-2">
+            <LanguageSwitcher currentLang={lang} variant="mobile" />
+          </div>
+
           <button
             ref={closeButtonRef}
             onClick={handleClose}
             aria-label="Close menu"
-            className="flex items-center justify-center w-8 h-8 rounded-full transition-colors"
+            className="flex items-center justify-center w-8 h-8 rounded-full transition-colors shrink-0"
             style={{ background: 'rgba(255,255,255,0.08)' }}
           >
             <X
@@ -164,32 +170,8 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             />
           </button>
         </div>
-
-        {/* ── Language switcher strip (mobile only) ── */}
-        <div
-          className="px-6 md:hidden"
-          style={{
-            paddingTop: '16px',
-            paddingBottom: '16px',
-            borderBottom: '1px solid rgba(255,255,255,0.06)',
-          }}
-        >
-          <p
-            style={{
-              fontSize: '11px',
-              color: 'rgba(255,255,255,0.3)',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase',
-              marginBottom: '10px',
-            }}
-          >
-            {t.mobile.language}
-          </p>
-          <LanguageSwitcher currentLang={lang} variant="mobile" />
-        </div>
-
         {/* ── Scrollable nav links ── */}
-        <div className="flex-1 overflow-y-auto px-6 pt-4">
+        <div className="flex-1 overflow-y-auto px-6 pt-2">
           <nav>
             {navLinks.map((link, index) => (
               <a
