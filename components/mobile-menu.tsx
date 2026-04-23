@@ -83,7 +83,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             yOffset = isMobile ? -60 : -20;
           } else if (href === '#courts') {
             // Courts: increase the gap (scroll less)
-            yOffset = isMobile ? -100 : -60;
+            yOffset = isMobile ? -80 : -60;
           } else if (href === '#pricing') {
             // Pricing: reduce the gap (scroll further down)
             yOffset = isMobile ? 0 : 30;
