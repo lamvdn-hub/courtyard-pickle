@@ -14,7 +14,7 @@ export interface TournamentConfig {
 }
 
 export const tournamentConfig: TournamentConfig = {
-  state: 'announced', // Set to 'announced', 'today', or 'recent' to show the chip
+  state: 'hidden', // Set to 'announced', 'today', or 'recent' to show the chip
   name: {
     en: 'Bounty Hunter',
     vi: 'Bounty Hunter',
