@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Phone, ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
 
@@ -12,6 +12,21 @@ export function ContactPanel({ showHeading = false }: ContactPanelProps) {
   const { t } = useLanguage();
   const [isCallOpen, setIsCallOpen] = useState(false);
   const [copiedNum, setCopiedNum] = useState<string | null>(null);
+  const expandRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isCallOpen && expandRef.current) {
+      // Use a small timeout to let the grid-rows transition begin
+      // so the element has a height to scroll to.
+      const timer = setTimeout(() => {
+        expandRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+        });
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, [isCallOpen]);
 
   function copyPhone(num: string, raw: string) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -70,8 +85,8 @@ export function ContactPanel({ showHeading = false }: ContactPanelProps) {
         />
       </button>
 
-      {/* Phone expand area */}
       <div
+        ref={expandRef}
         className={`grid transition-all duration-200 ease-out ${
           isCallOpen ? 'grid-rows-[1fr] opacity-100 mt-1' : 'grid-rows-[0fr] opacity-0 mt-0 !gap-0'
         }`}

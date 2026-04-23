@@ -19,6 +19,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
   const firstLinkRef = useRef<HTMLAnchorElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const [contactExpanded, setContactExpanded] = useState(false);
+  const contactRef = useRef<HTMLDivElement>(null);
   const [isRendered, setIsRendered] = useState(isOpen);
   const [isVisible, setIsVisible] = useState(false);
   const { lang, t } = useLanguage();
@@ -55,6 +56,18 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
       }
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    if (contactExpanded && contactRef.current) {
+      const timer = setTimeout(() => {
+        contactRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+        });
+      }, 150);
+      return () => clearTimeout(timer);
+    }
+  }, [contactExpanded]);
 
   const handleClose = useCallback(() => {
     onClose();
@@ -232,6 +245,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               </button>
 
               <div
+                ref={contactRef}
                 style={{
                   maxHeight: contactExpanded ? '1000px' : '0px',
                   opacity: contactExpanded ? 1 : 0,
