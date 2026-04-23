@@ -126,6 +126,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
         role="menu"
         aria-label="Navigation menu"
       >
+        {/* ── Header: logo + close ── */}
         <div className="flex items-center justify-between px-4 h-16" style={{ borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
           <a href={`/?lang=${lang}`} className="flex items-center gap-2">
             <Image
@@ -151,7 +152,31 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
           </button>
         </div>
 
-        <div className="flex-1 flex flex-col px-6 pt-8 overflow-y-auto">
+        {/* ── Language switcher strip (mobile only) ── */}
+        <div
+          className="px-6 md:hidden"
+          style={{
+            paddingTop: '16px',
+            paddingBottom: '16px',
+            borderBottom: '1px solid rgba(255,255,255,0.06)',
+          }}
+        >
+          <p
+            style={{
+              fontSize: '11px',
+              color: 'rgba(255,255,255,0.3)',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              marginBottom: '10px',
+            }}
+          >
+            {t.mobile.language}
+          </p>
+          <LanguageSwitcher currentLang={lang} variant="mobile" />
+        </div>
+
+        {/* ── Scrollable nav links ── */}
+        <div className="flex-1 overflow-y-auto px-6 pt-4">
           <nav>
             {navLinks.map((link, index) => (
               <a
@@ -222,84 +247,30 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
               </div>
             </div>
           </nav>
+        </div>
 
-          <div
+        {/* ── Sticky CTA footer ── */}
+        <div
+          className="px-6 py-4"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
+        >
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={handleCtaClick}
+            className="flex items-center justify-center w-full transition-opacity hover:opacity-90"
             style={{
-              height: '1px',
-              background: 'rgba(255,255,255,0.06)',
-              marginTop: '32px',
-              marginBottom: '28px',
+              backgroundColor: '#ccff00',
+              color: '#0a1a0c',
+              fontSize: '15px',
+              fontWeight: 600,
+              padding: '16px 0',
+              borderRadius: '12px',
             }}
-          />
-
-          <div style={{ marginBottom: '24px' }}>
-            <p
-              style={{
-                fontSize: '11px',
-                color: 'rgba(255,255,255,0.3)',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                marginBottom: '12px',
-              }}
-            >
-              {t.mobile.language}
-            </p>
-            <LanguageSwitcher currentLang={lang} variant="mobile" />
-          </div>
-
-          <div
-            style={{
-              height: '1px',
-              background: 'rgba(255,255,255,0.06)',
-              marginBottom: '28px',
-            }}
-          />
-
-          <div>
-            <p
-              style={{
-                fontSize: '11px',
-                color: 'rgba(255,255,255,0.3)',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                marginBottom: '4px',
-              }}
-            >
-              {t.mobile.readyToPlay}
-            </p>
-            <a
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleCtaClick}
-              className="flex items-center justify-center w-full transition-opacity hover:opacity-90"
-              style={{
-                backgroundColor: '#ccff00',
-                color: '#0a1a0c',
-                fontSize: '15px',
-                fontWeight: 500,
-                padding: '16px 0',
-                borderRadius: '12px',
-              }}
-            >
-              {t.mobile.secureYourCourt}&nbsp;&rarr;
-            </a>
-          </div>
-
-          <div
-            className="py-6 mt-6"
-            style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}
           >
-            <p
-              className="text-center"
-              style={{
-                fontSize: '11px',
-                color: 'rgba(255,255,255,0.2)',
-              }}
-            >
-              {t.mobile.openHours}
-            </p>
-          </div>
+            {t.mobile.secureYourCourt}&nbsp;&rarr;
+          </a>
         </div>
       </div>
     </>
