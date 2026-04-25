@@ -3,6 +3,7 @@ import { Footer } from '@/components/footer';
 import { MobileBottomCTA } from '@/components/mobile-bottom-cta';
 import { ScrollReset } from '@/components/scroll-reset';
 import { LanguageProvider } from '@/lib/language-context';
+import { CONTACT_EMAIL } from '@/lib/constants';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
@@ -44,7 +45,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-xl font-bold text-white mt-8 mb-4">1. Who We Are</h2>
             <p>Courtyard Pickle ("we", "us", "our") operates the website <a href="https://courtyardpickledanang.com" className="text-lime hover:underline">courtyardpickledanang.com</a> (the "Site").</p>
             <p><strong>Registered address:</strong><br />27 Dương Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam</p>
-            <p><strong>Privacy contact:</strong><br />courtyard.picklecafe@gmail.com</p>
+            <p><strong>Privacy contact:</strong><br />{CONTACT_EMAIL}</p>
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">2. Scope</h2>
             <p>This policy explains what data is collected when you visit this Site, by whom, the lawful basis for processing, and your rights under current Vietnamese personal data protection law. This English version is provided alongside the full Vietnamese version.</p>
@@ -79,12 +80,12 @@ export default function PrivacyPolicy() {
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">7. Cross-Border Data Transfer</h2>
             <p>Consent to analytics tools constitutes consent to transfer and processing on servers outside Vietnam by Google LLC (United States) and Microsoft Corporation (United States). Vercel and Cloudflare may process connection data outside Vietnam in normal operations.</p>
-            <p>Cross-border transfers occur under each provider's standard safeguards. We maintain the required transfer impact assessment dossier internally per current Vietnamese personal data protection law. A copy is available on request at courtyard.picklecafe@gmail.com.</p>
+            <p>Cross-border transfers occur under each provider's standard safeguards. We maintain the required transfer impact assessment dossier internally per current Vietnamese personal data protection law. A copy is available on request at {CONTACT_EMAIL}.</p>
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">8. Your Rights Under Current Vietnamese Personal Data Protection Law</h2>
             <p>You have the right to:</p>
             <p>• Know what personal data is collected and the purpose<br />• Access your personal data<br />• Correct inaccurate personal data<br />• Delete your personal data<br />• Restrict processing of your personal data<br />• Withdraw consent at any time without penalty (use footer cookie settings)<br />• Object to processing that harms your legal rights or interests<br />• Claim compensation for damages from violations<br />• Complain to the Ministry of Public Security's Department of Cybersecurity and High-Tech Crime Prevention</p>
-            <p>Contact courtyard.picklecafe@gmail.com to exercise rights regarding analytics providers. We will facilitate with the provider.</p>
+            <p>Contact {CONTACT_EMAIL} to exercise rights regarding analytics providers. We will facilitate with the provider.</p>
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">9. Data Security</h2>
             <p>Although we do not store personal data directly, we require service providers to maintain technical and organizational measures (encryption in transit, access controls, regular audits) in compliance with current Vietnamese personal data protection law.</p>
@@ -99,7 +100,7 @@ export default function PrivacyPolicy() {
             <p>We may update this policy for tools, legal requirements, or functionality. The "Last updated" date changes accordingly. Material changes are notified prominently on the Site. Where changes affect consent-based processing, we provide opportunity to review and renew consent. Continued use after notification constitutes acceptance where legally permitted.</p>
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">13. Contact</h2>
-            <p><strong>Courtyard Pickle</strong><br />27 Dương Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam<br />Email: courtyard.picklecafe@gmail.com<br />Website: courtyardpickledanang.com</p>
+            <p><strong>Courtyard Pickle</strong><br />27 Dương Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam<br />Email: {CONTACT_EMAIL}<br />Website: courtyardpickledanang.com</p>
           </div>
         </div>
 

@@ -83,10 +83,13 @@ export interface Translations {
     contactTitle: string;
     messageFacebook: string;
     callUs: string;
+    emailUs: string;
     primaryPhone: string;
     secondaryPhone: string;
     copyNumber: string;
     copiedNumber: string;
+    copyEmail: string;
+    copiedEmail: string;
     locationTitle: string;
     addressLine1: string;
     addressLine2: string;
@@ -181,10 +184,13 @@ const en: Translations = {
     contactTitle: 'CONTACT US',
     messageFacebook: 'Facebook',
     callUs: 'Call Us',
+    emailUs: 'Email Us',
     primaryPhone: 'PRIMARY',
     secondaryPhone: 'SECONDARY',
     copyNumber: 'Copy',
     copiedNumber: 'Copied \u2713',
+    copyEmail: 'Copy',
+    copiedEmail: 'Copied \u2713',
     locationTitle: 'LOCATION',
     addressLine1: '27 Dương Thị Xuân Quý',
     addressLine2: 'Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam',
@@ -279,10 +285,13 @@ const vi: Translations = {
     contactTitle: 'LIÊN HỆ',
     messageFacebook: 'Facebook',
     callUs: 'Gọi điện',
+    emailUs: 'Gửi email',
     primaryPhone: 'CHÍNH',
     secondaryPhone: 'PHỤ',
     copyNumber: 'Sao chép',
     copiedNumber: 'Đã sao chép \u2713',
+    copyEmail: 'Sao chép',
+    copiedEmail: 'Đã sao chép \u2713',
     locationTitle: 'ĐỊA ĐIỂM',
     addressLine1: '27 Dương Thị Xuân Quý',
     addressLine2: 'Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam',

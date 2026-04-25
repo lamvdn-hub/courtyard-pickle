@@ -3,6 +3,7 @@ import { Footer } from '@/components/footer';
 import { MobileBottomCTA } from '@/components/mobile-bottom-cta';
 import { ScrollReset } from '@/components/scroll-reset';
 import { LanguageProvider } from '@/lib/language-context';
+import { CONTACT_EMAIL } from '@/lib/constants';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Metadata } from 'next';
@@ -44,7 +45,7 @@ export default function PrivacyPolicyVN() {
             <h2 className="text-xl font-bold text-white mt-8 mb-4">1. Chúng tôi là ai</h2>
             <p>Courtyard Pickle (sau đây gọi là “chúng tôi”, “của chúng tôi”) vận hành trang web <a href="https://courtyardpickledanang.com" className="text-lime hover:underline">courtyardpickledanang.com</a> (sau đây gọi là “Trang web”).</p>
             <p><strong>Địa chỉ đăng ký:</strong><br />27 Dương Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam</p>
-            <p><strong>Liên hệ về quyền riêng tư:</strong><br />courtyard.picklecafe@gmail.com</p>
+            <p><strong>Liên hệ về quyền riêng tư:</strong><br />{CONTACT_EMAIL}</p>
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">2. Phạm vi áp dụng</h2>
             <p>Chính sách này giải thích dữ liệu được thu thập khi bạn truy cập Trang web, bởi ai, cơ sở pháp lý xử lý và quyền của bạn theo pháp luật Việt Nam hiện hành về bảo vệ dữ liệu cá nhân. Phiên bản tiếng Anh được cung cấp song song với phiên bản tiếng Việt đầy đủ này.</p>
@@ -79,12 +80,12 @@ export default function PrivacyPolicyVN() {
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">7. Chuyển dữ liệu ra nước ngoài</h2>
             <p>Việc đồng ý sử dụng công cụ phân tích đồng nghĩa với việc đồng ý chuyển và xử lý dữ liệu trên máy chủ ngoài Việt Nam bởi Google LLC (Hoa Kỳ) và Tập đoàn Microsoft (Hoa Kỳ). Vercel và Cloudflare có thể xử lý dữ liệu kết nối ngoài Việt Nam trong hoạt động thông thường.</p>
-            <p>Việc chuyển dữ liệu được thực hiện theo biện pháp bảo vệ tiêu chuẩn của từng nhà cung cấp. Chúng tôi duy trì hồ sơ đánh giá tác động chuyển dữ liệu ra nước ngoài theo quy định pháp luật Việt Nam hiện hành về bảo vệ dữ liệu cá nhân. Bản sao hồ sơ có sẵn theo yêu cầu tại courtyard.picklecafe@gmail.com.</p>
+            <p>Việc chuyển dữ liệu được thực hiện theo biện pháp bảo vệ tiêu chuẩn của từng nhà cung cấp. Chúng tôi duy trì hồ sơ đánh giá tác động chuyển dữ liệu ra nước ngoài theo quy định pháp luật Việt Nam hiện hành về bảo vệ dữ liệu cá nhân. Bản sao hồ sơ có sẵn theo yêu cầu tại {CONTACT_EMAIL}.</p>
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">8. Quyền của bạn theo pháp luật Việt Nam về bảo vệ dữ liệu cá nhân</h2>
             <p>Bạn có quyền:</p>
             <p>• Được thông báo về việc xử lý dữ liệu cá nhân<br />• Truy cập dữ liệu cá nhân của mình<br />• Sửa chữa dữ liệu cá nhân không chính xác<br />• Xóa dữ liệu cá nhân<br />• Hạn chế xử lý dữ liệu cá nhân<br />• Phản đối việc xử lý dữ liệu cá nhân<br />• Rút lại sự đồng ý bất kỳ lúc nào (qua liên kết cài đặt cookie ở chân trang)<br />• Yêu cầu cung cấp dữ liệu cá nhân<br />• Khiếu nại, tố cáo hoặc khởi kiện theo quy định pháp luật<br />• Yêu cầu bồi thường thiệt hại do vi phạm</p>
-            <p>Liên hệ courtyard.picklecafe@gmail.com để thực hiện quyền liên quan đến nhà cung cấp phân tích. Chúng tôi sẽ phối hợp hỗ trợ.</p>
+            <p>Liên hệ {CONTACT_EMAIL} để thực hiện quyền liên quan đến nhà cung cấp phân tích. Chúng tôi sẽ phối hợp hỗ trợ.</p>
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">9. An ninh dữ liệu</h2>
             <p>Mặc dù chúng tôi không lưu trữ trực tiếp dữ liệu cá nhân, chúng tôi yêu cầu các nhà cung cấp dịch vụ áp dụng các biện pháp kỹ thuật và tổ chức (mã hóa truyền tải, kiểm soát truy cập, kiểm toán định kỳ) theo pháp luật Việt Nam hiện hành về bảo vệ dữ liệu cá nhân.</p>
@@ -99,7 +100,7 @@ export default function PrivacyPolicyVN() {
             <p>Chúng tôi có thể cập nhật chính sách để phù hợp với công cụ, yêu cầu pháp lý hoặc chức năng mới. Ngày “Cập nhật lần cuối” sẽ thay đổi. Thay đổi quan trọng sẽ được thông báo nổi bật trên Trang web. Khi thay đổi ảnh hưởng đến xử lý dựa trên đồng ý, chúng tôi cung cấp cơ hội xem xét và gia hạn đồng ý. Việc tiếp tục sử dụng sau thông báo cấu thành chấp nhận nếu pháp luật cho phép.</p>
 
             <h2 className="text-xl font-bold text-white mt-8 mb-4">13. Liên hệ</h2>
-            <p><strong>Courtyard Pickle</strong><br />27 Dương Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam<br />Email: courtyard.picklecafe@gmail.com<br />Trang web: courtyardpickledanang.com</p>
+            <p><strong>Courtyard Pickle</strong><br />27 Dương Thị Xuân Quý, Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam<br />Email: {CONTACT_EMAIL}<br />Trang web: courtyardpickledanang.com</p>
           </div>
         </div>
 
