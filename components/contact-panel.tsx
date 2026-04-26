@@ -55,19 +55,44 @@ export function ContactPanel({ showHeading = false }: ContactPanelProps) {
   const emailRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isCallOpen && phoneRef.current) {
+    if (isCallOpen && phoneRef.current && window.innerWidth < 768) {
       const timer = setTimeout(() => {
-        phoneRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 150);
+        const element = phoneRef.current;
+        if (!element) return;
+        
+        const rect = element.getBoundingClientRect();
+        const stickyCtaHeight = 90; // Approx height of sticky CTA + padding
+        const viewportHeight = window.innerHeight;
+        
+        // Check if the bottom of the element is covered by the sticky CTA
+        if (rect.bottom > viewportHeight - stickyCtaHeight) {
+          const scrollAmount = rect.bottom - (viewportHeight - stickyCtaHeight) + 20;
+          window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+        } else {
+          element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }, 200);
       return () => clearTimeout(timer);
     }
   }, [isCallOpen]);
 
   useEffect(() => {
-    if (emailExpanded && emailRef.current) {
+    if (emailExpanded && emailRef.current && window.innerWidth < 768) {
       const timer = setTimeout(() => {
-        emailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 150);
+        const element = emailRef.current;
+        if (!element) return;
+
+        const rect = element.getBoundingClientRect();
+        const stickyCtaHeight = 90;
+        const viewportHeight = window.innerHeight;
+
+        if (rect.bottom > viewportHeight - stickyCtaHeight) {
+          const scrollAmount = rect.bottom - (viewportHeight - stickyCtaHeight) + 20;
+          window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+        } else {
+          element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      }, 200);
       return () => clearTimeout(timer);
     }
   }, [emailExpanded]);

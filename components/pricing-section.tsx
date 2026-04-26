@@ -16,6 +16,7 @@ export function PricingSection() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const popoverRef = useRef<HTMLDivElement>(null);
   const [opensUpward, setOpensUpward] = useState(true);
 
   // Accordion state for mobile
@@ -45,6 +46,35 @@ export function PricingSection() {
     }
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isContactOpen]);
+
+  // Scroll popover into view on mobile when opened
+  useEffect(() => {
+    if (isContactOpen && popoverRef.current && window.innerWidth < 768) {
+      const timer = setTimeout(() => {
+        const element = popoverRef.current;
+        if (!element) return;
+
+        const rect = element.getBoundingClientRect();
+        const stickyCtaHeight = 90; // Approx height of sticky CTA + padding
+        const viewportHeight = window.innerHeight;
+
+        // If dropping down and covered by CTA, or if dropping up and going off top
+        if (!opensUpward && rect.bottom > viewportHeight - stickyCtaHeight) {
+          const scrollAmount = rect.bottom - (viewportHeight - stickyCtaHeight) + 20;
+          window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+        } else if (opensUpward && rect.top < 0) {
+          const scrollAmount = rect.top - 20;
+          window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+        } else {
+          element.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+          });
+        }
+      }, 250); // Wait for animation
+      return () => clearTimeout(timer);
+    }
+  }, [isContactOpen, opensUpward]);
 
   const plans = [
     {
@@ -182,6 +212,7 @@ export function PricingSection() {
                         <div ref={containerRef} className="relative">
                           {/* Popover Panel */}
                           <div
+                            ref={popoverRef}
                             aria-hidden={!isContactOpen}
                             className={cn(
                               "absolute left-0 right-0 z-50 p-4 rounded-2xl bg-[#0f2213] border border-white/10 shadow-2xl transition-[opacity,transform] duration-200 ease-out",
