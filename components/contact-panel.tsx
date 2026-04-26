@@ -1,8 +1,44 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
-import { Phone, ChevronDown } from 'lucide-react';
+import { useState, useRef, useEffect, useCallback } from 'react';
+import { Phone, ChevronDown, Mail } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
+import { FACEBOOK_URL, PHONE_NUMBER_PRIMARY, PHONE_NUMBER_SECONDARY, CONTACT_EMAIL } from '@/lib/constants';
+
+const PHONE_PRIMARY_RAW = '+84932150006';
+const PHONE_SECONDARY_RAW = '0708191711';
+
+function CopyButton({
+  number,
+  copiedNumber,
+  onCopy,
+  labelCopy,
+  labelCopied,
+}: {
+  number: string;
+  copiedNumber: string | null;
+  onCopy: (num: string) => void;
+  labelCopy: string;
+  labelCopied: string;
+}) {
+  const isCopied = copiedNumber === number;
+
+  return (
+    <button
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        onCopy(number);
+      }}
+      className={`text-[11px] px-2 py-1 rounded-md border transition-all duration-200 ${isCopied
+          ? 'text-lime border-lime/30 bg-lime/10'
+          : 'text-white/55 border-white/10 bg-white/[0.07] hover:bg-white/[0.12]'
+        }`}
+    >
+      {isCopied ? labelCopied : labelCopy}
+    </button>
+  );
+}
 
 interface ContactPanelProps {
   showHeading?: boolean;
@@ -11,41 +47,57 @@ interface ContactPanelProps {
 export function ContactPanel({ showHeading = false }: ContactPanelProps) {
   const { t } = useLanguage();
   const [isCallOpen, setIsCallOpen] = useState(false);
-  const [copiedNum, setCopiedNum] = useState<string | null>(null);
-  const expandRef = useRef<HTMLDivElement>(null);
+  const [emailExpanded, setEmailExpanded] = useState(false);
+  const [copiedNumber, setCopiedNumber] = useState<string | null>(null);
+  const [copiedEmail, setCopiedEmail] = useState<string | null>(null);
+
+  const phoneRef = useRef<HTMLDivElement>(null);
+  const emailRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isCallOpen && expandRef.current) {
-      // Use a small timeout to let the grid-rows transition begin
-      // so the element has a height to scroll to.
+    if (isCallOpen && phoneRef.current) {
       const timer = setTimeout(() => {
-        expandRef.current?.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-        });
+        phoneRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }, 150);
       return () => clearTimeout(timer);
     }
   }, [isCallOpen]);
 
-  function copyPhone(num: string, raw: string) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(raw).catch(() => {});
-    } else {
-      const textarea = document.createElement('textarea');
-      textarea.value = raw;
-      textarea.style.position = 'fixed';
-      textarea.style.opacity = '0';
-      document.body.appendChild(textarea);
-      textarea.select();
-      try {
-        document.execCommand('copy');
-      } catch (e) {}
-      document.body.removeChild(textarea);
+  useEffect(() => {
+    if (emailExpanded && emailRef.current) {
+      const timer = setTimeout(() => {
+        emailRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 150);
+      return () => clearTimeout(timer);
     }
-    setCopiedNum(num);
-    setTimeout(() => setCopiedNum(null), 2000);
-  }
+  }, [emailExpanded]);
+
+  const copyToClipboard = useCallback((text: string, type: 'phone' | 'email') => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        textarea.style.position = 'fixed';
+        textarea.style.opacity = '0';
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+
+      if (type === 'phone') {
+        setCopiedNumber(text);
+        setTimeout(() => setCopiedNumber(null), 2000);
+      } else {
+        setCopiedEmail(text);
+        setTimeout(() => setCopiedEmail(null), 2000);
+      }
+    } catch {
+      /* silently fail */
+    }
+  }, []);
 
   return (
     <div className="flex flex-col gap-2">
@@ -57,7 +109,7 @@ export function ContactPanel({ showHeading = false }: ContactPanelProps) {
 
       {/* Facebook button */}
       <a
-        href="https://m.me/61571952061949"
+        href={FACEBOOK_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-3 w-full bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl h-11 px-3 transition-colors"
@@ -68,66 +120,108 @@ export function ContactPanel({ showHeading = false }: ContactPanelProps) {
         <span className="text-sm font-medium text-white">{t.footer.messageFacebook || 'Facebook'}</span>
       </a>
 
-      {/* Call Us button */}
-      <button
-        onClick={() => setIsCallOpen(!isCallOpen)}
-        aria-expanded={isCallOpen}
-        className="flex items-center gap-3 w-full bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl h-11 px-3 transition-colors"
-      >
-        <span className="w-[26px] h-[26px] rounded-full bg-[#1da462] flex items-center justify-center text-white shrink-0">
-          <Phone className="w-3.5 h-3.5" />
-        </span>
-        <span className="text-sm font-medium text-white">{t.footer.callUs || 'Call Us'}</span>
-        <ChevronDown
-          className={`w-4 h-4 text-white/40 ml-auto transition-transform duration-200 ${
-            isCallOpen ? 'rotate-180' : ''
-          }`}
-        />
-      </button>
+      {/* Call Us section */}
+      <div className="flex flex-col">
+        <button
+          onClick={() => setIsCallOpen(!isCallOpen)}
+          aria-expanded={isCallOpen}
+          className="flex items-center gap-3 w-full bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl h-11 px-3 transition-colors"
+        >
+          <span className="w-[26px] h-[26px] rounded-full bg-[#1da462] flex items-center justify-center text-white shrink-0">
+            <Phone className="w-3.5 h-3.5" />
+          </span>
+          <span className="text-sm font-medium text-white">{t.footer.callUs || 'Call Us'}</span>
+          <ChevronDown
+            className={`w-4 h-4 text-white/40 ml-auto transition-transform duration-200 ${isCallOpen ? 'rotate-180' : ''
+              }`}
+          />
+        </button>
 
-      <div
-        ref={expandRef}
-        className={`grid transition-all duration-200 ease-out ${
-          isCallOpen ? 'grid-rows-[1fr] opacity-100 mt-1' : 'grid-rows-[0fr] opacity-0 mt-0 !gap-0'
-        }`}
-      >
-        <div className="overflow-hidden">
-          <div className="bg-white/[0.03] border border-white/[0.07] rounded-xl p-3 flex flex-col gap-3">
-            {/* Primary */}
-            <div>
-              <p className="text-[9px] tracking-widest text-white/25 uppercase mb-1">{t.footer.primaryPhone || 'PRIMARY'}</p>
-              <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-white">+84 93 215 00 06</span>
-                <button
-                  onClick={() => copyPhone('+84932150006', '+84932150006')}
-                  className={`text-[11px] px-2 py-1 rounded-md border transition-colors ${
-                    copiedNum === '+84932150006'
-                      ? 'text-lime border-lime/30 bg-lime/10'
-                      : 'text-white/55 border-white/10 bg-white/[0.07]'
-                  }`}
-                >
-                  {copiedNum === '+84932150006' ? (t.footer.copiedNumber || 'Copied') : (t.footer.copyNumber || 'Copy')}
-                </button>
+        <div
+          ref={phoneRef}
+          className={`grid transition-all duration-200 ease-out ${isCallOpen ? 'grid-rows-[1fr] opacity-100 mt-1' : 'grid-rows-[0fr] opacity-0 mt-0 !gap-0'
+            }`}
+        >
+          <div className="overflow-hidden">
+            <div className="bg-white/[0.03] border border-white/[0.07] rounded-xl p-3 flex flex-col gap-3">
+              {/* Primary */}
+              <div>
+                <p className="text-[9px] tracking-widest text-white/25 uppercase mb-1">{t.footer.primaryPhone || 'PRIMARY'}</p>
+                <div className="flex items-center justify-between">
+                  <a href={`tel:${PHONE_PRIMARY_RAW}`} className="text-sm font-medium text-white hover:text-lime transition-colors">
+                    {PHONE_NUMBER_PRIMARY}
+                  </a>
+                  <CopyButton
+                    number={PHONE_NUMBER_PRIMARY}
+                    copiedNumber={copiedNumber}
+                    onCopy={(num) => copyToClipboard(num, 'phone')}
+                    labelCopy={t.footer.copyNumber || 'Copy'}
+                    labelCopied={t.footer.copiedNumber || 'Copied'}
+                  />
+                </div>
+              </div>
+
+              <hr className="border-white/[0.06]" />
+
+              {/* Secondary */}
+              <div>
+                <p className="text-[9px] tracking-widest text-white/25 uppercase mb-1">{t.footer.secondaryPhone || 'SECONDARY'}</p>
+                <div className="flex items-center justify-between">
+                  <a href={`tel:${PHONE_SECONDARY_RAW}`} className="text-sm font-medium text-white/60 hover:text-white transition-colors">
+                    {PHONE_NUMBER_SECONDARY}
+                  </a>
+                  <CopyButton
+                    number={PHONE_NUMBER_SECONDARY}
+                    copiedNumber={copiedNumber}
+                    onCopy={(num) => copyToClipboard(num, 'phone')}
+                    labelCopy={t.footer.copyNumber || 'Copy'}
+                    labelCopied={t.footer.copiedNumber || 'Copied'}
+                  />
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <hr className="border-white/[0.06]" />
+      {/* Email Us section */}
+      <div className="flex flex-col">
+        <button
+          onClick={() => setEmailExpanded(!emailExpanded)}
+          aria-expanded={emailExpanded}
+          className="flex items-center gap-3 w-full bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl h-11 px-3 transition-colors"
+        >
+          <span className="w-[26px] h-[26px] rounded-full bg-[#6366f1] flex items-center justify-center text-white shrink-0">
+            <Mail className="w-3.5 h-3.5" />
+          </span>
+          <span className="text-sm font-medium text-white">{t.footer.emailUs || 'Email Us'}</span>
+          <ChevronDown
+            className={`w-4 h-4 text-white/40 ml-auto transition-transform duration-200 ${emailExpanded ? 'rotate-180' : ''
+              }`}
+          />
+        </button>
 
-            {/* Secondary */}
-            <div>
-              <p className="text-[9px] tracking-widest text-white/25 uppercase mb-1">{t.footer.secondaryPhone || 'SECONDARY'}</p>
+        <div
+          ref={emailRef}
+          className={`grid transition-all duration-200 ease-out ${emailExpanded ? 'grid-rows-[1fr] opacity-100 mt-1' : 'grid-rows-[0fr] opacity-0 mt-0 !gap-0'
+            }`}
+        >
+          <div className="overflow-hidden">
+            <div className="bg-white/[0.03] border border-white/[0.07] rounded-xl p-3">
               <div className="flex items-center justify-between">
-                <span className="text-sm font-medium text-white">0708 19 17 11</span>
-                <button
-                  onClick={() => copyPhone('0708191711', '0708191711')}
-                  className={`text-[11px] px-2 py-1 rounded-md border transition-colors ${
-                    copiedNum === '0708191711'
-                      ? 'text-lime border-lime/30 bg-lime/10'
-                      : 'text-white/55 border-white/10 bg-white/[0.07]'
-                  }`}
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="text-sm font-medium text-white hover:text-lime transition-colors break-all mr-2"
                 >
-                  {copiedNum === '0708191711' ? (t.footer.copiedNumber || 'Copied') : (t.footer.copyNumber || 'Copy')}
-                </button>
+                  {CONTACT_EMAIL}
+                </a>
+                <CopyButton
+                  number={CONTACT_EMAIL}
+                  copiedNumber={copiedEmail}
+                  onCopy={(text) => copyToClipboard(text, 'email')}
+                  labelCopy={t.footer.copyEmail || 'Copy'}
+                  labelCopied={t.footer.copiedEmail || 'Copied'}
+                />
               </div>
             </div>
           </div>

@@ -19,6 +19,7 @@ const localBusinessSchema = {
   name: 'Courtyard Pickle',
   url: 'https://courtyardpickledanang.com',
   telephone: '+84 93 215 00 06',
+  email: 'info@courtyardpickledanang.com',
   address: {
     '@type': 'PostalAddress',
     streetAddress: '27 Dương Thị Xuân Quý, Bắc Mỹ An',

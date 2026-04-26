@@ -39,7 +39,7 @@ const en: FAQ[] = [
   {
     question: 'Do you offer pickleball lessons at Courtyard?',
     answer:
-      'Yes, we offer both private and group lessons suitable for all levels and ages at Courtyard Pickle. Lessons can be booked by contacting us directly.',
+      'Yes, we offer both private and group lessons suitable for all levels and ages at Courtyard Pickle. Lessons can be booked by contacting us directly at info@courtyardpickledanang.com.',
   },
   {
     question: 'Is there parking at Courtyard Pickle?',
@@ -54,7 +54,7 @@ const en: FAQ[] = [
   {
     question: 'Can I book pickleball courts for a group or private event?',
     answer:
-      'Yes. We accommodate group sessions, events, and private tournaments at Courtyard Pickle, serving Da Nang and surrounding areas. Please contact us at +84 93 215 00 06 or message us on Facebook to discuss availability, pricing, and setup.',
+      'Yes. We accommodate group sessions, events, and private tournaments at Courtyard Pickle, serving Da Nang and surrounding areas. Please contact us at +84 93 215 00 06, email info@courtyardpickledanang.com, or message us on Facebook to discuss availability, pricing, and setup.',
   },
   {
     question: 'Can I walk in without a reservation?',
@@ -97,7 +97,7 @@ const vi: FAQ[] = [
   {
     question: 'Sân có lớp dạy chơi pickleball không?',
     answer:
-      'Chúng tôi cung cấp cả lớp học riêng và lớp học nhóm phù hợp với mọi cấp độ và lứa tuổi tại Courtyard Pickle. Bạn có thể tham khảo và đặt lịch bằng cách liên hệ trực tiếp với chúng tôi.',
+      'Chúng tôi cung cấp cả lớp học riêng và lớp học nhóm phù hợp với mọi cấp độ và lứa tuổi tại Courtyard Pickle. Bạn có thể tham khảo và đặt lịch bằng cách liên hệ trực tiếp với chúng tôi qua email info@courtyardpickledanang.com.',
   },
   {
     question: 'Courtyard Pickle có chỗ đậu xe không?',
@@ -112,7 +112,7 @@ const vi: FAQ[] = [
   {
     question: 'Tôi có thể đặt sân cho nhóm hoặc sự kiện riêng không?',
     answer:
-      'Chúng tôi có nhận tổ chức các buổi giao lưu, sự kiện nhóm và giải đấu nội bộ tại Courtyard Pickle Đà Nẵng. Vui lòng liên hệ qua số điện thoại +84 93 215 00 06 hoặc nhắn tin qua Facebook để thảo luận về lịch trống, mức giá và khâu tổ chức.',
+      'Chúng tôi có nhận tổ chức các buổi giao lưu, sự kiện nhóm và giải đấu nội bộ tại Courtyard Pickle Đà Nẵng. Vui lòng liên hệ qua số điện thoại +84 93 215 00 06, email info@courtyardpickledanang.com hoặc nhắn tin qua Facebook để thảo luận về lịch trống, mức giá và khâu tổ chức.',
   },
   {
     question: 'Tôi có thể đến chơi mà không cần đặt trước không?',
