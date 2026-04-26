@@ -4,9 +4,12 @@ import { Trophy, ExternalLink, Calendar } from 'lucide-react';
 import { useLanguage } from '@/lib/language-context';
 import { FACEBOOK_URL } from '@/lib/constants';
 import { Reveal } from '@/components/ui/reveal';
+import { tournamentConfig } from '@/config/tournament.config';
 
 export function TournamentSection() {
   const { t } = useLanguage();
+
+  if (!tournamentConfig.enabled) return null;
 
   const isTournamentUpcoming = t.tournaments.date && t.tournaments.date.trim() !== '';
 

@@ -18,7 +18,7 @@ export function HeroSection() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-start pt-24 sm:pt-20 sm:items-center overflow-hidden pb-6 sm:pb-0">
+    <section className="relative min-h-screen flex items-start pt-16 sm:pt-12 sm:items-center overflow-hidden pb-6 sm:pb-0">
       <div className="absolute inset-0 bg-gradient-to-br from-forest via-forest-dark to-forest opacity-80" />
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-lime/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-lime/5 rounded-full blur-3xl" />
@@ -26,13 +26,14 @@ export function HeroSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
-            <div className="pt-4 sm:pt-6">
+            <div className="pt-6 sm:pt-6">
               <TournamentChip />
             </div>
 
-            <div>
+            <div className="!mt-5 sm:!mt-6">
               <h1 className="text-[3.25rem] sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.08] sm:leading-[1.1]">
-                {t.hero.headlinePart1}{" "}
+                {t.hero.headlinePart1}
+                <br />
                 <span className="text-lime">{t.hero.headlinePart2}</span>
               </h1>
 
@@ -76,7 +77,7 @@ export function HeroSection() {
 
             <GoogleReviewsBadge />
 
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-6 !mt-6">
               {features.map(({ icon: Icon, label }) => (
                 <div key={label} className="flex items-center gap-2">
                   <Icon className="w-4 h-4 text-lime" />

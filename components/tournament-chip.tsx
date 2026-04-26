@@ -49,10 +49,10 @@ function useMountAnimation() {
 
 export function TournamentChip() {
   const { lang, t } = useLanguage();
-  const { state, name, date, link, linkLabel } = tournamentConfig;
+  const { enabled, state, name, date, link, linkLabel } = tournamentConfig;
   const mountAnimation = useMountAnimation();
 
-  if (state === 'hidden') return null;
+  if (!enabled || state === 'hidden') return null;
 
   // Helper to get localized string based on current language
   const getLocalized = (field: LocalizedString) => {

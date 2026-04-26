@@ -41,7 +41,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div>
+          <div id="contact">
             <h4
               style={{
                 fontSize: '11px',

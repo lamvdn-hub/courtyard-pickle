@@ -28,7 +28,7 @@ const localBusinessSchema = {
     postalCode: '550000',
     addressCountry: 'VN',
   },
-  openingHours: 'Mo-Su 05:00-22:00',
+  openingHours: 'Mo-Su 05:30-22:30',
   sport: 'Pickleball',
 };
 

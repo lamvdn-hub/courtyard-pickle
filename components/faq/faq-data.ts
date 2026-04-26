@@ -9,7 +9,7 @@ const en: FAQ[] = [
   {
     question: 'How do I book a court at Courtyard Pickle?',
     answer:
-      'Clicking any "Book" or "Reserve" button on this page takes you to our booking partner\'s secure site, where you can select your preferred date, time, and court at Courtyard Pickle in Da Nang. After finalizing the payment you will receive the confirmation instantly in your email.',
+      'Clicking any "Book" or "Reserve" button will take you to our secure partner, Alobo, where you can select your preferred date, time, and court at Courtyard Pickle Da Nang. Once your bank transfer is completed, our team will verify the transaction and send your booking confirmation shortly.',
   },
   {
     question: 'How much does it cost to rent a court at Courtyard Pickle?',
@@ -19,7 +19,7 @@ const en: FAQ[] = [
   {
     question: 'What are your opening hours?',
     answer:
-      'Courtyard Pickle Da Nang is open daily from 05:00 to 22:00. Hours may vary on public holidays, please check our booking calendar for live availability.',
+      'Courtyard Pickle Da Nang is open daily from 05:30 to 22:30. Hours may vary on public holidays, please check our booking calendar for live availability.',
   },
   {
     question: 'Where is Courtyard Pickle located?',
@@ -39,7 +39,7 @@ const en: FAQ[] = [
   {
     question: 'Do you offer pickleball lessons at Courtyard?',
     answer:
-      'Yes, we offer both private and group lessons suitable for all levels and ages at Courtyard Pickle. Lessons can be booked by contacting us directly at info@courtyardpickledanang.com.',
+      'Yes, we offer both private and group lessons suitable for all levels and ages at Courtyard Pickle. Lessons can be booked by contacting us directly at +84 93 215 00 06, info@courtyardpickledanang.com, or via our Facebook messenger.',
   },
   {
     question: 'Is there parking at Courtyard Pickle?',
@@ -67,17 +67,17 @@ const vi: FAQ[] = [
   {
     question: 'Làm thế nào để đặt sân tại Courtyard Pickle Đà Nẵng?',
     answer:
-      'Chỉ cần nhấp vào bất kỳ nút "Đặt sân" nào trên trang này, bạn sẽ được chuyển đến trang đặt chỗ chính thức của Alobo. Tại đây, bạn có thể chọn ngày, giờ và sân mong muốn tại Courtyard Pickle Đà Nẵng. Sau khi hoàn tất thanh toán, bạn sẽ nhận được email xác nhận ngay lập tức.',
+      'Chỉ cần nhấp vào bất kỳ nút "Đặt sân" nào trên trang này, bạn sẽ được chuyển đến trang đặt chỗ chính thức của Alobo. Tại đây, bạn có thể dễ dàng chọn lịch chơi, sân phù hợp, và thực hiện thanh toán bằng cách chuyển khoản nhanh chóng. Courtyard Pickle sẽ gửi xác nhận đặt sân đến bạn ngay sau khi giao dịch được xác minh thành công.',
   },
   {
     question: 'Chi phí thuê sân tại Courtyard Pickle là bao nhiêu?',
     answer:
-      'Giá thuê sân sẽ thay đổi tùy theo khung giờ, trong khoảng 120k-160k / giờ và 50k/lượt cho vé social. Courtyard Pickle có hỗ trợ đặt lịch định kỳ theo tháng từ 100k-140k / giờ.',
+      'Giá thuê sân sẽ thay đổi tùy theo khung giờ, trong khoảng 120k-160k / giờ và 50k/lượt cho vé social. Courtyard Pickle có hỗ trợ đặt lịch cố định theo tháng từ 100k-140k / giờ.',
   },
   {
     question: 'Giờ mở cửa của sân là khi nào?',
     answer:
-      'Courtyard Pickle Đà Nẵng mở cửa hàng ngày từ 05:00 đến 22:00. Giờ hoạt động có thể thay đổi vào các ngày lễ, xin vui lòng kiểm tra lịch đặt sân để cập nhật tình trạng sân trống thực tế.',
+      'Courtyard Pickle Đà Nẵng mở cửa hàng ngày từ 05:30 đến 22:30. Giờ hoạt động có thể thay đổi vào các ngày lễ, xin vui lòng kiểm tra lịch đặt sân để cập nhật tình trạng sân trống thực tế.',
   },
   {
     question: 'Courtyard Pickle nằm ở đâu?',
@@ -97,7 +97,7 @@ const vi: FAQ[] = [
   {
     question: 'Sân có lớp dạy chơi pickleball không?',
     answer:
-      'Chúng tôi cung cấp cả lớp học riêng và lớp học nhóm phù hợp với mọi cấp độ và lứa tuổi tại Courtyard Pickle. Bạn có thể tham khảo và đặt lịch bằng cách liên hệ trực tiếp với chúng tôi qua email info@courtyardpickledanang.com.',
+      'Chúng tôi cung cấp cả lớp học riêng và lớp học nhóm phù hợp với mọi cấp độ và lứa tuổi tại Courtyard Pickle. Bạn có thể tham khảo và đặt lịch bằng cách liên hệ trực tiếp với chúng tôi qua số điện thoại +84 93 215 00 06, hoặc email info@courtyardpickledanang.com.',
   },
   {
     question: 'Courtyard Pickle có chỗ đậu xe không?',
@@ -112,7 +112,7 @@ const vi: FAQ[] = [
   {
     question: 'Tôi có thể đặt sân cho nhóm hoặc sự kiện riêng không?',
     answer:
-      'Chúng tôi có nhận tổ chức các buổi giao lưu, sự kiện nhóm và giải đấu nội bộ tại Courtyard Pickle Đà Nẵng. Vui lòng liên hệ qua số điện thoại +84 93 215 00 06, email info@courtyardpickledanang.com hoặc nhắn tin qua Facebook để thảo luận về lịch trống, mức giá và khâu tổ chức.',
+      'Chúng tôi có nhận tổ chức các buổi giao lưu, sự kiện nhóm và giải đấu nội bộ tại Courtyard Pickle Đà Nẵng. Vui lòng liên hệ qua số điện thoại +84 93 215 00 06, email info@courtyardpickledanang.com, hoặc nhắn tin qua Facebook để thảo luận về lịch trống, mức giá và khâu tổ chức.',
   },
   {
     question: 'Tôi có thể đến chơi mà không cần đặt trước không?',

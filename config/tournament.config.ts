@@ -6,6 +6,7 @@ export interface LocalizedString {
 }
 
 export interface TournamentConfig {
+  enabled: boolean;
   state: TournamentState;
   name: LocalizedString;
   date: LocalizedString;
@@ -14,7 +15,8 @@ export interface TournamentConfig {
 }
 
 export const tournamentConfig: TournamentConfig = {
-  state: 'hidden', // Set to 'announced', 'today', or 'recent' to show the chip
+  enabled: false,
+  state: 'announced', // Set to 'announced', 'today', or 'recent' to show the chip
   name: {
     en: 'Bounty Hunter',
     vi: 'Bounty Hunter',

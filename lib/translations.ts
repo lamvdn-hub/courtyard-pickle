@@ -120,6 +120,8 @@ export interface Translations {
       offPeak: string;
       peak: string;
       contactCta: string;
+      save: string;
+      bestValue: string;
     };
     social: {
       title: string;
@@ -128,14 +130,19 @@ export interface Translations {
       calloutBody: string;
       calloutLink: string;
     };
+    from: string;
     bookNow: string;
   };
   testimonials: {
     header: string;
     viewMore: string;
+    reviewFromGoogle: string;
+    readMore: string;
     reviews: {
       name: string;
+      date: string;
       text: string;
+      url?: string;
     }[];
   };
   tournaments: {
@@ -160,7 +167,7 @@ const en: Translations = {
   },
   hero: {
     headlinePart1: 'Courtyard',
-    headlinePart2: 'Pickle.',
+    headlinePart2: 'Pickle',
     slogan: 'Where Every Sense Is Touched',
     description:
       'Sheltered courts. Free equipments and cleaning service. A café to unwind after your games. At Courtyard, leave the details to us so you can just enjoy the game.',
@@ -184,7 +191,7 @@ const en: Translations = {
     tournaments: 'Tournaments',
     faq: 'FAQ',
     contact: 'Contact',
-    openHours: 'Open daily 05:00 – 22:00  ·  2 courts available',
+    openHours: 'Open daily 05:30 – 22:30  ·  2 courts available',
   },
   howItWorks: {
     kicker: 'Simple as 1-2-3',
@@ -247,55 +254,65 @@ const en: Translations = {
     locationTitle: 'LOCATION',
     addressLine1: '27 Dương Thị Xuân Quý',
     addressLine2: 'Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Vietnam',
-    hours: 'Open Daily: 05:00 – 22:00',
+    hours: 'Open Daily: 05:30 – 22:30',
     copyright: 'Courtyard Pickle. All rights reserved.',
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Terms of Service',
   },
   reviews: {
-    badgeFormat: '4.7 / 5.0 (47 reviews on Google)',
+    badgeFormat: '4.7 / 5.0 (48 reviews on Google)',
   },
   pricing: {
-    kicker: 'Clear Pricing',
-    header: 'Play on Your Terms',
-    subheader: 'Simple rates tailored to how often you play.',
+    kicker: 'Play on Your Terms',
+    header: 'Clear Pricing',
+    subheader: 'Flexible options for every type of player.',
     casual: {
-      title: 'Casual Play',
-      desc: 'Ideal for spontaneous games. Pay per hour.',
-      offPeak: '120k VND / hr',
-      peak: '160k VND / hr',
+      title: 'Casual Sessions',
+      desc: 'Perfect for a quick game or a social session. Pay as you go.',
+      offPeak: '120,000 VND / hr',
+      peak: '160,000 VND / hr',
     },
     fixed: {
-      title: 'Fixed Booking',
-      desc: 'Secure the same time every week or month.',
-      offPeak: '100k VND / hr',
-      peak: '140k VND / hr',
+      title: 'Regular Sessions',
+      desc: 'Secure your your favorite court every week/month. Our best rates',
+      offPeak: '100,000 VND / hr',
+      peak: '140,000 VND / hr',
       contactCta: 'Contact Us to Arrange',
+      save: 'Save {percent}%',
+      bestValue: 'Best Value',
     },
     social: {
-      title: 'Social Play',
+      title: 'Social Sessions',
       desc: 'Join the community and play with others.',
-      price: '50k VND / ticket',
-      calloutBody: 'Occasional open sessions, 50k VND per ticket. Hosted at lower frequency.',
-      calloutLink: 'Follow us on Facebook for upcoming dates.',
+      price: '50,000 VND / ticket',
+      calloutBody: 'Connect with fellow pickleball lovers through our occasional open sessions for only 50,000 VND per ticket.',
+      calloutLink: 'Join our Zalo group for the latest updates!',
     },
+    from: 'From {price}',
     bookNow: 'Book Now',
   },
   testimonials: {
     header: 'What Players Say',
     viewMore: 'See all reviews on Google',
+    reviewFromGoogle: 'Review from',
+    readMore: 'Read full review',
     reviews: [
       {
-        name: 'Quan',
-        text: 'Very comfortable courts, high-quality surface. Free paddle cleaning and fruits are a big plus.',
+        name: 'Thùy Trinh',
+        date: 'March 2026',
+        text: 'Sân được đầu tư mới, không gian sạch sẽ và hiện đại. Hệ thống ánh sáng đầy đủ, đảm bảo chơi tốt cả vào buổi tối. Khu vực nghỉ ngơi tiện nghi, có nước uống và nhiều góc check-in đẹp. Rất phù hợp cho nhóm bạn vừa chơi thể thao vừa thư giãn, chụp ảnh.',
       },
       {
-        name: 'Thao',
-        text: 'The café area is great for waiting or relaxing after a game. Sheltered courts mean no worries about sun or rain.',
+        name: 'Svetlana',
+        date: 'August 2025',
+        text: 'I absolutely love this pickleball court! The location is perfect and easy to get to, and the entire facility is always clean and well-maintained. The restrooms are spotless, which is something I really appreciate…',
+        url: 'https://www.google.com/search?q=courtyard+pickle+da+nang#irp=',
       },
       {
-        name: 'Huy',
-        text: 'Easy to find location, clean courts and friendly staff helping new players. Definitely coming back!',
+        name: 'Pavel Strabykin',
+        date: 'November 2025',
+        text: "It's probably the best court in Da Nang. Perfect equipment, reasonable prices, free rackets & balls and excellent service! The owners do this not for money, but for people…",
+        url: 'https://www.google.com/search?q=courtyard+pickle+da+nang#irp=',
       },
     ],
   },
@@ -321,7 +338,7 @@ const vi: Translations = {
   },
   hero: {
     headlinePart1: 'Courtyard',
-    headlinePart2: 'Pickle.',
+    headlinePart2: 'Pickle',
     slogan: 'Nơi Cảm Xúc Được Chạm Tới',
     description:
       'Hệ thống sân có mái che. Cho mượn vợt, bóng và vệ sinh dụng cụ miễn phí. Café thư giãn sau trận đấu. Tại Courtyard, hãy để chúng tôi lo mọi thứ để bạn có thể tận hưởng cuộc chơi.',
@@ -341,11 +358,11 @@ const vi: Translations = {
     howItWorks: 'Cách thức đặt sân',
     ourFacility: 'Cơ sở vật chất',
     pricing: 'Bảng giá',
-    testimonials: 'Đánh giá',
+    testimonials: 'Đánh giá của khách hàng',
     tournaments: 'Giải đấu',
     faq: 'Câu hỏi thường gặp',
     contact: 'Liên hệ',
-    openHours: 'Mở cửa hàng ngày 05:00 – 22:00  ·  2 sân',
+    openHours: 'Mở cửa hàng ngày 05:30 – 22:30  ·  2 sân',
   },
   howItWorks: {
     kicker: 'ĐƠN GIẢN TRONG 3 BƯỚC',
@@ -408,55 +425,65 @@ const vi: Translations = {
     locationTitle: 'ĐỊA ĐIỂM',
     addressLine1: '27 Dương Thị Xuân Quý',
     addressLine2: 'Bắc Mỹ An, Ngũ Hành Sơn, Đà Nẵng 550000, Việt Nam',
-    hours: 'Mở cửa hàng ngày: 05:00 – 22:00',
+    hours: 'Mở cửa hàng ngày: 05:30 – 22:30',
     copyright: 'Courtyard Pickle. Bảo lưu mọi quyền.',
     privacyPolicy: 'Chính sách bảo mật',
     termsOfService: 'Điều khoản dịch vụ',
   },
   reviews: {
-    badgeFormat: '4.7 / 5.0 (47 đánh giá trên Google)',
+    badgeFormat: '4.7 / 5.0 (48 đánh giá trên Google)',
   },
   pricing: {
-    kicker: 'Bảng Giá Rõ Ràng',
-    header: 'Lựa Chọn Phù Hợp Cho Bạn',
-    subheader: 'Mức giá linh hoạt tùy theo nhu cầu của bạn.',
+    kicker: 'Chơi Theo Cách Của Bạn',
+    header: 'Chi Phí Ra Sân',
+    subheader: 'Lựa Chọn Phù Hợp Dành Cho Mọi Nhu Cầu.',
     casual: {
-      title: 'Sân Vãng Lai',
-      desc: 'Dành cho những trận đấu ngẫu hứng. Thanh toán theo giờ.',
+      title: 'Chơi Ngẫu Hứng',
+      desc: 'Thích là nhích! Dành cho các kèo giao lưu đột xuất. Thanh toán theo giờ.',
       offPeak: '120.000 VNĐ / giờ',
       peak: '160.000 VNĐ / giờ',
     },
     fixed: {
       title: 'Sân Cố Định',
-      desc: 'Đảm bảo thời gian cố định hàng tuần/tháng.',
+      desc: 'Đảm bảo sân và khung giờ đẹp cố định hàng tháng.',
       offPeak: '100.000 VNĐ / giờ',
       peak: '140.000 VNĐ / giờ',
       contactCta: 'Liên hệ để đặt chỗ',
+      save: 'Tiết kiệm {percent}%',
+      bestValue: 'ƯU ĐÃI NHẤT',
     },
     social: {
-      title: 'Giao Lưu - Social Play',
+      title: 'Giao lưu social',
       desc: 'Tham gia vào cộng đồng và giao lưu.',
       price: '50.000 VNĐ / lượt',
-      calloutBody: 'Các buổi chơi mở thỉnh thoảng diễn ra, 50.000 VNĐ một lượt. Tổ chức với tần suất thấp hơn.',
-      calloutLink: 'Theo dõi chúng tôi trên Facebook để cập nhật lịch chơi.',
+      calloutBody: 'Kết nối đam mê với các buổi giao lưu ngẫu hứng, vé chỉ 50.000 VNĐ một lượt.',
+      calloutLink: 'Tham gia nhóm Zalo để cập nhật lịch social mới nhất!',
     },
+    from: 'Từ {price}',
     bookNow: 'Đặt Sân Ngay',
   },
   testimonials: {
     header: 'Khách Hàng Nói Gì',
     viewMore: 'Xem tất cả đánh giá trên Google',
+    reviewFromGoogle: 'Đánh giá từ',
+    readMore: 'Xem toàn bộ đánh giá',
     reviews: [
       {
-        name: 'Quân',
-        text: 'Sân chơi rất thoải mái, mặt sân chất lượng. Dịch vụ vệ sinh vợt và trái cây miễn phí là điểm cộng lớn.',
+        name: 'Thùy Trinh',
+        date: 'March 2026',
+        text: 'Sân được đầu tư mới, không gian sạch sẽ và hiện đại. Hệ thống ánh sáng đầy đủ, đảm bảo chơi tốt cả vào buổi tối. Khu vực nghỉ ngơi tiện nghi, có nước uống và nhiều góc check-in đẹp. Rất phù hợp cho nhóm bạn vừa chơi thể thao vừa thư giãn, chụp ảnh.',
       },
       {
-        name: 'Thảo',
-        text: 'Không gian café ngồi chờ hay nghỉ ngơi sau khi chơi đều rất tuyệt. Sân có mái che nên không lo nắng mưa.',
+        name: 'Svetlana',
+        date: 'August 2025',
+        text: 'I absolutely love this pickleball court! The location is perfect and easy to get to, and the entire facility is always clean and well-maintained. The restrooms are spotless, which is something I really appreciate…',
+        url: 'https://www.google.com/search?q=courtyard+pickle+da+nang#irp=',
       },
       {
-        name: 'Huy',
-        text: 'Vị trí dễ tìm, sân sạch sẽ và nhân viên nhiệt tình hỗ trợ người mới chơi. Chắc chắn sẽ quay lại!',
+        name: 'Pavel Strabykin',
+        date: 'November 2025',
+        text: "It's probably the best court in Da Nang. Perfect equipment, reasonable prices, free rackets & balls and excellent service! The owners do this not for money, but for people…",
+        url: 'https://www.google.com/search?q=courtyard+pickle+da+nang#irp=',
       },
     ],
   },

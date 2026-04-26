@@ -8,6 +8,7 @@ import { BOOKING_URL } from '@/lib/constants';
 import { LanguageSwitcher } from '@/components/navigation/language-switcher';
 import { useLanguage } from '@/lib/language-context';
 import { ContactPanel } from '@/components/contact-panel';
+import { tournamentConfig } from '@/config/tournament.config';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -33,7 +34,12 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
     { label: t.mobile.testimonials, href: '#testimonials' },
     { label: t.mobile.tournaments, href: '#tournaments' },
     { label: t.mobile.faq, href: '#faq' },
-  ];
+  ].filter(link => {
+    if (link.href === '#tournaments' && !tournamentConfig.enabled) {
+      return false;
+    }
+    return true;
+  });
 
   useEffect(() => {
     if (isOpen) {
@@ -102,7 +108,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
             yOffset = isMobile ? 0 : 30;
           } else if (href === '#testimonials') {
             // Testimonials: increase the gap (scroll less)
-            yOffset = isMobile ? -40 : -60;
+            yOffset = isMobile ? -40 : -30;
           } else if (href === '#tournaments') {
             // Tournament
             yOffset = isMobile ? -100 : -110;
@@ -153,7 +159,7 @@ export function MobileMenu({ isOpen, onClose, triggerRef }: MobileMenuProps) {
           </a>
 
           {/* Centered language switcher */}
-          <div className="flex-1 flex justify-center px-2">
+          <div className="flex-1 flex justify-center px-2 md:hidden">
             <LanguageSwitcher currentLang={lang} variant="mobile" />
           </div>
 
