@@ -260,7 +260,7 @@ const en: Translations = {
     termsOfService: 'Terms of Service',
   },
   reviews: {
-    badgeFormat: '4.7 / 5.0 (49 reviews on Google)',
+    badgeFormat: '4.7 / 5.0 (51 reviews on Google)',
   },
   pricing: {
     kicker: 'Play on Your Terms',
@@ -431,7 +431,7 @@ const vi: Translations = {
     termsOfService: 'Điều khoản dịch vụ',
   },
   reviews: {
-    badgeFormat: '4.7 / 5.0 (49 đánh giá trên Google)',
+    badgeFormat: '4.7 / 5.0 (51 đánh giá trên Google)',
   },
   pricing: {
     kicker: 'Chơi Theo Cách Của Bạn',
